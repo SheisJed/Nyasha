@@ -58,7 +58,7 @@ function AchievementsShowcase() {
               </div>
               <p className="achievement-description">{achievement.description}</p>
               {achievement.year && (
-                <span className="achievement-year">Earned in {achievement.year}</span>
+                <span className="achievement-year">Graduated in {achievement.year}</span>
               )}
             </div>
             {achievement.unlocked && (
