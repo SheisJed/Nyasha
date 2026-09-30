@@ -10,7 +10,7 @@ import { PortfolioConfig } from '../types'
 export const portfolioConfig: PortfolioConfig = {
   // Personal Information
   personal: {
-    name: 'Victor Zyon Tiangson',
+    name: 'Waithiegeni Jedidah',
     title: '.NET Developer | Development Team Lead | Web Developer | Scrum Master',
     location: 'Quezon City, Philippines',
     bio: 'Full-stack developer specializing in .NET and React, passionate about building interactive web experiences with modern technologies. Team lead with 8+ years of experience delivering enterprise solutions.',
