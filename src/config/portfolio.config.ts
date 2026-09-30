@@ -11,11 +11,9 @@ export const portfolioConfig: PortfolioConfig = {
   // Personal Information
   personal: {
     name: 'Waithiegeni Jedidah',
-    title: '.Industrial Chemist | Water Treatment Design Engineer | Water & Wastewater Consultant | Writer | Curious Explorer | Foodie
-',
+    title: '.Industrial Chemist | Water Treatment Design Engineer | Water & Wastewater Consultant | Writer | Curious Explorer | Foodie',
     location: 'Nairobi, Kenya',
-    bio: 'I work with water, chemistry, words, and the occasional very serious plate of food. I’m an industrial chemist and water treatment design engineer curious about better ways to treat, reuse, and rethink water. When I’m not designing systems or writing, I’m probably exploring somewhere new—or deciding what to eat next.
-',
+    bio: 'I work with water, chemistry, words, and the occasional very serious plate of food. I’m an industrial chemist and water treatment design engineer curious about better ways to treat, reuse, and rethink water. When I’m not designing systems or writing, I’m probably exploring somewhere new—or deciding what to eat next',
     email: 'jedidahgithinji12@gmail.com',
     phone: '(+254) 712 293 972',
     birthday: undefined, 
@@ -35,8 +33,7 @@ export const portfolioConfig: PortfolioConfig = {
   // Current Work Status
   workStatus: {
     status: 'available', // 'available' | 'employed' | 'away' | 'busy'
-    message: 'Open to water problems, good writing & great food.
-',
+    message: 'Open to water problems, good writing & great food'
   },
 
   // Featured Projects (will be enhanced with GitHub API data)
