@@ -88,9 +88,9 @@ function InfoModal({ isOpen, onClose }: InfoModalProps) {
         <div className="modal-content">
           {activeTab === 'levels' && (
             <div className="info-section">
-              <h3>Developer Level Tiers</h3>
+              <h3>Achievement Tiers</h3>
               <p className="info-description">
-                Your level is determined by total XP earned. Each tier brings unique visual effects!
+                Your achievements unlock different tiers, each with its own visual effects!
               </p>
               <div className="level-tiers-grid">
                 {levelTiers.map((tier) => {

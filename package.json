@@ -1,7 +1,7 @@
 {
-  "name": "steam-profile-portfolio",
+  "name": "jedidah-portfolio",
   "version": "1.0.0",
-  "description": "A steam-inspired portfolio - stunning interactive portfolio website with Steam profile design, built with React, TypeScript, and Vite. Creative gaming-inspired developer portfolio showcasing projects and achievements.",
+  "description": "A personal portfolio for Waithiegeni Jedidah — an industrial chemist, water treatment design engineer, writer, and curious explorer. Built with React, TypeScript, and Vite.",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
@@ -12,17 +12,23 @@
     "test:coverage": "vitest --coverage"
   },
   "keywords": [
-    "steam-inspired-portfolio",
-    "steam-portfolio",
-    "steam-design",
-    "interactive-portfolio",
-    "gaming-inspired-portfolio",
+    "Waithiegeni Jedidah",
+    "Jedidah Waithiegeni",
+    "industrial chemist",
+    "water treatment",
+    "water treatment design",
+    "water reuse",
+    "wastewater treatment",
+    "water quality analysis",
+    "reverse osmosis",
+    "laboratory analysis",
+    "technical writing",
+    "creative writing",
+    "sustainability",
+    "circular water systems",
     "portfolio",
-    "steam",
-    "react",
-    "typescript",
-    "vite",
-    "github-api"
+    "Nairobi",
+    "Kenya"
   ],
   "author": "Waithiegeni Jedidah <jedidahgithinji12@gmail.com>",
   "license": "MIT",
