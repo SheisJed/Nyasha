@@ -96,7 +96,7 @@ export const translations: Record<Language, Translations> = {
     contact: 'Contact',
     skills: 'Skills',
     info: 'Info',
-    portfolioTitle: "ZYON'S PORTFOLIO",
+    portfolioTitle: "JEDIDAH'S PORTFOLIO",
 
     developerLevel: 'Developer Level',
     yearsOfExperience: 'Years of Experience',
@@ -104,9 +104,8 @@ export const translations: Record<Language, Translations> = {
     followers: 'Followers',
     totalStars: 'Total Stars',
     achievements: 'Achievements',
-    workStatus: 'Not looking for work',
-    profileDescription: "Just your average developer from the Philippines -- currently leading a development team and working primarily with the .NET stack. I've also worn the Scrum Master hat, backed by a few certifications to prove it.\n\nI'm passionate about turning innovative ideas into real, working solutions and love approaching challenges from a fresh perspective. Off the clock, I'm just a chill guy who enjoys learning, building, and improving things.",
-
+    workStatus: 'Curious & open to what’s next',
+    profileDescription: "Meet Jedidah: a Nairobi-based industrial chemist, water treatment design engineer, writer, curious explorer, and enthusiastic overthinker of perfectly good questions. She likes understanding how things work, finding better ways to do them, and discovering what happens when curiosity is allowed to run slightly unsupervised. She is also very easily persuaded by good food.",
     recentActivity: 'Recent Activity',
     contributions: 'contributions in last 12 weeks',
     viewAllActivity: 'View all activity on GitHub',
