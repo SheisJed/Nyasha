@@ -24,11 +24,11 @@
     "vite",
     "github-api"
   ],
-  "author": "Victor Zyon Tiangson <tiangsonzyon@gmail.com>",
+  "author": "Waithiegeni Jedidah <jedidahgithinji12@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zyonify/steam-profile-portfolio.git"
+    "url": "https://github.com/WaithiegeniJedidah/jedidah-portfolio.git"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^5.0.4",

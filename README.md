@@ -59,7 +59,7 @@ A stunning, interactive portfolio website inspired by Steam's profile design, bu
   - LocalStorage persistence - language preference saved across sessions
   - All UI text translates dynamically: headers, navigation, card titles, buttons, stats
   - Satirical language options for entertainment:
-    - **Sarcasm**: "Code Dumps", "Pity Stars", "Things I Googled Once", "ZYON'S HUMBLE PORTFOLIO"
+    - **Sarcasm**: "Water, Words & What-Ifs", "Questions That Escalated", "Things I Probably Shouldn't Have Researched", "JEDIDAH'S ATTEMPT AT FIGURING THINGS OUT"
     - **Binary**: All text converted to binary code
     - **Emoji Only**: Pure emoji representations (👤 💼 📧 🎯)
     - **Lorem Ipsum**: Classic placeholder Latin text
@@ -224,8 +224,8 @@ A stunning, interactive portfolio website inspired by Steam's profile design, bu
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/zyonify/steam-profile-portfolio.git
-cd steam-profile-portfolio
+git clone https://github.com/WaithiegeniJedidah/jedidah-portfolio.git
+cd jedidah-portfolio
 ```
 
 2. **Install dependencies**
@@ -239,14 +239,14 @@ npm install
    ```typescript
    export const portfolioConfig = {
      personal: {
-       name: 'Your Name',
-       title: 'Your Title',
-       email: 'your.email@example.com',
+       name: 'Waithiegeni Jedidah',
+       title: 'Industrial Chemist | Water Treatment Design Engineer',
+       email: 'jedidahgithinji12@gmail.com',
        // ... more settings
      },
      social: {
-       github: 'your-github-username',
-       linkedin: 'https://linkedin.com/in/your-profile',
+       github: 'WaithiegeniJedidah',
+       linkedin: 'https://linkedin.com/in/waithiegeni-jedidah/',
      },
      // ... more configuration
    }
@@ -256,7 +256,7 @@ npm install
    - `profile-avatar.gif` - Your animated avatar
    - `profile-background.jpg` - Background image
    - `resume.pdf` - Your resume PDF
-   - `zyonify-logo.png` - Your logo
+   - `your-logo.png` - Your logo
 
 5. **Run development server**
 ```bash
@@ -376,11 +376,11 @@ Switch between 6 different languages for a completely different experience:
 - Headers: Quis Nostrud, Exercitation Ullamco, Magna Aliqua
 - Traditional placeholder Latin text throughout
 
-**Young Stunnah (Filipino Gen Z Slang)**
+**Slightly Unsupervised**
 - Navigation: Petmalu Profile, Werpa Projects, Chika Tayo, Swabe Skills
 - Stats: Dev Lodi Level, G na G Years, Code Sesh
 - Headers: Bet na Bet Projects, Flex Wall, Latest Gawa
-- Portfolio Title: PORTFOLIO NI ZYON
+- Portfolio Title: JEDIDAH'S PORTFOLIO
 
 **How to Use:**
 1. Click on your name in the top-right header
@@ -462,10 +462,10 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 👤 Author
 
-**Victor Zyon Tiangson**
-- GitHub: [@zyonify](https://github.com/zyonify)
-- LinkedIn: [Victor Zyon Tiangson](https://www.linkedin.com/in/zyontiangson/)
-- Email: tiangsonzyon@gmail.com
+**Waithiegeni Jedidah**
+- GitHub: [@WaithiegeniJedidah](https://github.com/WaithiegeniJedidah)
+- LinkedIn: [Waithiegeni Jedidah](https://www.linkedin.com/in/waithiegeni-jedidah/)
+- Email: jedidahgithinji12@gmail.com
 
 ## 🙏 Acknowledgments
 

@@ -1,16 +1,16 @@
-Contact: mailto:tiangsonzyon@gmail.com
-Preferred-Languages: en, tl
-Canonical: https://zyon-portfolio.vercel.app/.well-known/security.txt
-Expires: 2026-12-31T23:59:59.000Z
+Contact: mailto:jedidahgithinji12@gmail.com
+Preferred-Languages: en, sw
+Canonical: https://waithiegenijedidah.github.io/jedidah-portfolio/.well-known/security.txt
+Expires: 2027-10-01T23:59:59.000Z
 
-# Security Policy for Victor Zyon Tiangson Portfolio
+# Security Policy for Waithiegeni Jedidah Portfolio
 
 # If you discover any security vulnerabilities or have security-related
 # questions about this portfolio website, please contact me directly.
 
-# Personal Portfolio of Victor Zyon Tiangson
-# Developer | Scrum Master | Team Lead
-# Based in Quezon City, Philippines
+# Personal Portfolio of Waithiegeni Jedidah
+# Industrial Chemist | Water Treatment Design Engineer
+# Based in Nairobi City, Kenya
 
-# GitHub: https://github.com/zyonify
-# LinkedIn: https://www.linkedin.com/in/zyontiangson/
+# GitHub: https://github.com/waithiegenijedidah
+# LinkedIn: https://www.linkedin.com/in/waithiegeni-jedidah/

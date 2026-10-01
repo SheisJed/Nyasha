@@ -165,7 +165,7 @@ function Header({ onOpenAchievements, onOpenInfo, onOpenWallet }: HeaderProps) {
                 title="Account Menu"
                 onClick={() => setShowUserDropdown(!showUserDropdown)}
               >
-                <span className="user-name">Victor Zyon Tiangson</span>
+                <span className="user-name">Waithiegeni Jedidah</span>
                 <svg className="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor">
                   <polygon points="6,8 2,4 10,4"></polygon>
                 </svg>
@@ -175,7 +175,7 @@ function Header({ onOpenAchievements, onOpenInfo, onOpenWallet }: HeaderProps) {
               {showUserDropdown && (
                 <div className="user-dropdown-menu">
                   <button className="dropdown-item">
-                    Account details: <span className="account-name">zyonify</span>
+                    Account details: <span className="account-name">WaithiegeniJedidah</span>
                   </button>
 
                   <button className="dropdown-item" onClick={onOpenWallet}>
@@ -230,11 +230,11 @@ function Header({ onOpenAchievements, onOpenInfo, onOpenWallet }: HeaderProps) {
                           className="dropdown-submenu-item"
                           onClick={() => handleLanguageSelect('youngStunnah')}
                         >
-                          Young Stunnah {language === 'youngStunnah' && '✓'}
+                          Slightly Unsupervised {language === 'youngStunnah' && '✓'}
                         </button>
                         <div className="dropdown-divider"></div>
                         <a
-                          href={`https://github.com/zyonify/zyon-portfolio/issues/new?title=Translation%20Issue&body=**Language:**%20${language}%0A%0A**Issue%20Description:**%0A(Please%20describe%20the%20translation%20problem%20you%20found)%0A%0A**Expected%20Translation:**%0A(What%20should%20it%20say%20instead?)&labels=translation,bug`}
+                          href={`https://github.com/WaithiegeniJedidah/jedidah-portfolio/issues/new?title=Translation%20Issue&body=**Language:**%20${language}%0A%0A**Issue%20Description:**%0A(Please%20describe%20the%20translation%20problem%20you%20found)%0A%0A**Expected%20Translation:**%0A(What%20should%20it%20say%20instead?)&labels=translation,bug`}
                           className="dropdown-submenu-item dropdown-submenu-report"
                           target="_blank"
                           rel="noopener noreferrer"
@@ -262,7 +262,7 @@ function Header({ onOpenAchievements, onOpenInfo, onOpenWallet }: HeaderProps) {
             <a href="#profile" className="user-avatar-link" title="View Profile">
               <img
                 src="/profile-avatar.gif"
-                alt="Victor Zyon Tiangson"
+                alt="Waithiegeni Jedidah"
                 className="user-avatar-img"
               />
             </a>
