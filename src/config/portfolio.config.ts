@@ -24,7 +24,7 @@ export const portfolioConfig: PortfolioConfig = {
 
   // Social Media Links
   social: {
-    github: 'WaithiegeniJedidah',
+    github: 'SheisJed',
     linkedin: 'https://www.linkedin.com/in/waithiegeni-jedidah/',
     twitter: 'https://x.com/WaithiegeniJ',
     website: 'https://waithiegeni.substack.com',

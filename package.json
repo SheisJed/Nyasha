@@ -34,7 +34,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/WaithiegeniJedidah/jedidah-portfolio.git"
+    "url": "https://github.com/sheisjed/Nyasha.git"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^5.0.4",

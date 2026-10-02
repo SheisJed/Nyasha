@@ -224,7 +224,7 @@ A stunning, interactive portfolio website inspired by Steam's profile design, bu
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/WaithiegeniJedidah/jedidah-portfolio.git
+git clone https://github.com/sheisjed/Nyasha.git
 cd jedidah-portfolio
 ```
 
@@ -245,7 +245,7 @@ npm install
        // ... more settings
      },
      social: {
-       github: 'WaithiegeniJedidah',
+       github: 'SheisJed',
        linkedin: 'https://linkedin.com/in/waithiegeni-jedidah/',
      },
      // ... more configuration
@@ -463,7 +463,7 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 👤 Author
 
 **Waithiegeni Jedidah**
-- GitHub: [@WaithiegeniJedidah](https://github.com/WaithiegeniJedidah)
+- GitHub: [@SheisJed](https://github.com/sheisjed)
 - LinkedIn: [Waithiegeni Jedidah](https://www.linkedin.com/in/waithiegeni-jedidah/)
 - Email: jedidahgithinji12@gmail.com
 
