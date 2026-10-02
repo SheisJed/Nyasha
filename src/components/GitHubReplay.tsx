@@ -1,9 +1,15 @@
-import { useState } from 'react'
+import { useEffect,useState } from 'react'
 import './GitHubReplay.css'
 
 export default function GitHubReplay() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
+  useEffect(() => {
+  const timer = setInterval(() => {
+  setCurrentSlide((prev) => (prev + 1) % 6)
+  }, 7000)
+  return () => clearInterval(timer)
+  }, [])
 
   const nextSlide = () => {
     if (isAnimating) return
@@ -176,12 +182,12 @@ export default function GitHubReplay() {
 
       <div className="replay-carousel">
         <button
-          className="carousel-nav prev"
+          className="carousel-nav prev work prev"
           onClick={prevSlide}
           aria-label="Previous slide"
           disabled={isAnimating}
         >
-          ◀
+        ← Earlier
         </button>
 
         <div className={`carousel-content ${isAnimating ? 'animating' : ''}`}>
@@ -189,16 +195,16 @@ export default function GitHubReplay() {
         </div>
 
         <button
-          className="carousel-nav next"
+          className="carousel-nav next work-next"
           onClick={nextSlide}
           aria-label="Next slide"
           disabled={isAnimating}
         >
-          ▶
+          Keep going →
         </button>
       </div>
-
-      <div className="carousel-dots">
+      <div className="slide-progress">Chapter {currentSlide + 1} of 6</div>
+      <div className="carousel-dots work-progress">
         {[0, 1, 2, 3, 4, 5].map((index) => (
           <button
             key={index}
