@@ -3,7 +3,6 @@ import { useLanguage } from '../contexts/LanguageContext'
 import './GitHubReplay.css'
 
 export default function GitHubReplay() {
-  const { t } = useLanguage()
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
 
