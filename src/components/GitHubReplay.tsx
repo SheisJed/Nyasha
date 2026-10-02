@@ -172,7 +172,7 @@ export default function GitHubReplay() {
     <section className="card work-experience">
       <div className="card-header">
         <div className="replay-header-content">
-          <span>{Work Experience}</span>
+          <span>Work Experience</span>
         </div>
       </div>
 
