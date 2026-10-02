@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { useLanguage } from '../contexts/LanguageContext'
 import './GitHubReplay.css'
 
 export default function GitHubReplay() {
