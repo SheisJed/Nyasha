@@ -12,6 +12,7 @@ import InfoModal from './components/InfoModal'
 import WalletModal from './components/WalletModal'
 import SteamNotification from './components/SteamNotification'
 import SignOutSatire from './components/SignOutSatire'
+import ContactSection from './components/ContactSection'
 import Footer from './components/Footer'
 import { LanguageProvider } from './contexts/LanguageContext'
 import { portfolioConfig } from './config/portfolio.config'
@@ -71,6 +72,7 @@ function App() {
               <TechnicalSkills />
               <ResumeViewer />
               <PersonalHobbies />
+              <ContactSection />
             </div>
           </div>
         </main>
