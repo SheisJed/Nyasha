@@ -105,7 +105,7 @@ export const translations: Record<Language, Translations> = {
     totalStars: 'Total Stars',
     achievements: 'Achievements',
     workStatus: 'Curious & open to what’s next',
-    profileDescription: "Meet Jedidah: a Nairobi-based industrial chemist, water treatment design engineer, writer, curious explorer, and enthusiastic overthinker of perfectly good questions. She likes understanding how things work, finding better ways to do them, and discovering what happens when curiosity is allowed to run slightly unsupervised. She is also very easily persuaded by good food.",
+    profileDescription:"Hi, I’m Jed. I’m an industrial chemist and water treatment design engineer based in Nairobi, Kenya. I spend a lot of my time thinking about water — how we treat it, how we reuse it, and how we can design better systems for the people who depend on them.\n\nI’m also a writer, a curious explorer, and someone who asks a lot of questions about how things work. When I’m not working, I’m probably reading something, writing something, planning somewhere I want to go, or deciding what I want to eat next.",
     recentActivity: 'Recent Activity',
     contributions: 'contributions in last 12 weeks',
     viewAllActivity: 'View all activity on GitHub',
