@@ -50,11 +50,6 @@ function AchievementsShowcase() {
             <div className="achievement-info">
               <div className="achievement-header">
                 <h4 className="achievement-title">{achievement.title}</h4>
-                {achievement.rarity && (
-                  <span className={`rarity-badge ${achievement.rarity}`}>
-                    {achievement.rarity.toUpperCase()}
-                  </span>
-                )}
               </div>
               <p className="achievement-description">{achievement.description}</p>
               {achievement.year && (
