@@ -13,6 +13,7 @@ import WalletModal from './components/WalletModal'
 import SteamNotification from './components/SteamNotification'
 import SignOutSatire from './components/SignOutSatire'
 import ContactSection from './components/ContactSection'
+import ChatWidget from './components/ChatWidget'
 import Footer from './components/Footer'
 import { LanguageProvider } from './contexts/LanguageContext'
 import { portfolioConfig } from './config/portfolio.config'
@@ -77,6 +78,7 @@ function App() {
           </div>
         </main>
         <Footer />
+        <ChatWidget />
         <AchievementModal
           isOpen={showAchievementModal}
           onClose={() => setShowAchievementModal(false)}
