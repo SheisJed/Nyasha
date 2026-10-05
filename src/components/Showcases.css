@@ -9,7 +9,7 @@
 }
 .achievements-showcase .card-header,
 .hobbies-showcase .card-header,
-.tech-stack .card-header
+.tech-stack .card-header,
 .resume-viewer .card-header {
   background: #ffecec;
   color: #ed85c7;
@@ -207,7 +207,7 @@
 .hobby-title {
   font-size: 15px;
   font-weight: bold;
-  color: var(--text-primary);
+  color: #ed85c7;
   line-height: 1.3;
 }
 
