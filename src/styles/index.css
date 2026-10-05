@@ -5,17 +5,17 @@
 }
 
 :root {
-  /* Steam-inspired color palette */
-  --bg-primary: #1b2838;
-  --bg-secondary: #171a21;
-  --bg-tertiary: #1e2329;
-  --accent-blue: #1a9fff;
-  --accent-blue-hover: #66c0f4;
-  --text-primary: #c7d5e0;
-  --text-secondary: #8f98a0;
-  --border-color: #2a475e;
-  --success: #5c7e10;
-  --highlight: #67c1f5;
+  /* Nyasha color palette  */
+  --bg-primary:  #ffecec;
+  --bg-secondary: #fff5f5;
+  --bg-tertiary: #ffffff;
+  --accent-blue: #ed85c7;
+  --accent-blue-hover: #d96caf;
+  --text-primary: #3d3035;
+  --text-secondary: #806f76;
+  --border-color: #edc9d8;
+  --success: #6f9b76;
+  --highlight: #ed85c7;
 }
 
 body.CosmicTheme {
@@ -32,8 +32,8 @@ body.CosmicTheme {
 }
 
 body {
-  font-family: "Motiva Sans", sans-serif;
-  background: #000;
+  font-family: Georgia, "Times New Roman", serif;
+  background: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
