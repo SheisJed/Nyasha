@@ -1,16 +1,11 @@
 import { useEffect, useState } from 'react'
 import Header from './components/Header'
 import ProfileOverview from './components/ProfileOverview'
-import FeaturedProjects from './components/FeaturedProjects'
 import GitHubReplay from './components/GitHubReplay'
 import AchievementsShowcase from './components/AchievementsShowcase'
 import TechnicalSkills from './components/TechnicalSkills'
 import ResumeViewer from './components/ResumeViewer'
 import PersonalHobbies from './components/PersonalHobbies'
-import ProfileStats from './components/ProfileStats'
-import StatsSection from './components/StatsSection'
-import ActivityFeed from './components/ActivityFeed'
-import SocialSection from './components/SocialSection'
 import AchievementToast from './components/AchievementToast'
 import AchievementModal from './components/AchievementModal'
 import InfoModal from './components/InfoModal'
@@ -71,19 +66,12 @@ function App() {
           <div className="content-wrapper">
             <div className="main-content">
               <ProfileOverview />
-              <FeaturedProjects />
               <GitHubReplay />
               <AchievementsShowcase />
               <TechnicalSkills />
               <ResumeViewer />
               <PersonalHobbies />
             </div>
-            <aside className="sidebar">
-              <ProfileStats />
-              <StatsSection />
-              <ActivityFeed />
-              <SocialSection />
-            </aside>
           </div>
         </main>
         <Footer />

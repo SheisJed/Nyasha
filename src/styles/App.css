@@ -33,7 +33,7 @@
 
 .content-wrapper {
   display: grid;
-  grid-template-columns: 1fr 340px;
+  grid-template-columns: 1fr;
   gap: 16px;
   margin-top: 0px;
   position: relative;
@@ -66,12 +66,6 @@ body.CosmicTheme .content-wrapper {
   flex-direction: column;
   gap: 20px;
   min-width: 0;
-}
-
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 }
 
 /* Card styling */
