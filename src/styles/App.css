@@ -130,7 +130,7 @@ body.CosmicTheme .highlight-pulse {
 .card-header {
   font-size: 14px;
   font-weight: 300;
-  color: #c7d5e0;
+  color: var(--text-primary);
   text-transform: uppercase;
   margin-bottom: 15px;
   padding-bottom: 10px;
