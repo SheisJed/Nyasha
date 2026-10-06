@@ -1,50 +1,47 @@
-import { useEffect } from 'react'
 import './Showcases.css'
 import { portfolioConfig } from '../config/portfolio.config'
-import { trackSectionVisit } from '../services/achievementService'
 import { useLanguage } from '../contexts/LanguageContext'
 
 function TechnicalSkills() {
   const { t } = useLanguage()
 
-  // Track section visits with Intersection Observer
-  useEffect(() => {
-    const skillsSection = document.getElementById('skills')
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting && entry.target.id === 'skills') {
-            trackSectionVisit('skills')
-          }
-        })
-      },
-      { threshold: 0.1 }
-    )
-
-    if (skillsSection) observer.observe(skillsSection)
-
-    return () => {
-      if (skillsSection) observer.unobserve(skillsSection)
-    }
-  }, [])
-
   return (
-    <section id="skills" className="showcase-card card tech-stack">
-      <div className="card-header">{t.technicalSkills}</div>
-      <div className="skills-showcase">
-        {Object.entries(portfolioConfig.technicalSkills).map(([category, skills]) => (
-          <div key={category} className="skill-category">
-            <h3 className="skill-category-title">{category}</h3>
-            <div className="skill-tags">
-              {skills.map((skill, index) => (
-                <span key={index} className="skill-tag">
-                  {skill}
+    <section id="skills" className="skills-section">
+      <div className="skills-heading">
+        <span className="skills-kicker">THE THINGS I GET TO PLAY WITH</span>
+
+        <h2>{t.technicalSkills}</h2>
+
+        <p>
+          A growing collection of things I know, use, and keep learning.
+        </p>
+      </div>
+
+      <div className="skills-list">
+        {Object.entries(portfolioConfig.technicalSkills).map(
+          ([category, skills], categoryIndex) => (
+            <div
+              key={category}
+              className={`skills-category skills-category-${categoryIndex + 1}`}
+            >
+              <div className="skills-category-heading">
+                <span className="skills-category-number">
+                  {String(categoryIndex + 1).padStart(2, '0')}
                 </span>
-              ))}
+
+                <h3>{category}</h3>
+              </div>
+
+              <div className="skills-items">
+                {skills.map((skill) => (
+                  <span key={skill} className="skill-item">
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          )
+        )}
       </div>
     </section>
   )

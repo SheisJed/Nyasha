@@ -1,176 +1,175 @@
-.resume-viewer {
-  overflow: hidden;
+.resume-section {
+  position: relative;
+  padding: 72px 8px 80px;
 }
 
-.resume-header-content {
+.resume-heading {
+  max-width: 900px;
+  margin: 0 auto 36px;
+}
+
+.resume-kicker {
+  display: block;
+  margin-bottom: 10px;
+  color: #ed85c7;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.resume-heading-row {
   display: flex;
+  align-items: flex-end;
   justify-content: space-between;
-  align-items: center;
-  width: 100%;
+  gap: 32px;
+}
+
+.resume-heading h2 {
+  margin: 0 0 10px;
+  color: #2f2529;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.resume-heading p {
+  max-width: 520px;
+  margin: 0;
+  color: var(--text-secondary);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.6;
 }
 
 .resume-actions {
   display: flex;
-  gap: 8px;
-  margin-left: auto;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
 }
 
 .resume-btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
-  border-radius: 3px;
-  font-size: 12px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  justify-content: center;
+  gap: 7px;
+  min-height: 36px;
+  padding: 8px 13px;
   border: 1px solid var(--border-color);
-  background: rgba(27, 40, 56, 0.6);
-  color: var(--text-primary);
+  border-radius: 3px;
+  background: transparent;
+  color: #3d3035;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .resume-btn:hover {
-  border-color: var(--accent-blue);
-  color: var(--accent-blue-hover);
-  transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(26, 159, 255, 0.2);
+  border-color: #ed85c7;
+  color: #ed85c7;
 }
 
 .download-btn {
-  background: var(--accent-blue);
-  border-color: var(--accent-blue);
-  color: white;
+  border-color: #ed85c7;
+  color: #ed85c7;
 }
 
 .download-btn:hover {
-  background: var(--accent-blue-hover);
-  border-color: var(--accent-blue-hover);
+  background: #ed85c7;
   color: white;
 }
 
-/* Cosmic Theme Buttons */
-body.CosmicTheme .download-btn {
-  background: var(--btn-background, rgb(90, 40, 92));
-  border-color: var(--btn-outline, rgba(140, 90, 142));
-}
-
-body.CosmicTheme .download-btn:hover {
-  background: var(--btn-background-hover, rgb(100, 50, 102));
-  box-shadow: 0 2px 8px rgba(248, 70, 180, 0.3);
-}
-
-body.CosmicTheme .resume-btn {
-  border-color: var(--btn-outline, rgba(140, 90, 142));
-}
-
-body.CosmicTheme .resume-btn:hover {
-  border-color: var(--btn-outline, rgba(140, 90, 142));
-  box-shadow: 0 2px 8px rgba(248, 70, 180, 0.2);
-}
-
 .resume-content {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  transition: height 0.3s ease;
-  overflow: hidden;
-}
-
-.resume-content.expanded {
-  height: 800px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .resume-preview {
   position: relative;
-  width: 100%;
-  height: 100%;
-  background: rgba(27, 40, 56, 0.3);
-  border-radius: 4px;
+  height: 620px;
   overflow: hidden;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  background: #fff5f5;
 }
 
 .resume-iframe {
+  display: block;
   width: 100%;
   height: 100%;
-  border: none;
+  border: 0;
   background: white;
 }
 
 .resume-overlay {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.resume-preview:hover .resume-overlay {
-  opacity: 1;
+  right: 18px;
+  bottom: 18px;
 }
 
 .view-full-btn {
-  padding: 10px 20px;
-  font-size: 14px;
-  background: var(--accent-blue);
-  border-color: var(--accent-blue);
-  color: white;
-  box-shadow: 0 4px 12px rgba(26, 159, 255, 0.3);
+  background: #ffecec;
+  border-color: #ed85c7;
+  color: #ed85c7;
 }
 
 .view-full-btn:hover {
-  background: var(--accent-blue-hover);
-  border-color: var(--accent-blue-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(26, 159, 255, 0.4);
+  background: #ed85c7;
+  color: white;
 }
 
-body.CosmicTheme .view-full-btn {
-  background: var(--btn-background, rgb(90, 40, 92));
-  border-color: var(--btn-outline, rgba(140, 90, 142));
-  box-shadow: 0 4px 12px rgba(248, 70, 180, 0.3);
+.resume-content:not(.expanded) .resume-preview {
+  height: 500px;
 }
 
-body.CosmicTheme .view-full-btn:hover {
-  background: var(--btn-background-hover, rgb(100, 50, 102));
-  box-shadow: 0 6px 16px rgba(248, 70, 180, 0.4);
-}
-
-@media (max-width: 968px) {
-  .resume-content {
-    height: 300px;
-  }
-
-  .resume-content.expanded {
-    height: 600px;
-  }
-
-  .resume-actions {
-    flex-wrap: wrap;
-  }
-
-  .resume-btn {
-    font-size: 11px;
-    padding: 5px 10px;
-  }
+.resume-content.expanded .resume-preview {
+  height: 820px;
 }
 
 @media (max-width: 640px) {
-  .resume-header-content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+  .resume-section {
+    padding: 48px 8px 56px;
+  }
+
+  .resume-heading {
+    margin-bottom: 28px;
+  }
+
+  .resume-heading-row {
+    display: block;
+  }
+
+  .resume-heading h2 {
+    font-size: 29px;
+  }
+
+  .resume-heading p {
+    font-size: 15px;
   }
 
   .resume-actions {
-    width: 100%;
-    justify-content: flex-start;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  .resume-preview,
+  .resume-content:not(.expanded) .resume-preview {
+    height: 480px;
+  }
+
+  .resume-content.expanded .resume-preview {
+    height: 680px;
+  }
+
+  .resume-overlay {
+    right: 10px;
+    bottom: 10px;
   }
 }

@@ -1,18 +1,13 @@
 import { useState, useEffect } from 'react'
 import './Header.css'
-import { getAchievementStats, onAchievementUnlock, trackLogoClick } from '../services/achievementService'
 import { useLanguage } from '../contexts/LanguageContext'
 import { Language } from '../services/languageService'
 
 interface HeaderProps {
-  onOpenAchievements: () => void
   onOpenInfo: () => void
-  onOpenWallet: () => void
 }
-
-function Header({ onOpenAchievements, onOpenInfo, onOpenWallet }: HeaderProps) {
+function Header({ onOpenInfo }: HeaderProps) {
   const [activeSection, setActiveSection] = useState('profile')
-  const [achievementStats, setAchievementStats] = useState(getAchievementStats())
   const [showUserDropdown, setShowUserDropdown] = useState(false)
   const [showLanguageSubmenu, setShowLanguageSubmenu] = useState(false)
   const { language, setLanguage, t } = useLanguage()
@@ -41,15 +36,6 @@ function Header({ onOpenAchievements, onOpenInfo, onOpenWallet }: HeaderProps) {
       }, 2000)
     }
   }
-
-  // Update achievement stats when achievements are unlocked
-  useEffect(() => {
-    const unsubscribe = onAchievementUnlock(() => {
-      setAchievementStats(getAchievementStats())
-    })
-
-    return unsubscribe
-  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -87,10 +73,6 @@ function Header({ onOpenAchievements, onOpenInfo, onOpenWallet }: HeaderProps) {
 
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
-
-  const handleLogoClick = () => {
-    trackLogoClick()
-  }
 
   const handleLanguageSelect = (lang: Language) => {
     console.log('Language selected:', lang)
@@ -145,20 +127,6 @@ function Header({ onOpenAchievements, onOpenInfo, onOpenWallet }: HeaderProps) {
               {t.info}
             </button>
 
-            <button
-              className="achievement-badge-btn-topbar"
-              onClick={onOpenAchievements}
-              title="View Achievements"
-            >
-              <span className="achievement-icon-topbar">🏆</span>
-              <span className="achievement-count-topbar">
-                {achievementStats.unlockedCount}/{achievementStats.totalCount}
-              </span>
-              {achievementStats.unlockedCount > 0 && achievementStats.unlockedCount < achievementStats.totalCount && (
-                <span className="achievement-badge-pulse-topbar"></span>
-              )}
-            </button>
-
             <div style={{ position: 'relative' }}>
               <button
                 className="user-dropdown-btn"
@@ -176,10 +144,6 @@ function Header({ onOpenAchievements, onOpenInfo, onOpenWallet }: HeaderProps) {
                 <div className="user-dropdown-menu">
                   <button className="dropdown-item">
                     Account details: <span className="account-name">WaithiegeniJedidah</span>
-                  </button>
-
-                  <button className="dropdown-item" onClick={onOpenWallet}>
-                    View my wallet <span className="account-name">₱0.00</span>
                   </button>
 
                   <div

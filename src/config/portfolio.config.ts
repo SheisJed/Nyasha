@@ -50,6 +50,13 @@ export const portfolioConfig: PortfolioConfig = {
       unlocked: true,
       rarity: 'common',
     },
+    {
+  id: 2,
+  title: 'Self-Education',
+  description: 'Always learning. Always asking better questions.',
+  icon: '🔎',
+  year: 'Continuous',
+    },
   ],
 
   // Personal Hobbies & Interests
