@@ -12,7 +12,6 @@ import ContactSection from './components/ContactSection'
 import ChatWidget from './components/ChatWidget'
 import Footer from './components/Footer'
 import { LanguageProvider } from './contexts/LanguageContext'
-import { portfolioConfig } from './config/portfolio.config'
 import './styles/App.css'
 
 function App() {

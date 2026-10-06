@@ -55,7 +55,7 @@ export const portfolioConfig: PortfolioConfig = {
   title: 'Self-Education',
   description: 'Always learning. Always asking better questions.',
   icon: '🔎',
-  year: 'Continuous',
+  year: '2026',
     },
   ],
 

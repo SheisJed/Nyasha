@@ -238,7 +238,7 @@ function Header({ onOpenInfo }: HeaderProps) {
       <div className="header-main">
         <div className="header-container">
           <div className="header-left">
-            <div className="logo" onClick={handleLogoClick}>
+            <div className="logo" onClick>
               <img src="/zyon-z-logo.png" alt="Zyonify Logo" className="logo-img" />
               <span className="logo-text">{t.portfolioTitle}</span>
             </div>
