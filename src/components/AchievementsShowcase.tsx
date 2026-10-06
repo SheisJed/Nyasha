@@ -51,4 +51,3 @@ function AchievementsShowcase() {
 }
 
 export default AchievementsShowcase
-```
