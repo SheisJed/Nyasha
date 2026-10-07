@@ -5,7 +5,7 @@
 
 .experience-heading {
   max-width: 760px;
-  margin: 0 auto 56px;
+  margin: 0 auto 64px;
   text-align: center;
 }
 
@@ -38,15 +38,16 @@
   line-height: 1.6;
 }
 
-.experience-path {
+/* Experience Tree */
+
+.experience-tree {
   position: relative;
-  max-width: 900px;
-  min-height: 430px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 20px 0;
 }
 
-.experience-line {
+.experience-tree-line {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -56,20 +57,85 @@
   transform: translateX(-50%);
 }
 
-.experience-content {
+.experience-branch {
   position: relative;
-  z-index: 1;
   width: 50%;
-  margin-left: 50%;
-  padding-left: 52px;
 }
 
-.experience-slide {
-  position: relative;
-  max-width: 380px;
-  padding: 4px 0 20px;
-  animation: experienceFade 0.35s ease;
+.experience-branch-left {
+  padding-right: 56px;
 }
+
+.experience-branch-right {
+  margin-left: 50%;
+  padding-left: 56px;
+}
+
+.experience-entry {
+  position: relative;
+  padding: 0 0 56px;
+}
+
+.experience-entry:last-child {
+  padding-bottom: 0;
+}
+
+.experience-entry-content {
+  max-width: 440px;
+}
+
+.experience-entry-left .experience-entry-content {
+  margin-left: auto;
+  text-align: right;
+}
+
+.experience-entry-right .experience-entry-content {
+  margin-right: auto;
+  text-align: left;
+}
+
+/* Connecting branches to the tree */
+
+.experience-entry-left::after,
+.experience-entry-right::after {
+  content: '';
+  position: absolute;
+  top: 7px;
+  width: 56px;
+  height: 1px;
+  background: var(--border-color);
+}
+
+.experience-entry-left::after {
+  right: 0;
+}
+
+.experience-entry-right::after {
+  left: 0;
+}
+
+/* Tree Nodes */
+
+.experience-node {
+  position: absolute;
+  top: 2px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--accent-blue);
+  border-radius: 50%;
+  background: var(--bg-primary);
+  z-index: 2;
+}
+
+.experience-entry-left .experience-node {
+  right: -5px;
+}
+
+.experience-entry-right .experience-node {
+  left: -5px;
+}
+
+/* Entry Content */
 
 .experience-number {
   display: block;
@@ -88,7 +154,7 @@
   line-height: 1;
 }
 
-.experience-slide h3 {
+.experience-entry h3 {
   margin: 0 0 12px;
   color: #2f2529;
   font-family: Georgia, "Times New Roman", serif;
@@ -132,111 +198,36 @@
 .experience-highlights li {
   position: relative;
   margin-bottom: 10px;
-  padding-left: 18px;
   color: var(--text-secondary);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 14px;
   line-height: 1.65;
 }
 
+.experience-entry-left .experience-highlights li {
+  padding-right: 18px;
+}
+
+.experience-entry-right .experience-highlights li {
+  padding-left: 18px;
+}
+
 .experience-highlights li::before {
   content: '•';
   position: absolute;
-  left: 0;
   color: #ed85c7;
   font-size: 16px;
 }
 
-.experience-controls {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 900px;
-  margin: 20px auto 0;
-  padding-top: 24px;
-  border-top: 1px solid var(--border-color);
+.experience-entry-left .experience-highlights li::before {
+  right: 0;
 }
 
-.experience-nav {
-  border: 0;
-  padding: 6px 0;
-  background: transparent;
-  color: #ed85c7;
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: transform 0.2s ease, color 0.2s ease;
+.experience-entry-right .experience-highlights li::before {
+  left: 0;
 }
 
-.experience-nav:hover:not(:disabled) {
-  color: #d96caf;
-  transform: translateX(2px);
-}
-
-.experience-nav:first-child:hover:not(:disabled) {
-  transform: translateX(-2px);
-}
-
-.experience-nav:disabled {
-  opacity: 0.45;
-  cursor: default;
-}
-
-.experience-progress {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.experience-progress > span {
-  color: var(--text-secondary);
-  font-family: Arial, sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-}
-
-.experience-dots {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.experience-dot {
-  width: 7px;
-  height: 7px;
-  padding: 0;
-  border: 1px solid #ed85c7;
-  border-radius: 50%;
-  background: transparent;
-  cursor: pointer;
-  transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.experience-dot.active {
-  background: #ed85c7;
-  transform: scale(1.25);
-}
-
-.experience-dot:hover:not(:disabled) {
-  transform: scale(1.2);
-}
-
-.experience-dot:disabled {
-  cursor: default;
-}
-
-@keyframes experienceFade {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+/* Mobile */
 
 @media (max-width: 640px) {
   .work-experience {
@@ -255,48 +246,60 @@
     font-size: 15px;
   }
 
-  .experience-path {
-    min-height: 0;
+  .experience-tree {
     padding: 12px 0 12px 28px;
   }
 
-  .experience-line {
+  .experience-tree-line {
     left: 8px;
     transform: none;
   }
 
-  .experience-content {
+  .experience-branch,
+  .experience-branch-right {
     width: 100%;
     margin-left: 0;
     padding-left: 28px;
+    padding-right: 0;
   }
 
-  .experience-content::before {
-    content: '';
-    position: absolute;
-    top: 20px;
-    left: 0;
-    width: 28px;
-    height: 1px;
-    background: var(--border-color);
+  .experience-branch-right {
+    margin-top: 56px;
   }
 
-  .experience-slide {
+  .experience-entry-left .experience-entry-content,
+  .experience-entry-right .experience-entry-content {
     max-width: none;
+    margin: 0;
+    text-align: left;
   }
 
-  .experience-slide h3 {
+  .experience-entry-left::after,
+  .experience-entry-right::after {
+    left: 0;
+    right: auto;
+    width: 28px;
+  }
+
+  .experience-entry-left .experience-node,
+  .experience-entry-right .experience-node {
+    left: -5px;
+    right: auto;
+  }
+
+  .experience-entry-left .experience-highlights li,
+  .experience-entry-right .experience-highlights li {
+    padding-left: 18px;
+    padding-right: 0;
+  }
+
+  .experience-entry-left .experience-highlights li::before,
+  .experience-entry-right .experience-highlights li::before {
+    left: 0;
+    right: auto;
+  }
+
+  .experience-entry h3 {
     font-size: 23px;
-  }
-
-  .experience-controls {
-    flex-wrap: wrap;
-    gap: 18px;
-  }
-
-  .experience-progress {
-    order: 3;
-    width: 100%;
-    justify-content: center;
   }
 }

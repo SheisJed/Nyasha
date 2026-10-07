@@ -39,7 +39,7 @@ function Header({ onOpenInfo }: HeaderProps) {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['profile', 'projects', 'contact', 'skills']
+      const sections = ['profile', 'experience', 'education', 'skills', 'contact']
 
       // Get the center of the viewport for more accurate detection
       const scrollPosition = window.scrollY + window.innerHeight / 3
@@ -239,39 +239,49 @@ function Header({ onOpenInfo }: HeaderProps) {
         <div className="header-container">
           <div className="header-left">
             <div className="logo">
-              <img src="/zyon-z-logo.png" alt="Zyonify Logo" className="logo-img" />
               <span className="logo-text">{t.portfolioTitle}</span>
             </div>
             <nav className="nav">
-              <a
-                href="#profile"
-                className={`nav-link ${activeSection === 'profile' ? 'active' : ''}`}
-                onClick={(e) => scrollToSection(e, 'profile')}
-              >
-                {t.profile}
-              </a>
-              <a
-                href="#projects"
-                className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}
-                onClick={(e) => scrollToSection(e, 'projects')}
-              >
-                {t.projects}
-              </a>
-              <a
-                href="#contact"
-                className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}
-                onClick={(e) => scrollToSection(e, 'contact')}
-              >
-                {t.contact}
-              </a>
-              <a
-                href="#skills"
-                className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`}
-                onClick={(e) => scrollToSection(e, 'skills')}
-              >
-                {t.skills}
-              </a>
-            </nav>
+             <a
+             href="#profile"
+           className={`nav-link ${activeSection === 'profile' ? 'active' : ''}`}
+           onClick={(e) => scrollToSection(e, 'profile')}
+  >
+    {t.profile}
+  </a>
+
+  <a
+    href="#experience"
+    className={`nav-link ${activeSection === 'experience' ? 'active' : ''}`}
+    onClick={(e) => scrollToSection(e, 'experience')}
+  >
+    Experience
+  </a>
+
+  <a
+    href="#education"
+    className={`nav-link ${activeSection === 'education' ? 'active' : ''}`}
+    onClick={(e) => scrollToSection(e, 'education')}
+  >
+    Education
+  </a>
+
+  <a
+    href="#skills"
+    className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`}
+    onClick={(e) => scrollToSection(e, 'skills')}
+  >
+    {t.skills}
+  </a>
+
+  <a
+    href="#contact"
+    className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}
+    onClick={(e) => scrollToSection(e, 'contact')}
+  >
+    {t.contact}
+  </a>
+</nav>
           </div>
           <div className="header-right">
           </div>
