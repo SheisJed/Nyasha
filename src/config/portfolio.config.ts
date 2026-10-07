@@ -18,7 +18,7 @@ export const portfolioConfig: PortfolioConfig = {
     phone: '(+254) 712 293 972',
     birthday: undefined, 
     banner: '/profile-background.jpg',
-    resumeUrl: '/resume.pdf', // Add your resume PDF to the public folder
+    resumeUrl: '/Nyasha/resume.pdf',
     avatar: '/profile-avatar.gif',
   },
 
