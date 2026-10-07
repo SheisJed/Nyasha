@@ -50,43 +50,9 @@ export interface Translations {
   lockedTab: string
 
   // Footer
-  footerQuickLinks: string
-  footerAbout: string
   footerTagline: string
   footerCopyright: string
   footerMadeWith: string
-
-  // GitHub Replay
-  replayTitle: string
-  replayLoading: string
-  replayError: string
-  replayOverviewTitle: string
-  replayOverviewCommits: string
-  replayOverviewMostActiveMonth: string
-  replayOverviewLongestStreak: string
-  replayOverviewDaysCoded: string
-  replayLanguageTitle: string
-  replayLanguageSubtitle: string
-  replayImpactTitle: string
-  replayImpactStarsEarned: string
-  replayImpactForks: string
-  replayImpactReposCreated: string
-  replayImpactTopRepo: string
-  replayProductivityTitle: string
-  replayProductivityMostProductiveDay: string
-  replayProductivityPeakHour: string
-  replayProductivityNightOwl: string
-  replayProductivityWeekendWarrior: string
-  replayCollaborationTitle: string
-  replayCollaborationPrsCreated: string
-  replayCollaborationPrsMerged: string
-  replayCollaborationIssuesClosed: string
-  replayCollaborationTopCollabRepo: string
-  replayGrowthTitle: string
-  replayGrowthFollowers: string
-  replayGrowthTotalRepos: string
-  replayGrowthContributionGraph: string
-  replayGrowthFooter: string
 }
 
 export const translations: Record<Language, Translations> = {
@@ -105,7 +71,8 @@ export const translations: Record<Language, Translations> = {
     totalStars: 'Total Stars',
     achievements: 'Achievements',
     workStatus: 'Curious & open to what’s next',
-    profileDescription:"Hi, I’m Jed. I’m an industrial chemist and water treatment design engineer based in Nairobi, Kenya. I spend a lot of my time thinking about water — how we treat it, how we reuse it, and how we can design better systems for the people who depend on them.\n\nI’m also a writer, a curious explorer, and someone who asks a lot of questions about how things work. When I’m not working, I’m probably reading something, writing something, planning somewhere I want to go, or deciding what I want to eat next.",
+    profileDescription: "Hi, I’m Jed. I’m an industrial chemist and water treatment design engineer based in Nairobi, Kenya. I spend a lot of my time thinking about water — how we treat it, how we reuse it, and how we can design better systems for the people who depend on them.\n\nI’m also a writer, a curious explorer, and someone who asks a lot of questions about how things work. When I’m not working, I’m probably reading something, writing something, planning somewhere I want to go, or deciding what I want to eat next.",
+
     recentActivity: 'Recent Activity',
     contributions: 'contributions in last 12 weeks',
     viewAllActivity: 'View all activity on GitHub',
@@ -131,42 +98,9 @@ export const translations: Record<Language, Translations> = {
     unlockedTab: 'Unlocked',
     lockedTab: 'Locked',
 
-    footerQuickLinks: 'Click Around & Find Out 👀',
-    footerAbout: 'Okay, But Who Is She?',
     footerTagline: 'A small corner of the internet where water, words & curiosity collide',
     footerCopyright: '©2026 Waithiegeni Jedidah. Somehow, this became a website.',
     footerMadeWith: 'Made with curiosity, questionable amounts of overthinking, and questionable decisions',
-
-    replayTitle: 'Curiosity Replay',
-    replayLoading: 'Loading your replay...',
-    replayError: 'Unable to load replay stats',
-    replayOverviewTitle: 'Your Year of Curiosity',
-    replayOverviewCommits: 'Total Commits',
-    replayOverviewMostActiveMonth: 'Most Active Month',
-    replayOverviewLongestStreak: 'Longest Streak',
-    replayOverviewDaysCoded: 'Days Coded',
-    replayLanguageTitle: 'Language Mastery',
-    replayLanguageSubtitle: "You're a {language} wizard!",
-    replayImpactTitle: 'Your Impact',
-    replayImpactStarsEarned: 'Stars Earned',
-    replayImpactForks: 'Forks Gained',
-    replayImpactReposCreated: 'Repos Created',
-    replayImpactTopRepo: 'Top Starred Repository',
-    replayProductivityTitle: 'Productivity Patterns',
-    replayProductivityMostProductiveDay: 'Most Productive Day',
-    replayProductivityPeakHour: 'Peak Coding Hour',
-    replayProductivityNightOwl: 'Night Owl',
-    replayProductivityWeekendWarrior: 'Weekend Warrior',
-    replayCollaborationTitle: 'Collaboration Stats',
-    replayCollaborationPrsCreated: 'PRs Created',
-    replayCollaborationPrsMerged: 'PRs Merged',
-    replayCollaborationIssuesClosed: 'Issues Closed',
-    replayCollaborationTopCollabRepo: 'Most Collaborated',
-    replayGrowthTitle: 'Your Growth Story',
-    replayGrowthFollowers: 'Followers',
-    replayGrowthTotalRepos: 'Total Repositories',
-    replayGrowthContributionGraph: 'Contribution Heatmap',
-    replayGrowthFooter: 'That was your {year} in code!'
   },
 
   sarcasm: {
@@ -211,42 +145,9 @@ export const translations: Record<Language, Translations> = {
     unlockedTab: 'My Sad Victories',
     lockedTab: 'Future Disappointments',
 
-    footerQuickLinks: 'Click Around & Find Out 👀',
-    footerAbout: 'Okay, But Who Is She?',
     footerTagline: 'A small corner of the internet where water, words & curiosity collide',
     footerCopyright: '© 2026 Waithiegeni Jedidah. All rights reserved (somehow).',
     footerMadeWith: 'Built with curiosity, overthinking, and questionable decisions',
-
-    replayTitle: 'GitHub Replay (Your Annual Highlight Reel)',
-    replayLoading: 'Pretending to compile your achievements...',
-    replayError: 'Failed to load your mediocre stats',
-    replayOverviewTitle: 'Your Year in "Productivity"',
-    replayOverviewCommits: 'Code Submissions',
-    replayOverviewMostActiveMonth: 'Least Lazy Month',
-    replayOverviewLongestStreak: 'Lucky Streak',
-    replayOverviewDaysCoded: 'Days Pretending to Work',
-    replayLanguageTitle: 'Language "Expertise"',
-    replayLanguageSubtitle: "You copy-pasted {language} a lot!",
-    replayImpactTitle: 'Your "Impact"',
-    replayImpactStarsEarned: 'Pity Stars Collected',
-    replayImpactForks: 'Desperate Forks',
-    replayImpactReposCreated: 'Repos Abandoned',
-    replayImpactTopRepo: 'Least Embarrassing Repo',
-    replayProductivityTitle: 'Procrastination Patterns',
-    replayProductivityMostProductiveDay: 'Least Unproductive Day',
-    replayProductivityPeakHour: 'Deadline Panic Hour',
-    replayProductivityNightOwl: 'Insomniac Coder',
-    replayProductivityWeekendWarrior: 'No-Life Developer',
-    replayCollaborationTitle: 'Social Coding (Kinda)',
-    replayCollaborationPrsCreated: 'PRs Thrown Into Void',
-    replayCollaborationPrsMerged: 'PRs Actually Accepted',
-    replayCollaborationIssuesClosed: 'Problems Swept Under Rug',
-    replayCollaborationTopCollabRepo: 'Most Bothered Project',
-    replayGrowthTitle: 'Your "Progress"',
-    replayGrowthFollowers: 'Random Followers',
-    replayGrowthTotalRepos: 'Code Graveyards',
-    replayGrowthContributionGraph: 'Green Squares of Shame',
-    replayGrowthFooter: 'That was your {year} in "achievement" (sure...)'
   },
 
   binary: {
@@ -269,10 +170,10 @@ export const translations: Record<Language, Translations> = {
     recentActivity: '01000001 01100011 01110100',
     contributions: '01100011 01101111 01101110 01110100',
     viewAllActivity: '01110110 01101001 01100101 01110111',
-    featuredProjects: '01000110 01100101 01100001 01110100',
+    featuredProjects: '01000110 01100101 01110100',
     achievementShowcase: '01000001 01100011 01101000 01101001',
     personalHobbies: '01001000 01101111 01100010 01100010',
-    technicalSkills: '01010100 01100101 01100011 01101000',
+    technicalSkills: '01010100 01100101 01100001 01101000',
     connectWithMe: '01000011 01101111 01101110 01101110',
     githubFollowers: '01000111 01101001 01110100 01001000',
 
@@ -291,42 +192,9 @@ export const translations: Record<Language, Translations> = {
     unlockedTab: '01010101 01101110 01101100',
     lockedTab: '01001100 01101111 01100011 01101011',
 
-    footerQuickLinks: '01010001 01110101 01101001 01100011 01101011',
-    footerAbout: '01000001 01100010 01101111 01110101 01110100',
     footerTagline: '01010011 01110100 01100101 01100001 01101101...',
     footerCopyright: '00101110 00101110 00101110',
     footerMadeWith: '01001101 01100001 01100100 01100101',
-
-    replayTitle: '01010010 01100101 01110000 01101100 01100001 01111001',
-    replayLoading: '01001100 01101111 01100001 01100100...',
-    replayError: '01000101 01110010 01110010 01101111 01110010',
-    replayOverviewTitle: '01011001 01100101 01100001 01110010',
-    replayOverviewCommits: '01000011 01101111 01101101 01101101',
-    replayOverviewMostActiveMonth: '01001101 01101111 01101110 01110100 01101000',
-    replayOverviewLongestStreak: '01010011 01110100 01110010 01100101 01100001 01101011',
-    replayOverviewDaysCoded: '01000100 01100001 01111001 01110011',
-    replayLanguageTitle: '01001100 01100001 01101110 01100111',
-    replayLanguageSubtitle: '01010111 01101001 01111010 01100001 01110010 01100100',
-    replayImpactTitle: '01001001 01101101 01110000 01100001 01100011 01110100',
-    replayImpactStarsEarned: '01010011 01110100 01100001 01110010 01110011',
-    replayImpactForks: '01000110 01101111 01110010 01101011 01110011',
-    replayImpactReposCreated: '01010010 01100101 01110000 01101111 01110011',
-    replayImpactTopRepo: '01010100 01101111 01110000',
-    replayProductivityTitle: '01010000 01110010 01101111 01100100',
-    replayProductivityMostProductiveDay: '01000100 01100001 01111001',
-    replayProductivityPeakHour: '01001000 01101111 01110101 01110010',
-    replayProductivityNightOwl: '01001110 01101001 01100111 01101000 01110100',
-    replayProductivityWeekendWarrior: '01010111 01100101 01100101 01101011 01100101 01101110 01100100',
-    replayCollaborationTitle: '01000011 01101111 01101100 01101100 01100001 01100010',
-    replayCollaborationPrsCreated: '01010000 01010010 01110011',
-    replayCollaborationPrsMerged: '01001101 01100101 01110010 01100111 01100101 01100100',
-    replayCollaborationIssuesClosed: '01001001 01110011 01110011 01110101 01100101 01110011',
-    replayCollaborationTopCollabRepo: '01010100 01101111 01110000 01010010 01100101 01110000 01101111',
-    replayGrowthTitle: '01000111 01110010 01101111 01110111 01110100 01101000',
-    replayGrowthFollowers: '01000110 01101111 01101100 01101100 01101111 01110111',
-    replayGrowthTotalRepos: '01010010 01100101 01110000 01101111 01110011',
-    replayGrowthContributionGraph: '01001000 01100101 01100001 01110100 01101101 01100001 01110000',
-    replayGrowthFooter: '01011001 01100101 01100001 01110010 00100001'
   },
 
   emoji: {
@@ -371,42 +239,9 @@ export const translations: Record<Language, Translations> = {
     unlockedTab: '✅',
     lockedTab: '🔒',
 
-    footerQuickLinks: '⚡ 🔗',
-    footerAbout: 'ℹ️ 👨‍💻',
     footerTagline: '🎮 💻 🎨 ⭐',
     footerCopyright: '© 2025 👨‍💻 ✨',
     footerMadeWith: '❤️ 🎮',
-
-    replayTitle: '🎮 🔄 📊',
-    replayLoading: '⏳ 📊...',
-    replayError: '❌ 📊',
-    replayOverviewTitle: '📅 💻 🎯',
-    replayOverviewCommits: '📝 ✅',
-    replayOverviewMostActiveMonth: '🔥 📅',
-    replayOverviewLongestStreak: '🏃 🔥',
-    replayOverviewDaysCoded: '📆 💻',
-    replayLanguageTitle: '💻 🎯',
-    replayLanguageSubtitle: '🧙 {language} ⭐',
-    replayImpactTitle: '💥 📊',
-    replayImpactStarsEarned: '⭐ 📈',
-    replayImpactForks: '🍴 📈',
-    replayImpactReposCreated: '📦 ➕',
-    replayImpactTopRepo: '🏆 📦',
-    replayProductivityTitle: '⏰ 📊',
-    replayProductivityMostProductiveDay: '🔥 📅',
-    replayProductivityPeakHour: '⏰ 🎯',
-    replayProductivityNightOwl: '🌙 🦉',
-    replayProductivityWeekendWarrior: '🏖️ ⚔️',
-    replayCollaborationTitle: '🤝 📊',
-    replayCollaborationPrsCreated: '🔀 ➕',
-    replayCollaborationPrsMerged: '✅ 🔀',
-    replayCollaborationIssuesClosed: '✅ 🐛',
-    replayCollaborationTopCollabRepo: '🏆 🤝',
-    replayGrowthTitle: '📈 🌟',
-    replayGrowthFollowers: '👥 📈',
-    replayGrowthTotalRepos: '📦 📊',
-    replayGrowthContributionGraph: '🟩 📊',
-    replayGrowthFooter: '🎉 {year} 💻 ✨'
   },
 
   lorem: {
@@ -451,42 +286,9 @@ export const translations: Record<Language, Translations> = {
     unlockedTab: 'Apertus',
     lockedTab: 'Clausus',
 
-    footerQuickLinks: 'Celeritas Nexus',
-    footerAbout: 'De Nobis',
     footerTagline: 'Lorem ipsum dolor sit amet portfolio',
     footerCopyright: '© MMXXVI Waithiegeni Jedidah. Omnia iura reservata.',
     footerMadeWith: 'Factum cum Steam inspiratio',
-
-    replayTitle: 'Lorem Replay Ipsum',
-    replayLoading: 'Lorem ipsum expectans...',
-    replayError: 'Error lorem ipsum dolor',
-    replayOverviewTitle: 'Annus In Codex',
-    replayOverviewCommits: 'Summa Commits',
-    replayOverviewMostActiveMonth: 'Mensis Activus',
-    replayOverviewLongestStreak: 'Longissima Series',
-    replayOverviewDaysCoded: 'Dies Codex',
-    replayLanguageTitle: 'Lingua Dominatio',
-    replayLanguageSubtitle: 'Tu es {language} magister!',
-    replayImpactTitle: 'Tuum Impactus',
-    replayImpactStarsEarned: 'Stellae Acquisitae',
-    replayImpactForks: 'Furcae Acquisitae',
-    replayImpactReposCreated: 'Repositoria Creata',
-    replayImpactTopRepo: 'Summus Repositorium',
-    replayProductivityTitle: 'Productivitas Patterns',
-    replayProductivityMostProductiveDay: 'Dies Productivissimus',
-    replayProductivityPeakHour: 'Hora Culminis',
-    replayProductivityNightOwl: 'Noctis Codificator',
-    replayProductivityWeekendWarrior: 'Bellator Sabbati',
-    replayCollaborationTitle: 'Collaboratio Statisticae',
-    replayCollaborationPrsCreated: 'PR Creatae',
-    replayCollaborationPrsMerged: 'PR Fusae',
-    replayCollaborationIssuesClosed: 'Quaestiones Clausae',
-    replayCollaborationTopCollabRepo: 'Maxime Collaboratum',
-    replayGrowthTitle: 'Historia Crescentiae',
-    replayGrowthFollowers: 'Sequentes',
-    replayGrowthTotalRepos: 'Summa Repositoria',
-    replayGrowthContributionGraph: 'Contributio Mappa',
-    replayGrowthFooter: 'Ille fuit tuus {year} in codice!'
   },
 
   youngStunnah: {
@@ -531,43 +333,10 @@ export const translations: Record<Language, Translations> = {
     unlockedTab: 'Nakuha Na',
     lockedTab: 'Di Pa Makuha',
 
-    footerQuickLinks: 'Mabilis na Links',
-    footerAbout: 'Tungkol',
     footerTagline: 'Steam-inspired portfolio na pang-flex ng projects at achievements',
     footerCopyright: '© 2026 Waithiegeni Jedidah. All rights reserved (somehow).',
     footerMadeWith: 'Gawa gamit ang Steam vibes',
-
-    replayTitle: 'GitHub Replay Ko',
-    replayLoading: 'Sandali, hinihimas yung data...',
-    replayError: 'Ayaw mag-load ng stats bro',
-    replayOverviewTitle: 'Taon Mo sa Pag-code',
-    replayOverviewCommits: 'Kabuuang Commits',
-    replayOverviewMostActiveMonth: 'Pinaka-Active na Buwan',
-    replayOverviewLongestStreak: 'Pinaka-Mahabang Streak',
-    replayOverviewDaysCoded: 'Araw na Nag-code',
-    replayLanguageTitle: 'Language Expert Ka',
-    replayLanguageSubtitle: 'Lodi ka talaga sa {language}!',
-    replayImpactTitle: 'Impact Mo Pre',
-    replayImpactStarsEarned: 'Stars na Nakuha',
-    replayImpactForks: 'Forks na Nakuha',
-    replayImpactReposCreated: 'Repos na Ginawa',
-    replayImpactTopRepo: 'Top Starred Repo Mo',
-    replayProductivityTitle: 'Productivity Habits',
-    replayProductivityMostProductiveDay: 'Pinaka-Productive Day',
-    replayProductivityPeakHour: 'Peak Coding Oras',
-    replayProductivityNightOwl: 'Puyat King',
-    replayProductivityWeekendWarrior: 'Weekend Grinder',
-    replayCollaborationTitle: 'Collab Stats',
-    replayCollaborationPrsCreated: 'PRs Ginawa',
-    replayCollaborationPrsMerged: 'PRs Na-merge',
-    replayCollaborationIssuesClosed: 'Issues Na-close',
-    replayCollaborationTopCollabRepo: 'Pinaka-Collab Repo',
-    replayGrowthTitle: 'Growth Story Mo',
-    replayGrowthFollowers: 'Mga Tropa',
-    replayGrowthTotalRepos: 'Total Repos',
-    replayGrowthContributionGraph: 'Contribution Heatmap',
-    replayGrowthFooter: 'Yan ang {year} mo sa pag-code, lodi!'
-  }
+  },
 }
 
 export function getTranslation(language: Language): Translations {

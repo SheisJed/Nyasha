@@ -1,65 +1,65 @@
 import './GitHubReplay.css'
 
 export default function GitHubReplay() {
-  const workExperience = [
-    {
-      number: '01',
-      emoji: '🔬',
-      title: 'Where It Started',
-      role: 'Laboratory Technician — Attaché',
-      company: 'State Department of Roads, Ministry of Infrastructure',
-      dates: 'Jan 2023 – Apr 2023',
-      highlights: [
-        'Conducted laboratory analysis of water, soil, cement, and construction materials.',
-        'Operated analytical instruments including AAS and Flame Photometry.',
-        'Prepared technical laboratory reports supporting engineering and construction decisions.',
-        'Maintained laboratory quality assurance and safety standards.',
-      ],
-    },
-    {
-      number: '02',
-      emoji: '🏭',
-      title: 'Chemistry Meets Industry',
-      role: 'Quality Control Analyst — Assistant',
-      company: 'Devki Group of Companies',
-      dates: 'Feb 2026 – Apr 2026',
-      highlights: [
-        'Performed in-process and final quality inspections across steel manufacturing operations.',
-        'Conducted dimensional inspection and tensile strength testing to verify product quality.',
-        'Used Vernier calipers, micrometers, and UTS testing equipment for precision measurements.',
-        'Identified non-conforming products and maintained quality inspection records.',
-      ],
-    },
-    {
-      number: '03',
-      emoji: '📞',
-      title: 'Learning People',
-      role: 'Customer Service Representative',
-      company: 'CCI Global',
-      dates: 'Oct 2024 – May 2026',
-      highlights: [
-        'Resolved customer concerns through active listening, clear communication, and practical problem-solving.',
-        'Balanced empathy with accurate policy interpretation during complex service interactions.',
-        'Investigated account issues and guided customers toward appropriate solutions.',
-        'Collaborated with cross-functional teams to support timely issue resolution.',
-      ],
-    },
-    {
-      number: '04',
-      emoji: '🌊',
-      title: 'Coming Back to Water',
-      role: 'Water Treatment Design Engineer',
-      company: 'Kridha Limited',
-      dates: 'May 2026 – Present',
-      highlights: [
-        'Design and size water treatment systems based on client requirements and raw water analysis.',
-        'Contribute to the design of reverse osmosis, softening, filtration, and wastewater treatment systems.',
-        'Interpret water quality analyses to recommend appropriate treatment solutions.',
-        'Prepare technical proposals, quotations, and project documentation.',
-        'Collaborate with technical and sales teams to develop customer-specific plant designs.',
-      ],
-    },
-  ]
+const workExperience = [
+  {
+    number: '01',
+    emoji: '🔬',
+    title: 'Where It Started',
+    role: 'Laboratory Technician — Attaché',
+    company: 'State Department of Roads, Ministry of Infrastructure',
+    dates: 'Jan 2023 – Apr 2023',
+    highlights: [
+      'Conducted laboratory analysis of water, soil, cement, and construction materials.',
+      'Operated analytical instruments including AAS and Flame Photometry.',
+      'Prepared technical laboratory reports supporting engineering and construction decisions.',
+      'Maintained laboratory quality assurance and safety standards.',
+    ],
+  },
+  {
+    number: '02',
+    emoji: '📞',
+    title: 'Learning People',
+    role: 'Customer Service Representative',
+    company: 'CCI Global',
+    dates: 'Oct 2024 – May 2026',
+    highlights: [
+      'Resolved customer concerns through active listening, clear communication, and practical problem-solving.',
+      'Balanced empathy with accurate policy interpretation during complex service interactions.',
+      'Investigated account issues and guided customers toward appropriate solutions.',
+      'Collaborated with cross-functional teams to support timely issue resolution.',
+    ],
+  },
+  {
+    number: '03',
+    emoji: '🏭',
+    title: 'Chemistry Meets Industry',
+    role: 'Quality Control Analyst — Volunteer',
+    company: 'Devki Group of Companies',
+    dates: 'Feb 2026 – Apr 2026',
+    highlights: [
+      'Performed in-process and final quality inspections across steel manufacturing operations.',
+      'Conducted dimensional inspection and tensile strength testing to verify product quality.',
+      'Used Vernier calipers, micrometers, and UTS testing equipment for precision measurements.',
+      'Identified non-conforming products and maintained quality inspection records.',
+    ],
+  },
+  {
+    number: '04',
+    emoji: '🌊',
+    title: 'Coming Back to Water',
+    role: 'Water Treatment Design Engineer',
+    company: 'Kridha Limited',
+    dates: 'May 2026 – Present',
+    highlights: [
+      'Design and size water treatment systems based on client requirements and raw water analysis.',
+      'Contribute to the design of reverse osmosis, softening, filtration, and wastewater treatment systems.',
+      'Interpret water quality analyses to recommend appropriate treatment solutions.',
+      'Prepare technical proposals, quotations, and project documentation.',
+      'Collaborate with technical and sales teams to develop customer-specific plant designs.',
+    ],
+  },
+]
 
   const jedBranches = [
     {

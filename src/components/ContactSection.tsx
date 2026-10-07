@@ -31,6 +31,15 @@ const ContactSection = () => {
           </a>
 
           <a
+            href="https://github.com/SheisJed"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-button"
+          >
+            ◉ GitHub
+          </a>
+
+          <a
             href="https://www.linkedin.com/in/waithiegeni-jedidah/"
             target="_blank"
             rel="noopener noreferrer"
@@ -56,6 +65,15 @@ const ContactSection = () => {
           >
             📷 Instagram
           </a>
+
+          <a
+            href="https://waithiegeni.substack.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-button"
+          >
+            ✍️ Substack
+          </a>
         </div>
       </div>
     </section>
@@ -63,3 +81,4 @@ const ContactSection = () => {
 }
 
 export default ContactSection
+
