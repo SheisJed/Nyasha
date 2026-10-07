@@ -30,9 +30,7 @@ function App() {
   return (
     <LanguageProvider>
       <div className="app">
-     <Header
-  onOpenInfo={() => setShowInfoModal(true)}
-        />
+     <Header/>
         <main className="container">
           <div className="content-wrapper">
             <div className="main-content">
