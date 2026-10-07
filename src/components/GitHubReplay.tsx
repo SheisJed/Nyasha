@@ -109,7 +109,7 @@ export default function GitHubReplay() {
       <div className="experience-tree">
         <div className="experience-tree-line" />
 
-        <div className="experience-branch experience-branch-left">
+        <div className="experience-work-column">
           {workExperience.map((experience) => (
             <article
               key={experience.number}
@@ -152,7 +152,7 @@ export default function GitHubReplay() {
           ))}
         </div>
 
-        <div className="experience-branch experience-branch-right">
+        <div className="experience-jed-column">
           {jedBranches.map((branch) => (
             <article
               key={branch.number}

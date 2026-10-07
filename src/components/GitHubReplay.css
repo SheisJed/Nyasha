@@ -42,6 +42,9 @@
 
 .experience-tree {
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 112px;
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px 0;
@@ -57,23 +60,27 @@
   transform: translateX(-50%);
 }
 
-.experience-branch {
+/* Columns */
+
+.experience-work-column,
+.experience-jed-column {
   position: relative;
-  width: 50%;
+  min-width: 0;
 }
 
-.experience-branch-left {
-  padding-right: 56px;
+.experience-work-column {
+  grid-column: 1;
 }
 
-.experience-branch-right {
-  margin-left: 50%;
-  padding-left: 56px;
+.experience-jed-column {
+  grid-column: 2;
 }
+
+/* Entries */
 
 .experience-entry {
   position: relative;
-  padding: 0 0 56px;
+  padding-bottom: 64px;
 }
 
 .experience-entry:last-child {
@@ -81,7 +88,7 @@
 }
 
 .experience-entry-content {
-  max-width: 440px;
+  max-width: 430px;
 }
 
 .experience-entry-left .experience-entry-content {
@@ -94,7 +101,7 @@
   text-align: left;
 }
 
-/* Connecting branches to the tree */
+/* Connecting Branches */
 
 .experience-entry-left::after,
 .experience-entry-right::after {
@@ -107,11 +114,11 @@
 }
 
 .experience-entry-left::after {
-  right: 0;
+  right: -56px;
 }
 
 .experience-entry-right::after {
-  left: 0;
+  left: -56px;
 }
 
 /* Tree Nodes */
@@ -128,11 +135,11 @@
 }
 
 .experience-entry-left .experience-node {
-  right: -5px;
+  right: -61px;
 }
 
 .experience-entry-right .experience-node {
-  left: -5px;
+  left: -61px;
 }
 
 /* Entry Content */
@@ -247,6 +254,7 @@
   }
 
   .experience-tree {
+    display: block;
     padding: 12px 0 12px 28px;
   }
 
@@ -255,16 +263,17 @@
     transform: none;
   }
 
-  .experience-branch,
-  .experience-branch-right {
+  .experience-work-column,
+  .experience-jed-column {
     width: 100%;
-    margin-left: 0;
-    padding-left: 28px;
-    padding-right: 0;
   }
 
-  .experience-branch-right {
+  .experience-jed-column {
     margin-top: 56px;
+  }
+
+  .experience-entry {
+    padding-bottom: 48px;
   }
 
   .experience-entry-left .experience-entry-content,
