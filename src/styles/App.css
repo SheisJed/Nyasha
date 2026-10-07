@@ -1,26 +1,7 @@
 .app {
   min-height: 100vh;
-  background: #000;
+  background: var(--bg-primary);
   position: relative;
-  background-position: 49.999% 0;
-  background-repeat: no-repeat;
-}
-
-@media (max-width: 1920px) {
-  .app {
-    background-size: auto;
-  }
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  .app {
-    background-position: 49.999% 0;
-  }
-}
-
-.container {
-  position: relative;
-  z-index: 1;
 }
 
 .container {
@@ -41,14 +22,6 @@
   overflow: visible;
   width: 100%;
   box-sizing: border-box;
-}
-body.CosmicTheme .content-wrapper {
-  background:
-    radial-gradient(farthest-side at top right, var(--gradient-right), transparent 500px),
-    radial-gradient(farthest-corner at top left, var(--gradient-left), transparent 600px),
-    radial-gradient(farthest-corner at bottom right, var(--gradient-background-right), transparent 500px),
-    radial-gradient(farthest-corner at bottom left, var(--gradient-background-left), transparent 600px);
-  background-color: var(--gradient-background);
 }
 
 .content-wrapper > * {
@@ -76,26 +49,5 @@ body.CosmicTheme .content-wrapper {
   100% {
     outline: 1px solid rgba(237, 133, 199, 0);
     outline-offset: 10px;
-  }
-}
-
-body.CosmicTheme .highlight-pulse {
-  animation: highlightPulseCosmic 2s ease-out;
-}
-
-@keyframes highlightPulseCosmic {
-  0% {
-    border-color: var(--btn-outline, rgba(140, 90, 142));
-    box-shadow: 0 0 30px rgba(248, 70, 180, 0.6), 0 0 60px rgba(9, 243, 99, 0.4);
-    transform: scale(1.02);
-  }
-  50% {
-    border-color: rgba(248, 180, 220);
-    box-shadow: 0 0 40px rgba(248, 70, 180, 0.8), 0 0 80px rgba(9, 243, 99, 0.5);
-  }
-  100% {
-    border-color: var(--border-color);
-    box-shadow: 0 0 15px rgba(248, 70, 180, 0.2);
-    transform: scale(1);
   }
 }

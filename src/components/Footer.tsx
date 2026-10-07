@@ -5,7 +5,7 @@ import { portfolioConfig } from '../config/portfolio.config'
 function Footer() {
   const { t } = useLanguage()
   const currentYear = new Date().getFullYear()
-  const startYear = 2025 // Portfolio launch year
+  const startYear = 2026
   const yearDisplay = startYear === currentYear ? `${currentYear}` : `${startYear} - ${currentYear}`
 
   const scrollToSection = (sectionId: string) => {
@@ -29,11 +29,10 @@ function Footer() {
   }
 
   const quickLinks = [
-    { name: t.profile, id: 'profile' },
-    { name: t.projects, id: 'projects' },
-    { name: t.contact, id: 'contact' },
-    { name: t.skills, id: 'skills' }
-  ]
+  { name: t.profile, id: 'profile' },
+  { name: t.contact, id: 'contact' },
+  { name: t.skills, id: 'skills' }
+]
 
   const socialLinks = [
     {
@@ -128,7 +127,6 @@ function Footer() {
             </p>
             <p className="footer-made-with">
               {t.footerMadeWith}
-              <span className="footer-steam-icon">🎮</span>
             </p>
           </div>
         </div>
