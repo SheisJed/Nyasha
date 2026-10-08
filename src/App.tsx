@@ -19,7 +19,7 @@ function App() {
   // Simple routing - check if we're on the satire sign out page
   const isSignOutPage = window.location.pathname === '/satire-signout'
   const isThingsPage =
-  window.location.pathname === '/Nyasha/things-that-dont-fit'
+  window.location.hash === '#/things-that-dont-fit'
 
 
   // Show satire sign out page

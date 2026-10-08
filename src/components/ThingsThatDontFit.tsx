@@ -16,7 +16,7 @@ function ThingsThatDontFit() {
         </p>
 
         <a
-          href="/Nyasha/things-that-dont-fit"
+          href="/Nyasha/#/things-that-dont-fit"
           className="things-that-dont-fit-link"
         >
           <span className="things-that-dont-fit-dancer">💃</span>
