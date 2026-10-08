@@ -1,0 +1,118 @@
+.things-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 96px 28px 100px;
+  color: var(--text-primary);
+}
+
+.things-page-intro {
+  max-width: 720px;
+  margin-bottom: 88px;
+}
+
+.things-page-kicker {
+  display: block;
+  margin-bottom: 14px;
+  color: #ed85c7;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.things-page-intro h1 {
+  margin: 0 0 20px;
+  color: #2f2529;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+.things-page-intro p {
+  max-width: 620px;
+  margin: 0;
+  color: var(--text-secondary);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.things-page-story {
+  padding: 32px 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.things-page-story-label {
+  display: block;
+  margin-bottom: 12px;
+  color: #ed85c7;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.things-page-story h2 {
+  margin: 0 0 12px;
+  color: #2f2529;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.things-page-story p {
+  max-width: 620px;
+  margin: 0;
+  color: var(--text-secondary);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.things-page-coming-soon {
+  display: block;
+  margin-top: 22px;
+  color: var(--text-secondary);
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.things-page-back {
+  display: inline-block;
+  margin-top: 36px;
+  color: #2f2529;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.things-page-back:hover {
+  color: #ed85c7;
+  transform: translateX(-3px);
+}
+
+@media (max-width: 600px) {
+  .things-page {
+    padding: 64px 20px 72px;
+  }
+
+  .things-page-intro {
+    margin-bottom: 60px;
+  }
+
+  .things-page-intro h1 {
+    font-size: 40px;
+  }
+
+  .things-page-intro p {
+    font-size: 17px;
+  }
+}

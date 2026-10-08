@@ -1,0 +1,78 @@
+.things-that-dont-fit {
+  padding: 72px 8px 80px;
+}
+
+.things-that-dont-fit-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 32px;
+  border-top: 1px solid var(--border-color);
+}
+
+.things-that-dont-fit-kicker {
+  display: block;
+  margin-bottom: 10px;
+  color: #ed85c7;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.things-that-dont-fit h2 {
+  max-width: 720px;
+  margin: 0 0 14px;
+  color: #2f2529;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.things-that-dont-fit-content > p {
+  max-width: 620px;
+  margin: 0;
+  color: var(--text-secondary);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.things-that-dont-fit-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 28px;
+  color: #2f2529;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.things-that-dont-fit-link:hover {
+  color: #ed85c7;
+  transform: translateX(4px);
+}
+
+.things-that-dont-fit-dancer {
+  display: inline-block;
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+.things-that-dont-fit-link:hover .things-that-dont-fit-dancer {
+  transform: rotate(-8deg) translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .things-that-dont-fit {
+    padding: 56px 8px 64px;
+  }
+
+  .things-that-dont-fit h2 {
+    font-size: 28px;
+  }
+}

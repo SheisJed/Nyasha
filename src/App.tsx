@@ -4,6 +4,8 @@ import GitHubReplay from './components/GitHubReplay'
 import AchievementsShowcase from './components/AchievementsShowcase'
 import TechnicalSkills from './components/TechnicalSkills'
 import ResumeViewer from './components/ResumeViewer'
+import ThingsThatDontFit from './components/ThingsThatDontFit'
+import ThingsThatDontFitPage from './components/ThingsThatDontFitPage'
 import PersonalHobbies from './components/PersonalHobbies'
 import SignOutSatire from './components/SignOutSatire'
 import ContactSection from './components/ContactSection'
@@ -16,12 +18,17 @@ function App() {
 
   // Simple routing - check if we're on the satire sign out page
   const isSignOutPage = window.location.pathname === '/satire-signout'
+  const isThingsPage =
+  window.location.pathname === '/Nyasha/things-that-dont-fit'
 
 
   // Show satire sign out page
   if (isSignOutPage) {
     return <SignOutSatire />
   }
+  if (isThingsPage) {
+  return <ThingsThatDontFitPage />
+}
 
   // Show main portfolio
   return (
@@ -36,6 +43,7 @@ function App() {
               <AchievementsShowcase />
               <TechnicalSkills />
               <ResumeViewer />
+              <ThingsThatDontFit />
               <PersonalHobbies />
               <ContactSection />
             </div>
