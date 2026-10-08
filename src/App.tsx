@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Header from './components/Header'
 import ProfileOverview from './components/ProfileOverview'
 import GitHubReplay from './components/GitHubReplay'
@@ -6,7 +5,6 @@ import AchievementsShowcase from './components/AchievementsShowcase'
 import TechnicalSkills from './components/TechnicalSkills'
 import ResumeViewer from './components/ResumeViewer'
 import PersonalHobbies from './components/PersonalHobbies'
-import InfoModal from './components/InfoModal'
 import SignOutSatire from './components/SignOutSatire'
 import ContactSection from './components/ContactSection'
 import ChatWidget from './components/ChatWidget'
@@ -15,7 +13,6 @@ import { LanguageProvider } from './contexts/LanguageContext'
 import './styles/App.css'
 
 function App() {
-  const [showInfoModal, setShowInfoModal] = useState(false)
 
   // Simple routing - check if we're on the satire sign out page
   const isSignOutPage = window.location.pathname === '/satire-signout'
@@ -46,10 +43,6 @@ function App() {
         </main>
         <Footer />
         <ChatWidget />
-        <InfoModal
-          isOpen={showInfoModal}
-          onClose={() => setShowInfoModal(false)}
-        />
       </div>
     </LanguageProvider>
   )
