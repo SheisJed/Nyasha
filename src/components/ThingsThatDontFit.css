@@ -60,19 +60,16 @@
 .things-that-dont-fit-dancer {
   display: inline-block;
   font-size: 18px;
-  transition: transform 0.2s ease;
+  animation: littleDance 1.4s ease-in-out infinite;
 }
 
-.things-that-dont-fit-link:hover .things-that-dont-fit-dancer {
-  transform: rotate(-8deg) translateY(-2px);
-}
-
-@media (max-width: 600px) {
-  .things-that-dont-fit {
-    padding: 56px 8px 64px;
+@keyframes littleDance {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-5deg);
   }
 
-  .things-that-dont-fit h2 {
-    font-size: 28px;
+  50% {
+    transform: translateY(-4px) rotate(5deg);
   }
 }

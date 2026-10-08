@@ -15,13 +15,15 @@ function ThingsThatDontFit() {
           outside the neat little boxes of a résumé.
         </p>
 
-        <a
+    <a
   href="https://sheisjed.github.io/Nyasha/#/things-that-dont-fit"
+  target="_blank"
+  rel="noopener noreferrer"
   className="things-that-dont-fit-link"
 >
-          <span className="things-that-dont-fit-dancer">💃</span>
-          <span>There’s more. Click me →</span>
-        </a>
+  <span className="things-that-dont-fit-dancer">💃</span>
+  <span>There’s more. Click me →</span>
+</a>
       </div>
     </section>
   )
