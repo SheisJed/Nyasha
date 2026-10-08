@@ -16,9 +16,9 @@ function ThingsThatDontFit() {
         </p>
 
         <a
-          href="/Nyasha/#/things-that-dont-fit"
-          className="things-that-dont-fit-link"
-        >
+  href="https://sheisjed.github.io/Nyasha/#/things-that-dont-fit"
+  className="things-that-dont-fit-link"
+>
           <span className="things-that-dont-fit-dancer">💃</span>
           <span>There’s more. Click me →</span>
         </a>
