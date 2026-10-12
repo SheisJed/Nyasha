@@ -139,8 +139,6 @@ function GitHubReplay() {
       </div>
 
       <div className="experience-stage">
-        <WhimsyCompanion />
-
         <div className="experience-cards">
           {workExperience.map((experience) => {
             const isExpanded = Boolean(
@@ -213,6 +211,10 @@ function GitHubReplay() {
               </article>
             )
           })}
+        </div>
+
+        <div className="experience-whimsy-bottom">
+          <WhimsyCompanion />
         </div>
       </div>
     </section>

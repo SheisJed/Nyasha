@@ -225,68 +225,50 @@
   margin: 0 auto;
 }
 
-.experience-stage > .whimsy-scene {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+
+.experience-stage {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.experience-whimsy-bottom {
+  position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  pointer-events: none;
+  min-height: 240px;
+  margin-top: 8px;
   overflow: hidden;
+  pointer-events: none;
 }
 
-.experience-stage > .whimsy-scene .whimsy-scene-image {
-  width: min(440px, 52%);
-  max-width: 100%;
-  max-height: 100%;
+.experience-whimsy-bottom .whimsy-scene {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.experience-whimsy-bottom .whimsy-scene-image {
+  display: block;
+  width: min(420px, 65%);
+  max-height: 280px;
   height: auto;
   object-fit: contain;
   object-position: bottom right;
-  opacity: 0.95;
 }
-
-/* Keep the cards above the GIF, with a little of it showing through */
-
-.experience-cards {
-  position: relative;
-  z-index: 1;
-}
-
-.experience-card {
-  position: relative;
-  min-width: 0;
-  padding: 24px;
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-  background: color-mix(
-    in srgb,
-    var(--bg-secondary) 82%,
-    transparent
-  );
-  -webkit-backdrop-filter: blur(3px);
-  backdrop-filter: blur(3px);
-  transition: border-color 180ms ease;
-}
-
-.experience-card.is-expanded {
-  border-color: var(--accent-blue);
-}
-
-/* Mobile */
 
 @media (max-width: 640px) {
-  .experience-stage > .whimsy-scene .whimsy-scene-image {
-    width: 58%;
+  .experience-whimsy-bottom {
+    min-height: 170px;
   }
 
-  .experience-card {
-    padding: 20px;
-    border-radius: 13px;
+  .experience-whimsy-bottom .whimsy-scene-image {
+    width: min(300px, 80%);
+    max-height: 200px;
   }
 }
 }
