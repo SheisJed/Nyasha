@@ -1,40 +1,31 @@
 
 .whimsy-scene {
   position: relative;
-  width: min(100% - 32px, 720px);
-  min-height: clamp(180px, 26vw, 280px);
+  width: min(calc(100% - 32px), 720px);
   margin: 16px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   overflow: hidden;
   pointer-events: none;
 }
 
-/* A quiet placeholder for the future grass-and-flowers photograph. */
-.whimsy-scene-ground {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 38%;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgb(111 155 118 / 7%)
-  );
-  border-radius: 50% 50% 0 0 / 18% 18% 0 0;
-}
-
-:root[data-theme='dark'] .whimsy-scene-ground {
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgb(154 198 161 / 9%)
-  );
+.whimsy-scene-image {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  object-fit: contain;
+  object-position: center bottom;
 }
 
 @media (max-width: 640px) {
   .whimsy-scene {
     width: calc(100% - 20px);
-    min-height: 160px;
     margin-top: 8px;
+  }
+
+  .whimsy-scene-image {
+    max-width: 100%;
   }
 }
