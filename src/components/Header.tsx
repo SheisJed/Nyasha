@@ -1,13 +1,40 @@
 
-import { useEffect, useState, type MouseEvent } from 'react'
+import { useEffect, useState } from 'react'
 import './Header.css'
-import { useLanguage } from '../contexts/LanguageContext'
 
 type Theme = 'light' | 'dark'
 
+const navigation = [
+  { id: 'home', label: 'Home', href: '#/' },
+  {
+    id: 'work-experience',
+    label: 'Work Experience',
+    href: '#/work-experience',
+  },
+  {
+    id: 'things-that-dont-fit',
+    label: "Things That Don't Fit",
+    href: '#/things-that-dont-fit',
+  },
+  { id: 'cv', label: 'CV', href: '#/cv' },
+  { id: 'writing', label: 'Writing', href: '#/writing' },
+  { id: 'contact', label: 'Contact', href: '#/contact' },
+]
+
+function getActiveRoute() {
+  const hash = window.location.hash
+
+  const currentPage = navigation.find(
+    (item) => item.href === hash,
+  )
+
+  return currentPage?.id ?? 'home'
+}
+
 function Header() {
-  const [activeSection, setActiveSection] = useState('profile')
   const [menuOpen, setMenuOpen] = useState(false)
+  const [activeRoute, setActiveRoute] = useState(getActiveRoute)
+
   const [theme, setTheme] = useState<Theme>(() => {
     try {
       return localStorage.getItem('nyasha-theme') === 'dark'
@@ -17,8 +44,6 @@ function Header() {
       return 'light'
     }
   })
-
-  const { t } = useLanguage()
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme
@@ -31,106 +56,67 @@ function Header() {
   }, [theme])
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = [
-        'profile',
-        'experience',
-        'education',
-        'skills',
-        'hobbies',
-        'contact',
-      ]
-
-      const scrollPosition = window.scrollY + window.innerHeight / 3
-      let currentSection = 'profile'
-      let closestDistance = Infinity
-
-      for (const sectionId of sections) {
-        const section = document.getElementById(sectionId)
-
-        if (section) {
-          const rect = section.getBoundingClientRect()
-          const sectionMiddle =
-            rect.top + window.scrollY + rect.height / 2
-          const distance = Math.abs(scrollPosition - sectionMiddle)
-
-          if (distance < closestDistance) {
-            closestDistance = distance
-            currentSection = sectionId
-          }
-        }
-      }
-
-      setActiveSection(currentSection)
+    const handleRouteChange = () => {
+      setActiveRoute(getActiveRoute())
+      setMenuOpen(false)
     }
 
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    handleScroll()
+    window.addEventListener('hashchange', handleRouteChange)
 
-    return () => window.removeEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('hashchange', handleRouteChange)
+    }
   }, [])
 
   useEffect(() => {
     if (!menuOpen) return
 
     const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') setMenuOpen(false)
+      if (event.key === 'Escape') {
+        setMenuOpen(false)
+      }
     }
 
     document.addEventListener('keydown', closeOnEscape)
-    return () => document.removeEventListener('keydown', closeOnEscape)
-  }, [menuOpen])
 
-  const scrollToSection = (
-    event: MouseEvent<HTMLAnchorElement>,
-    sectionId: string,
-  ) => {
-    event.preventDefault()
-    setActiveSection(sectionId)
-    setMenuOpen(false)
-
-    const section = document.getElementById(sectionId)
-
-    if (section) {
-      const headerOffset = 88
-      const offsetPosition =
-        section.getBoundingClientRect().top + window.scrollY - headerOffset
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      })
-
-      section.classList.remove('highlight-pulse')
-      void section.offsetWidth
-      section.classList.add('highlight-pulse')
-
-      window.setTimeout(() => {
-        section.classList.remove('highlight-pulse')
-      }, 2000)
+    return () => {
+      document.removeEventListener('keydown', closeOnEscape)
     }
-  }
-
-  const navigation = [
-    { id: 'profile', label: t.profile },
-    { id: 'experience', label: 'Experience' },
-    { id: 'education', label: 'Education' },
-    { id: 'skills', label: t.skills },
-    { id: 'hobbies', label: 'Hobbies' },
-    { id: 'contact', label: t.contact },
-  ]
+  }, [menuOpen])
 
   return (
     <header className="header">
       <div className="header-container">
         <a
           className="logo"
-          href="#profile"
-          onClick={(event) => scrollToSection(event, 'profile')}
-          aria-label="Jedidah — back to profile"
+          href="#/"
+          aria-label="Jedidah — Home"
+          onClick={() => setMenuOpen(false)}
         >
           <span className="logo-text">JEDIDAH</span>
         </a>
+
+        <nav
+          id="header-navigation"
+          className={`nav ${menuOpen ? 'nav-open' : ''}`}
+          aria-label="Main navigation"
+        >
+          {navigation.map((item) => (
+            <a
+              key={item.id}
+              href={item.href}
+              className={`nav-link ${
+                activeRoute === item.id ? 'active' : ''
+              }`}
+              aria-current={
+                activeRoute === item.id ? 'page' : undefined
+              }
+              onClick={() => setMenuOpen(false)}
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
 
         <div className="header-actions">
           <button
@@ -141,12 +127,17 @@ function Header() {
                 current === 'light' ? 'dark' : 'light',
               )
             }
-            aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-            title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+            aria-label={`Switch to ${
+              theme === 'light' ? 'dark' : 'light'
+            } mode`}
+            title={`Switch to ${
+              theme === 'light' ? 'dark' : 'light'
+            } mode`}
           >
             <span aria-hidden="true">
               {theme === 'light' ? '☾' : '☀'}
             </span>
+
             <span className="theme-toggle-label">
               {theme === 'light' ? 'Dark mode' : 'Light mode'}
             </span>
@@ -157,38 +148,22 @@ function Header() {
             type="button"
             aria-expanded={menuOpen}
             aria-controls="header-navigation"
-            aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-label={
+              menuOpen
+                ? 'Close navigation menu'
+                : 'Open navigation menu'
+            }
             onClick={() => setMenuOpen((open) => !open)}
           >
             <span className="menu-icon" aria-hidden="true">
               {menuOpen ? '×' : '☰'}
             </span>
+
             <span className="menu-label">
               {menuOpen ? 'Close' : 'Menu'}
             </span>
           </button>
         </div>
-
-        <nav
-          id="header-navigation"
-          className={`nav ${menuOpen ? 'nav-open' : ''}`}
-          aria-label="Main navigation"
-          hidden={!menuOpen}
-        >
-          {navigation.map((item) => (
-            <a
-              key={item.id}
-              href={`#${item.id}`}
-              className={`nav-link ${
-                activeSection === item.id ? 'active' : ''
-              }`}
-              aria-current={activeSection === item.id ? 'location' : undefined}
-              onClick={(event) => scrollToSection(event, item.id)}
-            >
-              {item.label}
-            </a>
-          ))}
-        </nav>
       </div>
     </header>
   )

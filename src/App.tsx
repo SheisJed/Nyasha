@@ -1,3 +1,5 @@
+
+import { useEffect, useState } from 'react'
 import Header from './components/Header'
 import ProfileOverview from './components/ProfileOverview'
 import GitHubReplay from './components/GitHubReplay'
@@ -14,41 +16,147 @@ import Footer from './components/Footer'
 import { LanguageProvider } from './contexts/LanguageContext'
 import './styles/App.css'
 
+type PageRoute =
+  | 'home'
+  | 'work-experience'
+  | 'things-that-dont-fit'
+  | 'cv'
+  | 'writing'
+  | 'contact'
+
+function getCurrentRoute(): PageRoute {
+  const hash = window.location.hash
+
+  switch (hash) {
+    case '#/work-experience':
+      return 'work-experience'
+    case '#/things-that-dont-fit':
+      return 'things-that-dont-fit'
+    case '#/cv':
+      return 'cv'
+    case '#/writing':
+      return 'writing'
+    case '#/contact':
+      return 'contact'
+    default:
+      return 'home'
+  }
+}
+
+function HomePage() {
+  return (
+    <main className="container">
+      <div className="content-wrapper">
+        <div className="main-content">
+          <ProfileOverview />
+          <GitHubReplay />
+          <AchievementsShowcase />
+          <TechnicalSkills />
+          <ResumeViewer />
+          <ThingsThatDontFit />
+          <PersonalHobbies />
+          <ContactSection />
+        </div>
+      </div>
+    </main>
+  )
+}
+
+function WritingPage() {
+  return (
+    <main className="container">
+      <div className="content-wrapper">
+        <div className="main-content">
+          <section className="writing-page" id="writing">
+            <span className="experience-kicker">
+              NOTES FROM MY CORNER
+            </span>
+
+            <h1>Writing</h1>
+
+            <p>
+              A home for essays, reflections, questions, and ideas
+              still finding their words.
+            </p>
+
+            <p>
+              This space is still taking shape. The writing will
+              find its way here soon.
+            </p>
+          </section>
+        </div>
+      </div>
+    </main>
+  )
+}
+
 function App() {
+  const [currentRoute, setCurrentRoute] =
+    useState<PageRoute>(getCurrentRoute)
 
-  // Simple routing - check if we're on the satire sign out page
-  const isSignOutPage = window.location.pathname === '/satire-signout'
-  const isThingsPage =
-  window.location.hash === '#/things-that-dont-fit'
+  const isSignOutPage =
+    window.location.pathname === '/satire-signout'
 
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setCurrentRoute(getCurrentRoute())
+      window.scrollTo({ top: 0, behavior: 'auto' })
+    }
 
-  // Show satire sign out page
+    window.addEventListener('hashchange', handleRouteChange)
+
+    return () => {
+      window.removeEventListener('hashchange', handleRouteChange)
+    }
+  }, [])
+
   if (isSignOutPage) {
     return <SignOutSatire />
   }
-  if (isThingsPage) {
-  return <ThingsThatDontFitPage />
-}
 
-  // Show main portfolio
   return (
     <LanguageProvider>
       <div className="app">
-     <Header/>
-        <main className="container">
-          <div className="content-wrapper">
-            <div className="main-content">
-              <ProfileOverview />
-              <GitHubReplay />
-              <AchievementsShowcase />
-              <TechnicalSkills />
-              <ResumeViewer />
-              <ThingsThatDontFit />
-              <PersonalHobbies />
-              <ContactSection />
+        <Header />
+
+        {currentRoute === 'home' && <HomePage />}
+
+        {currentRoute === 'work-experience' && (
+          <main className="container">
+            <div className="content-wrapper">
+              <div className="main-content">
+                <GitHubReplay />
+              </div>
             </div>
-          </div>
-        </main>
+          </main>
+        )}
+
+        {currentRoute === 'things-that-dont-fit' && (
+          <ThingsThatDontFitPage />
+        )}
+
+        {currentRoute === 'cv' && (
+          <main className="container">
+            <div className="content-wrapper">
+              <div className="main-content">
+                <ResumeViewer />
+              </div>
+            </div>
+          </main>
+        )}
+
+        {currentRoute === 'writing' && <WritingPage />}
+
+        {currentRoute === 'contact' && (
+          <main className="container">
+            <div className="content-wrapper">
+              <div className="main-content">
+                <ContactSection />
+              </div>
+            </div>
+          </main>
+        )}
+
         <Footer />
         <ChatWidget />
       </div>
