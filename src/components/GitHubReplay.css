@@ -1,7 +1,47 @@
 
 .work-experience {
   position: relative;
+  isolation: isolate;
   padding: 64px 8px 72px;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+/* Animated GIF covering the entire Work Experience section */
+
+.experience-background-gif {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+}
+
+/* Soft overlay to keep the text readable over the animation */
+
+.work-experience::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: color-mix(
+    in srgb,
+    var(--bg-primary) 30%,
+    transparent
+  );
+  pointer-events: none;
+}
+
+/* Heading and cards sit above the GIF */
+
+.work-experience-content {
+  position: relative;
+  z-index: 2;
   min-width: 0;
 }
 
@@ -40,22 +80,36 @@
   line-height: 1.6;
 }
 
-/* Stacked experience cards */
+/* Experience card grid */
+
+.experience-stage {
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
 .experience-cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
-  max-width: 1000px;
+  width: 100%;
   margin: 0 auto;
 }
 
+/* Translucent cards allow the background to show through */
+
 .experience-card {
+  position: relative;
   min-width: 0;
   padding: 24px;
   border: 1px solid var(--border-color);
   border-radius: 16px;
-  background: var(--bg-secondary);
+  background: color-mix(
+    in srgb,
+    var(--bg-secondary) 78%,
+    transparent
+  );
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   transition: border-color 180ms ease;
 }
 
@@ -212,63 +266,57 @@
   font-size: 16px;
 }
 
-/* Medium screens */
+/* Tablet */
 
 @media (max-width: 800px) {
-  
-/* The cards and cat share one visual scene */
-
-.experience-stage {
-  position: relative;
-  isolation: isolate;
-  max-width: 1000px;
-  margin: 0 auto;
+  .experience-cards {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 600px;
+  }
 }
 
-
-.experience-stage {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.experience-whimsy-bottom {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  width: 100%;
-  min-height: 240px;
-  margin-top: 8px;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.experience-whimsy-bottom .whimsy-scene {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.experience-whimsy-bottom .whimsy-scene-image {
-  display: block;
-  width: min(420px, 65%);
-  max-height: 280px;
-  height: auto;
-  object-fit: contain;
-  object-position: bottom right;
-}
+/* Mobile */
 
 @media (max-width: 640px) {
-  .experience-whimsy-bottom {
-    min-height: 170px;
+  .work-experience {
+    padding: 44px 4px 52px;
+    border-radius: 14px;
   }
 
-  .experience-whimsy-bottom .whimsy-scene-image {
-    width: min(300px, 80%);
-    max-height: 200px;
+  .experience-heading {
+    margin-bottom: 28px;
+  }
+
+  .experience-heading h2 {
+    font-size: 29px;
+  }
+
+  .experience-heading p {
+    font-size: 15px;
+  }
+
+  .experience-cards {
+    gap: 14px;
+  }
+
+  .experience-card {
+    padding: 20px;
+    border-radius: 13px;
+  }
+
+  .experience-card h3 {
+    font-size: 22px;
+  }
+
+  .experience-background-gif {
+    object-position: center;
   }
 }
+
+/* Respect reduced-motion preferences for card transitions */
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-card {
+    transition: none;
+  }
 }

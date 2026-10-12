@@ -1,7 +1,6 @@
 
 import { useState } from 'react'
 import './GitHubReplay.css'
-import WhimsyCompanion from './WhimsyCompanion'
 
 type ExperienceEntry = {
   number: string
@@ -128,93 +127,101 @@ function GitHubReplay() {
 
   return (
     <section className="work-experience" id="experience">
-      <div className="experience-heading">
-        <span className="experience-kicker">
-          A LITTLE ABOUT WHERE I'VE BEEN
-        </span>
+      <img
+        className="experience-background-gif"
+        src={`${import.meta.env.BASE_URL}whimsy-cat.gif`}
+        alt=""
+        aria-hidden="true"
+      />
 
-        <h2>Work Experience</h2>
+      <div className="work-experience-content">
+        <div className="experience-heading">
+          <span className="experience-kicker">
+            A LITTLE ABOUT WHERE I'VE BEEN
+          </span>
 
-        <p>A career that kept circling back to water.</p>
-      </div>
+          <h2>Work Experience</h2>
 
-      <div className="experience-stage">
-        <div className="experience-cards">
-          {workExperience.map((experience) => {
-            const isExpanded = Boolean(
-              expandedEntries[experience.number]
-            )
-            const detailsId = `experience-details-${experience.number}`
-
-            return (
-              <article
-                key={experience.number}
-                className={`experience-card ${
-                  isExpanded ? 'is-expanded' : ''
-                }`}
-              >
-                <div className="experience-card-top">
-                  <span className="experience-number">
-                    {experience.number}
-                  </span>
-
-                  <span className="experience-emoji" aria-hidden="true">
-                    {experience.emoji}
-                  </span>
-                </div>
-
-                <h3>{experience.title}</h3>
-
-                <p className="experience-role">
-                  {experience.role}
-                </p>
-
-                <p className="experience-company">
-                  {experience.company}
-                </p>
-
-                {experience.dates && (
-                  <p className="experience-dates">
-                    {experience.dates}
-                  </p>
-                )}
-
-                <p className="experience-summary">
-                  {experience.summary}
-                </p>
-
-                <button
-                  type="button"
-                  className="experience-toggle"
-                  aria-expanded={isExpanded}
-                  aria-controls={detailsId}
-                  onClick={() => toggleEntry(experience.number)}
-                >
-                  {isExpanded ? 'Show less' : 'Read more'}
-
-                  <span aria-hidden="true">
-                    {isExpanded ? '−' : '+'}
-                  </span>
-                </button>
-
-                <div
-                  id={detailsId}
-                  className="experience-details"
-                  hidden={!isExpanded}
-                >
-                  <ul className="experience-highlights">
-                    {experience.highlights.map((highlight) => (
-                      <li key={highlight}>{highlight}</li>
-                    ))}
-                  </ul>
-                </div>
-              </article>
-            )
-          })}
+          <p>A career that kept circling back to water.</p>
         </div>
 
-        <div className="experience-whimsy-bottom">
-          <WhimsyCompanion />
+        <div className="experience-stage">
+          <div className="experience-cards">
+            {workExperience.map((experience) => {
+              const isExpanded = Boolean(
+                expandedEntries[experience.number]
+              )
+              const detailsId = `experience-details-${experience.number}`
+
+              return (
+                <article
+                  key={experience.number}
+                  className={`experience-card ${
+                    isExpanded ? 'is-expanded' : ''
+                  }`}
+                >
+                  <div className="experience-card-top">
+                    <span className="experience-number">
+                      {experience.number}
+                    </span>
+
+                    <span
+                      className="experience-emoji"
+                      aria-hidden="true"
+                    >
+                      {experience.emoji}
+                    </span>
+                  </div>
+
+                  <h3>{experience.title}</h3>
+
+                  <p className="experience-role">
+                    {experience.role}
+                  </p>
+
+                  <p className="experience-company">
+                    {experience.company}
+                  </p>
+
+                  {experience.dates && (
+                    <p className="experience-dates">
+                      {experience.dates}
+                    </p>
+                  )}
+
+                  <p className="experience-summary">
+                    {experience.summary}
+                  </p>
+
+                  <button
+                    type="button"
+                    className="experience-toggle"
+                    aria-expanded={isExpanded}
+                    aria-controls={detailsId}
+                    onClick={() => toggleEntry(experience.number)}
+                  >
+                    {isExpanded ? 'Show less' : 'Read more'}
+
+                    <span aria-hidden="true">
+                      {isExpanded ? '−' : '+'}
+                    </span>
+                  </button>
+
+                  <div
+                    id={detailsId}
+                    className="experience-details"
+                    hidden={!isExpanded}
+                  >
+                    <ul className="experience-highlights">
+                      {experience.highlights.map((highlight) => (
+                        <li key={highlight}>{highlight}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </article>
+              )
+            })}
+          </div>
         </div>
       </div>
     </section>
