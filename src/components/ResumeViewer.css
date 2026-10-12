@@ -11,7 +11,7 @@
 .resume-kicker {
   display: block;
   margin-bottom: 10px;
-  color: #ed85c7;
+  color: var(--accent-blue);
   font-family: Arial, sans-serif;
   font-size: 10px;
   font-weight: 700;
@@ -28,7 +28,7 @@
 
 .resume-heading h2 {
   margin: 0 0 10px;
-  color: #2f2529;
+  color: var(--text-primary);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 34px;
   font-weight: 600;
@@ -62,7 +62,7 @@
   border: 1px solid var(--border-color);
   border-radius: 3px;
   background: transparent;
-  color: #3d3035;
+  color: var(--text-primary);
   font-family: Arial, sans-serif;
   font-size: 11px;
   font-weight: 700;
@@ -72,17 +72,17 @@
 }
 
 .resume-btn:hover {
-  border-color: #ed85c7;
-  color: #ed85c7;
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
 }
 
 .download-btn {
-  border-color: #ed85c7;
-  color: #ed85c7;
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
 }
 
 .download-btn:hover {
-  background: #ed85c7;
+  background: var(--accent-blue);
   color: white;
 }
 
@@ -97,7 +97,7 @@
   overflow: hidden;
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
-  background: #fff5f5;
+  background: var(--bg-secondary);
 }
 
 .resume-iframe {
@@ -115,13 +115,13 @@
 }
 
 .view-full-btn {
-  background: #ffecec;
-  border-color: #ed85c7;
-  color: #ed85c7;
+  background: var(--bg-primary);
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
 }
 
 .view-full-btn:hover {
-  background: #ed85c7;
+  background: var(--accent-blue);
   color: white;
 }
 
