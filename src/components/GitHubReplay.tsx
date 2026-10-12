@@ -1,7 +1,19 @@
+
+import { useState } from 'react'
 import './GitHubReplay.css'
 
-export default function GitHubReplay() {
-const workExperience = [
+type ExperienceEntry = {
+  number: string
+  emoji: string
+  title: string
+  role: string
+  company: string
+  dates?: string
+  summary: string
+  highlights: string[]
+}
+
+const workExperience: ExperienceEntry[] = [
   {
     number: '01',
     emoji: '🔬',
@@ -9,6 +21,8 @@ const workExperience = [
     role: 'Laboratory Technician — Attaché',
     company: 'State Department of Roads, Ministry of Infrastructure',
     dates: 'Jan 2023 – Apr 2023',
+    summary:
+      'Built a foundation in laboratory analysis, analytical instruments, and technical reporting.',
     highlights: [
       'Conducted laboratory analysis of water, soil, cement, and construction materials.',
       'Operated analytical instruments including AAS and Flame Photometry.',
@@ -23,6 +37,8 @@ const workExperience = [
     role: 'Customer Service Representative',
     company: 'CCI Global',
     dates: 'Oct 2024 – May 2026',
+    summary:
+      'Developed communication, empathy, and practical problem-solving through customer support.',
     highlights: [
       'Resolved customer concerns through active listening, clear communication, and practical problem-solving.',
       'Balanced empathy with accurate policy interpretation during complex service interactions.',
@@ -37,6 +53,8 @@ const workExperience = [
     role: 'Quality Control Analyst — Volunteer',
     company: 'Devki Group of Companies',
     dates: 'Feb 2026 – Apr 2026',
+    summary:
+      'Applied chemistry and precision measurement to quality checks in steel manufacturing.',
     highlights: [
       'Performed in-process and final quality inspections across steel manufacturing operations.',
       'Conducted dimensional inspection and tensile strength testing to verify product quality.',
@@ -51,6 +69,8 @@ const workExperience = [
     role: 'Water Treatment Design Engineer',
     company: 'Kridha Limited',
     dates: 'May 2026 – Present',
+    summary:
+      'Designs water treatment systems and translates water quality results into practical solutions.',
     highlights: [
       'Design and size water treatment systems based on client requirements and raw water analysis.',
       'Contribute to the design of reverse osmosis, softening, filtration, and wastewater treatment systems.',
@@ -59,38 +79,51 @@ const workExperience = [
       'Collaborate with technical and sales teams to develop customer-specific plant designs.',
     ],
   },
+  {
+    number: '05',
+    emoji: '🧪',
+    title: 'What I Actually Do',
+    role: 'Water, Chemistry & Problem-Solving',
+    company: 'Technical Work',
+    summary:
+      'Connects water analysis, treatment design, documentation, and real-world client needs.',
+    highlights: [
+      'Translate raw water analysis into practical treatment requirements.',
+      'Work across filtration, softening, reverse osmosis, and wastewater treatment.',
+      'Prepare technical proposals, quotations, and supporting documentation.',
+      'Balance technical requirements with client needs and project realities.',
+      'Keep learning because every water problem seems to come with another question.',
+    ],
+  },
+  {
+    number: '06',
+    emoji: '🌱',
+    title: "Where I'm Going",
+    role: 'Building Better Water Systems',
+    company: "The Questions I'm Following",
+    summary:
+      'Explores water reuse, low-energy treatment, and circular systems that support water security.',
+    highlights: [
+      'Exploring better ways to treat and reuse water.',
+      'Learning how low-energy treatment can make water systems more practical and sustainable.',
+      'Thinking about circular water systems, especially for communities that face water insecurity.',
+      'Growing from water treatment design into deeper technical understanding and problem-solving.',
+      'Writing, learning, and asking better questions along the way.',
+    ],
+  },
 ]
 
-  const jedBranches = [
-    {
-      number: '05',
-      emoji: '🧪',
-      title: 'What I Actually Do',
-      role: 'Water, Chemistry & Problem-Solving',
-      company: 'Technical Work',
-      highlights: [
-        'Translate raw water analysis into practical treatment requirements.',
-        'Work across filtration, softening, reverse osmosis, and wastewater treatment.',
-        'Prepare technical proposals, quotations, and supporting documentation.',
-        'Balance technical requirements with client needs and project realities.',
-        'Keep learning because every water problem seems to come with another question.',
-      ],
-    },
-    {
-      number: '06',
-      emoji: '🌱',
-      title: "Where I'm Going",
-      role: 'Building Better Water Systems',
-      company: "The Questions I'm Following",
-      highlights: [
-        'Exploring better ways to treat and reuse water.',
-        'Learning how low-energy treatment can make water systems more practical and sustainable.',
-        'Thinking about circular water systems, especially for communities that face water insecurity.',
-        'Growing from water treatment design into deeper technical understanding and problem-solving.',
-        'Writing, learning, and asking better questions along the way.',
-      ],
-    },
-  ]
+function GitHubReplay() {
+  const [expandedEntries, setExpandedEntries] = useState<
+    Record<string, boolean>
+  >({})
+
+  const toggleEntry = (number: string) => {
+    setExpandedEntries((current) => ({
+      ...current,
+      [number]: !current[number],
+    }))
+  }
 
   return (
     <section className="work-experience" id="experience">
@@ -101,96 +134,82 @@ const workExperience = [
 
         <h2>Work Experience</h2>
 
-        <p>
-          A career that kept circling back to water.
-        </p>
+        <p>A career that kept circling back to water.</p>
       </div>
 
-      <div className="experience-tree">
-        <div className="experience-tree-line" />
+      <div className="experience-cards">
+        {workExperience.map((experience) => {
+          const isExpanded = Boolean(
+            expandedEntries[experience.number]
+          )
+          const detailsId = `experience-details-${experience.number}`
 
-        <div className="experience-work-column">
-          {workExperience.map((experience) => (
+          return (
             <article
               key={experience.number}
-              className="experience-entry experience-entry-left"
+              className={`experience-card ${
+                isExpanded ? 'is-expanded' : ''
+              }`}
             >
-              <div className="experience-entry-content">
+              <div className="experience-card-top">
                 <span className="experience-number">
                   {experience.number}
                 </span>
-
-                <span className="experience-emoji">
+                <span className="experience-emoji" aria-hidden="true">
                   {experience.emoji}
                 </span>
+              </div>
 
-                <h3>{experience.title}</h3>
+              <h3>{experience.title}</h3>
 
-                <p className="experience-role">
-                  {experience.role}
-                </p>
+              <p className="experience-role">
+                {experience.role}
+              </p>
 
-                <p className="experience-company">
-                  {experience.company}
-                </p>
+              <p className="experience-company">
+                {experience.company}
+              </p>
 
+              {experience.dates && (
                 <p className="experience-dates">
                   {experience.dates}
                 </p>
+              )}
 
+              <p className="experience-summary">
+                {experience.summary}
+              </p>
+
+              <button
+                type="button"
+                className="experience-toggle"
+                aria-expanded={isExpanded}
+                aria-controls={detailsId}
+                onClick={() => toggleEntry(experience.number)}
+              >
+                {isExpanded ? 'Show less' : 'Read more'}
+                <span aria-hidden="true">
+                  {isExpanded ? '−' : '+'}
+                </span>
+              </button>
+
+              <div
+                id={detailsId}
+                className="experience-details"
+                hidden={!isExpanded}
+              >
                 <ul className="experience-highlights">
                   {experience.highlights.map((highlight) => (
-                    <li key={highlight}>
-                      {highlight}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <span className="experience-node" />
-            </article>
-          ))}
-        </div>
-
-        <div className="experience-jed-column">
-          {jedBranches.map((branch) => (
-            <article
-              key={branch.number}
-              className="experience-entry experience-entry-right"
-            >
-              <span className="experience-node" />
-
-              <div className="experience-entry-content">
-                <span className="experience-number">
-                  {branch.number}
-                </span>
-
-                <span className="experience-emoji">
-                  {branch.emoji}
-                </span>
-
-                <h3>{branch.title}</h3>
-
-                <p className="experience-role">
-                  {branch.role}
-                </p>
-
-                <p className="experience-company">
-                  {branch.company}
-                </p>
-
-                <ul className="experience-highlights">
-                  {branch.highlights.map((highlight) => (
-                    <li key={highlight}>
-                      {highlight}
-                    </li>
+                    <li key={highlight}>{highlight}</li>
                   ))}
                 </ul>
               </div>
             </article>
-          ))}
-        </div>
+          )
+        })}
       </div>
     </section>
   )
 }
+
+export default GitHubReplay

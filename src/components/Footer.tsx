@@ -31,14 +31,18 @@ function Footer() {
     }
   }
 
-  const quickLinks = [
-    { name: 'Profile', id: 'profile' },
-    { name: 'Experience', id: 'experience' },
-    { name: 'Education', id: 'education' },
-    { name: 'Skills', id: 'skills' },
-    { name: 'Hobbies', id: 'hobbies' },
-    { name: 'Contact', id: 'contact' },
-  ]
+ 
+const quickLinks = [
+  {
+    name: 'Resume',
+    id: 'resume',
+  },
+  {
+    name: 'Work Experience',
+    id: 'experience',
+  },
+]
+
 
   const socialLinks = [
     {
