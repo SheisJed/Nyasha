@@ -71,7 +71,13 @@ export const translations: Record<Language, Translations> = {
     totalStars: 'Total Stars',
     achievements: 'Achievements',
     workStatus: 'Curious & open to what’s next',
-    profileDescription: "Hi, I’m Jed. I’m an industrial chemist and water treatment design engineer based in Nairobi, Kenya. I spend a lot of my time thinking about water — how we treat it, how we reuse it, and how we can design better systems for the people who depend on them.\n\nI’m also a writer, a curious explorer, and someone who asks a lot of questions about how things work. When I’m not working, I’m probably reading something, writing something, planning somewhere I want to go, or deciding what I want to eat next.",
+    profileDescription: `Hi, I'm Waithiegeni Jedidah, though most people call me Jed.
+
+I'm an industrial chemist, currently working as a water treatment design engineer. I have a lot of interests, and one of them is bringing this little corner of the internet to life with words, imagination, quite profound headaches, and perhaps a little too much light. I spend a lot of time thinking about water — how we treat it, how we reuse it, and how we can design better systems for the people who depend on them. And human beings, too. Hey, you!
+
+I'm also a writer, a curious explorer, and someone who asks a lot of questions about how things work. When I'm not working, I'm probably reading something, writing something, planning somewhere I want to go, or deciding what I want to eat next.
+
+Anyway, I'm glad you're here. Stay curious, be gentle with yourself, and may you feel held, always.`,
 
     recentActivity: 'Recent Activity',
     contributions: 'contributions in last 12 weeks',
