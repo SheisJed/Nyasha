@@ -24,7 +24,7 @@
 .education-kicker {
   display: block;
   margin-bottom: 8px;
-  color: #ed85c7;
+  color: var(--accent-blue);
   font-family: Arial, sans-serif;
   font-size: 10px;
   font-weight: 700;
@@ -34,7 +34,7 @@
 
 .education-heading h2 {
   margin: 0;
-  color: #2f2529;
+  color: var(--text-primary);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 32px;
   font-weight: 600;
@@ -89,7 +89,7 @@
   align-items: center;
   justify-content: center;
   background: #ffecec;
-  border: 2px solid #ed85c7;
+  border: 2px solid var(--accent-blue);
   border-radius: 50%;
   z-index: 2;
 }
@@ -133,7 +133,7 @@
 
 .education-entry h3 {
   margin: 0 0 8px;
-  color: #2f2529;
+  color: var(--text-primary);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 21px;
   font-weight: 600;
@@ -149,7 +149,7 @@
 }
 
 .education-year {
-  color: #ed85c7;
+  color: var(--accent-blue);
   font-family: Arial, sans-serif;
   font-size: 11px;
   font-weight: 700;
@@ -233,7 +233,7 @@
 .hobbies-kicker {
   display: block;
   margin-bottom: 10px;
-  color: #ed85c7;
+  color: var(--accent-blue);
   font-family: Arial, sans-serif;
   font-size: 10px;
   font-weight: 700;
@@ -243,7 +243,7 @@
 
 .hobbies-heading h2 {
   margin: 0 0 12px;
-  color: #2f2529;
+  color: var(--text-primary);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 34px;
   font-weight: 600;
@@ -293,7 +293,7 @@
 }
 
 .hobby-item:hover .hobby-icon {
-  border-color: #ed85c7;
+  border-color: var(--accent-blue);
   transform: rotate(-6deg) scale(1.06);
 }
 
@@ -304,7 +304,7 @@
 .hobby-number {
   display: block;
   margin-bottom: 5px;
-  color: #ed85c7;
+  color: var(--accent-blue);
   font-family: Arial, sans-serif;
   font-size: 10px;
   font-weight: 700;
@@ -313,7 +313,7 @@
 
 .hobby-content h3 {
   margin: 0 0 8px;
-  color: #2f2529;
+  color: var(--text-primary);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 23px;
   font-weight: 600;
@@ -404,7 +404,7 @@
 .skills-kicker {
   display: block;
   margin-bottom: 10px;
-  color: #ed85c7;
+  color: var(--accent-blue);
   font-family: Arial, sans-serif;
   font-size: 10px;
   font-weight: 700;
@@ -414,7 +414,7 @@
 
 .skills-heading h2 {
   margin: 0 0 12px;
-  color: #2f2529;
+  color: var(--text-primary);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 34px;
   font-weight: 600;
@@ -455,7 +455,7 @@
 
 .skills-category-number {
   flex-shrink: 0;
-  color: #ed85c7;
+  color: var(--accent-blue);
   font-family: Arial, sans-serif;
   font-size: 10px;
   font-weight: 700;
@@ -465,7 +465,7 @@
 
 .skills-category-heading h3 {
   margin: 0;
-  color: #2f2529;
+  color: var(--text-primary);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 20px;
   font-weight: 600;
@@ -491,11 +491,11 @@
 .skill-item:not(:last-child)::after {
   content: '·';
   margin-left: 18px;
-  color: #ed85c7;
+  color: var(--accent-blue);
 }
 
 .skill-item:hover {
-  color: #2f2529;
+  color: var(--text-primary);
 }
 
 
