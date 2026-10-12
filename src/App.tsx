@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import Header from './components/Header'
 import ProfileOverview from './components/ProfileOverview'
 import GitHubReplay from './components/GitHubReplay'
+import WorkExperiencePage from './components/WorkExperiencePage'
 import AchievementsShowcase from './components/AchievementsShowcase'
 import TechnicalSkills from './components/TechnicalSkills'
 import ResumeViewer from './components/ResumeViewer'
@@ -25,9 +26,7 @@ type PageRoute =
   | 'contact'
 
 function getCurrentRoute(): PageRoute {
-  const hash = window.location.hash
-
-  switch (hash) {
+  switch (window.location.hash) {
     case '#/work-experience':
       return 'work-experience'
     case '#/things-that-dont-fit':
@@ -122,13 +121,7 @@ function App() {
         {currentRoute === 'home' && <HomePage />}
 
         {currentRoute === 'work-experience' && (
-          <main className="container">
-            <div className="content-wrapper">
-              <div className="main-content">
-                <GitHubReplay />
-              </div>
-            </div>
-          </main>
+          <WorkExperiencePage />
         )}
 
         {currentRoute === 'things-that-dont-fit' && (
