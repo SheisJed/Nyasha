@@ -12,6 +12,7 @@ import ThingsThatDontFitPage from './components/ThingsThatDontFitPage'
 import PersonalHobbies from './components/PersonalHobbies'
 import SignOutSatire from './components/SignOutSatire'
 import ContactSection from './components/ContactSection'
+import CVPage from './components/CVPage'
 import ChatWidget from './components/ChatWidget'
 import Footer from './components/Footer'
 import { LanguageProvider } from './contexts/LanguageContext'
@@ -128,15 +129,8 @@ function App() {
           <ThingsThatDontFitPage />
         )}
 
-        {currentRoute === 'cv' && (
-          <main className="container">
-            <div className="content-wrapper">
-              <div className="main-content">
-                <ResumeViewer />
-              </div>
-            </div>
-          </main>
-        )}
+        {currentRoute === 'cv' && <CVPage />}
+      
 
         {currentRoute === 'writing' && <WritingPage />}
 
