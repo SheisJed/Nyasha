@@ -6,7 +6,7 @@ function WhimsyCompanion() {
     <div className="whimsy-scene" aria-hidden="true">
       <img
         className="whimsy-scene-image"
-        src={`${import.meta.env.BASE_URL}images/whimy-ct.jfif`}
+        src={`${import.meta.env.BASE_URL}images/whimy-cat.jfif`}
         alt=""
       />
     </div>
