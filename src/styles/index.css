@@ -43,6 +43,24 @@ body {
   min-height: 100vh;
 }
 
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg-primary: #211923;
+  --bg-secondary: #302331;
+  --bg-tertiary: #3b2a3a;
+
+  --accent-blue: #e99bc9;
+  --accent-blue-hover: #f3b4d9;
+
+  --text-primary: #f8eaf2;
+  --text-secondary: #d0b9c8;
+
+  --border-color: #62465b;
+  --success: #9ac6a1;
+  --highlight: #e99bc9;
+}
+
 /* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 12px;
