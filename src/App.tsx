@@ -50,7 +50,6 @@ function App() {
             </div>
           </div>
         </main>
-        <WhimsyCompanion />
         <Footer />
         <ChatWidget />
       </div>

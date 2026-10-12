@@ -1,6 +1,7 @@
 
 import { useState } from 'react'
 import './GitHubReplay.css'
+import WhimsyCompanion from './WhimsyCompanion'
 
 type ExperienceEntry = {
   number: string
@@ -204,6 +205,20 @@ function GitHubReplay() {
                   ))}
                 </ul>
               </div>
+              
+      <div className="experience-whimsy">
+        <div className="experience-whimsy-note">
+          <span className="experience-whimsy-kicker">
+            AND STILL, I WONDER
+          </span>
+          <p>
+            A little curiosity can take you somewhere beautiful.
+          </p>
+        </div>
+
+        <WhimsyCompanion />
+      </div>
+
             </article>
           )
         })}

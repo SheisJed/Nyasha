@@ -259,3 +259,101 @@
     transition: none;
   }
 }
+
+/* A little whimsical ending to the experience story */
+
+.experience-whimsy {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  max-width: 1000px;
+  min-height: 250px;
+  margin: 24px auto 0;
+}
+
+.experience-whimsy-note {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  bottom: 38px;
+  width: 72%;
+  box-sizing: border-box;
+  padding: 18px 90px 18px 0;
+  background: linear-gradient(
+    90deg,
+    var(--bg-primary) 65%,
+    transparent 100%
+  );
+}
+
+.experience-whimsy-kicker {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent-blue);
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.experience-whimsy-note p {
+  max-width: 420px;
+  margin: 0;
+  color: var(--text-primary);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(19px, 2.5vw, 27px);
+  font-style: italic;
+  line-height: 1.45;
+}
+
+/* Keep the GIF large and anchored to the right */
+
+.experience-whimsy .whimsy-scene {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 min(40%, 360px);
+  width: min(40%, 360px);
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+}
+
+.experience-whimsy .whimsy-scene-image {
+  width: 100%;
+  max-width: 360px;
+  max-height: 280px;
+  height: auto;
+  object-fit: contain;
+  object-position: bottom right;
+}
+
+/* Mobile layout */
+
+@media (max-width: 640px) {
+  .experience-whimsy {
+    min-height: 190px;
+    margin-top: 20px;
+  }
+
+  .experience-whimsy-note {
+    bottom: 20px;
+    width: 76%;
+    padding: 12px 35px 12px 0;
+  }
+
+  .experience-whimsy-note p {
+    font-size: 19px;
+  }
+
+  .experience-whimsy .whimsy-scene {
+    flex-basis: 48%;
+    width: 48%;
+  }
+
+  .experience-whimsy .whimsy-scene-image {
+    max-height: 200px;
+  }
+}
