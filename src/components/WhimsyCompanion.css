@@ -1,0 +1,145 @@
+
+.whimsy-layer {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+
+  --whimsy-cat-fur: #8b858f;
+  --whimsy-cat-ear: #c9a8ba;
+  --whimsy-cat-face: #b6adb9;
+  --whimsy-cat-eye: #332b35;
+  --whimsy-butterfly: var(--accent-blue);
+}
+
+:root[data-theme='dark'] .whimsy-layer {
+  --whimsy-cat-fur: #bcb2c3;
+  --whimsy-cat-ear: #e6a8cf;
+  --whimsy-cat-face: #e1d4e3;
+  --whimsy-cat-eye: #302331;
+}
+
+.whimsy-cat {
+  position: absolute;
+  width: 64px;
+  height: 48px;
+  opacity: 0.86;
+  transition:
+    left 7s ease-in-out,
+    top 7s ease-in-out;
+  will-change: left, top;
+}
+
+.whimsy-cat-facing-left .whimsy-cat-drawing {
+  transform: scaleX(-1);
+}
+
+.whimsy-cat-drawing {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.cat-fur {
+  fill: var(--whimsy-cat-fur);
+}
+
+.cat-ear {
+  fill: var(--whimsy-cat-ear);
+}
+
+.cat-face {
+  fill: var(--whimsy-cat-face);
+}
+
+.cat-eye {
+  fill: var(--whimsy-cat-eye);
+}
+
+.cat-nose {
+  fill: var(--whimsy-cat-ear);
+}
+
+.cat-whiskers {
+  fill: none;
+  stroke: var(--whimsy-cat-eye);
+  stroke-width: 0.8;
+  stroke-linecap: round;
+}
+
+.whimsy-butterfly {
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  opacity: 0.72;
+  animation: butterfly-drift 7s ease-in-out infinite;
+}
+
+.whimsy-butterfly svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.butterfly-wing {
+  fill: var(--whimsy-butterfly);
+  opacity: 0.75;
+}
+
+.butterfly-body {
+  fill: none;
+  stroke: var(--whimsy-cat-eye);
+  stroke-width: 1.3;
+  stroke-linecap: round;
+}
+
+.whimsy-butterfly-one {
+  top: 22%;
+  right: 8%;
+}
+
+.whimsy-butterfly-two {
+  bottom: 20%;
+  left: 9%;
+  width: 21px;
+  height: 21px;
+  animation-delay: -3.5s;
+}
+
+@keyframes butterfly-drift {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(-8deg);
+  }
+
+  50% {
+    transform: translate(9px, -13px) rotate(9deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .whimsy-cat {
+    width: 48px;
+    height: 38px;
+  }
+
+  .whimsy-butterfly-one {
+    right: 5%;
+  }
+
+  .whimsy-butterfly-two {
+    left: 4%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whimsy-cat {
+    transition: none;
+  }
+
+  .whimsy-butterfly {
+    animation: none;
+  }
+}

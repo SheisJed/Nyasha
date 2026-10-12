@@ -10,6 +10,7 @@ import PersonalHobbies from './components/PersonalHobbies'
 import SignOutSatire from './components/SignOutSatire'
 import ContactSection from './components/ContactSection'
 import ChatWidget from './components/ChatWidget'
+import WhimsyCompanion from './components/WhimsyCompanion'
 import Footer from './components/Footer'
 import { LanguageProvider } from './contexts/LanguageContext'
 import './styles/App.css'
@@ -35,6 +36,7 @@ function App() {
     <LanguageProvider>
       <div className="app">
      <Header/>
+     <WhimsyCompanion />
         <main className="container">
           <div className="content-wrapper">
             <div className="main-content">
