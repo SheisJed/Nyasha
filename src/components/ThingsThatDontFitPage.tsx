@@ -34,9 +34,9 @@ function ThingsThatDontFitPage() {
         </span>
       </section>
 
-      <a href="/Nyasha/" className="things-page-back">
-        ← Back to Nyasha
-      </a>
+      <a href="#/" className="things-page-back">
+  ← Back to Home
+</a>
     </main>
   )
 }

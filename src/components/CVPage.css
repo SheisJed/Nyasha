@@ -78,13 +78,29 @@
 }
 
 .cv-header-intro {
-  max-width: 520px;
-  margin: 8px 0 0;
+  align-self: stretch;
+  width: 100%;
+  max-width: none;
+  margin: 20px 0 0;
+  color: var(--text-secondary);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  line-height: 1.75;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+.cv-personal-philosophy {
+  align-self: center;
+  max-width: 620px;
+  margin: 18px 0 0;
   color: var(--text-secondary);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 16px;
+  font-size: 15px;
   font-style: italic;
-  line-height: 1.8;
+  line-height: 1.7;
+  text-align: center;
+  text-wrap: balance;
 }
 
 .cv-contact-links {
