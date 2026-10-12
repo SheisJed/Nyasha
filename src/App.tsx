@@ -36,7 +36,6 @@ function App() {
     <LanguageProvider>
       <div className="app">
      <Header/>
-     <WhimsyCompanion />
         <main className="container">
           <div className="content-wrapper">
             <div className="main-content">
@@ -51,6 +50,7 @@ function App() {
             </div>
           </div>
         </main>
+        <WhimsyCompanion />
         <Footer />
         <ChatWidget />
       </div>
