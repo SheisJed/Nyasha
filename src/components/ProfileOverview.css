@@ -118,7 +118,7 @@
 
   .profile-name {
     max-width: 650px;
-    font-size: clamp(40px, 9vw, 64px);
+    font-size: clamp(36px, 8vw, 52px);;
     margin-bottom: 18px;
   }
 
