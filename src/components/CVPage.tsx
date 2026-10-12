@@ -1,4 +1,3 @@
-
 import './CVPage.css'
 import { portfolioConfig } from '../config/portfolio.config'
 
@@ -100,32 +99,39 @@ function CVPage() {
     <main className="container cv-page">
       <article className="cv-sheet">
         <header className="cv-header">
-          <div className="cv-heading-copy">
-            <span className="cv-eyebrow">CURRICULUM VITAE</span>
-            <h1>Waithiegeni Jedidah</h1>
-            <p className="cv-professional-title">
-              Industrial Chemistry Graduate · Water Treatment Design Engineer
-            </p>
-            <p className="cv-header-intro">
-              Chemistry, water quality, and practical engineering solutions.
-            </p>
-            
-<div className="cv-contact-links">
-  <a href="mailto:jedidahgithinji12@gmail.com">
-    jedidahgithinji19@gmail.com
-  </a>
-  <a href="tel:+254712293972">
-    +254 712 293 972
-  </a>
-  <a
-    href="https://www.linkedin.com/in/waithiegeni-jedidah/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    LinkedIn <span aria-hidden="true">↗</span>
-  </a>
-</div>
+          <span className="cv-eyebrow">CURRICULUM VITAE</span>
 
+          <h1>Waithiegeni Jedidah</h1>
+
+          <p className="cv-professional-title">
+            Industrial Chemistry Graduate
+            <span aria-hidden="true"> · </span>
+            Water Treatment Design Engineer
+          </p>
+
+          <p className="cv-header-intro">
+            Chemistry, water quality, and practical engineering solutions.
+          </p>
+
+          <div
+            className="cv-contact-links"
+            aria-label="Professional contact details"
+          >
+            <a href="mailto:jedidahgithinji19@gmail.com">
+              jedidahgithinji19@gmail.com
+            </a>
+
+            <a href="tel:+254712293972">
+              +254 712 293 972
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/jedidah-githinji/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn <span aria-hidden="true">↗</span>
+            </a>
           </div>
 
           {resumeUrl && (
@@ -141,51 +147,30 @@ function CVPage() {
         </header>
 
         <div className="cv-body">
-          <section className="cv-section cv-profile">
-            <div className="cv-section-label">
-              <span>01</span>
-              <h2>Professional Profile</h2>
-            </div>
-
-            <div className="cv-section-content">
-              <p>
-                Industrial Chemistry graduate with experience spanning
-                laboratory analysis, materials testing, quality control,
-                customer service, and water treatment plant design.
-                Skilled in interpreting water quality results, supporting
-                treatment system design, and preparing technical
-                documentation.
-              </p>
-              <p>
-                Interested in applying scientific principles to practical
-                engineering and environmental challenges. I believe
-                engineering has its greatest impact when it quietly makes
-                everyday life better.
-              </p>
-            </div>
-          </section>
-
-          <section className="cv-section">
-            <div className="cv-section-label">
-              <span>02</span>
+          <section className="cv-section cv-experience-section">
+            <div className="cv-section-heading">
+              <span className="cv-section-number">01</span>
               <h2>Professional Experience</h2>
             </div>
 
-            <div className="cv-section-content cv-experience-list">
+            <div className="cv-experience-list">
               {experience.map((item) => (
                 <article
                   className="cv-role"
                   key={`${item.organisation}-${item.role}`}
                 >
                   <div className="cv-role-heading">
-                    <div>
+                    <div className="cv-role-title-block">
                       <h3>{item.role}</h3>
-                      <p className="cv-organisation">{item.organisation}</p>
+                      <p className="cv-organisation">
+                        {item.organisation}
+                      </p>
                     </div>
+
                     <span className="cv-dates">{item.dates}</span>
                   </div>
 
-                  <ul>
+                  <ul className="cv-points">
                     {item.points.map((point) => (
                       <li key={point}>{point}</li>
                     ))}
@@ -196,25 +181,34 @@ function CVPage() {
           </section>
 
           <section className="cv-section">
-            <div className="cv-section-label">
-              <span>03</span>
+            <div className="cv-section-heading">
+              <span className="cv-section-number">02</span>
               <h2>Education</h2>
             </div>
 
             <div className="cv-section-content">
               <article className="cv-education">
-                <h3>Bachelor of Science in Industrial Chemistry</h3>
-                <p className="cv-organisation">
-                  Jomo Kenyatta University of Agriculture and Technology
-                </p>
-                <p className="cv-dates">Sep 2019 – Jun 2024</p>
+                <div className="cv-role-heading">
+                  <div className="cv-role-title-block">
+                    <h3>
+                      Bachelor of Science in Industrial Chemistry
+                    </h3>
+                    <p className="cv-organisation">
+                      Jomo Kenyatta University of Agriculture and Technology
+                    </p>
+                  </div>
+
+                  <span className="cv-dates">
+                    Sep 2019 – Jun 2024
+                  </span>
+                </div>
               </article>
             </div>
           </section>
 
           <section className="cv-section">
-            <div className="cv-section-label">
-              <span>04</span>
+            <div className="cv-section-heading">
+              <span className="cv-section-number">03</span>
               <h2>Research Project</h2>
             </div>
 
@@ -224,11 +218,13 @@ function CVPage() {
                   Removal of Pb(II) Ions from Wastewater Using Activated
                   Carbon Prepared from Banana Peels
                 </h3>
+
                 <p className="cv-organisation">
                   Research project · Jomo Kenyatta University of Agriculture
                   and Technology
                 </p>
-                <ul>
+
+                <ul className="cv-points">
                   <li>
                     Prepared activated carbon from agricultural waste
                     through controlled carbonisation and activation.
@@ -250,44 +246,50 @@ function CVPage() {
             </div>
           </section>
 
-          <section className="cv-section">
-            <div className="cv-section-label">
-              <span>05</span>
+          <section className="cv-section cv-skills-section">
+            <div className="cv-section-heading">
+              <span className="cv-section-number">04</span>
               <h2>Technical Skills</h2>
             </div>
 
-            <div className="cv-section-content cv-skills">
+            <div className="cv-skill-grid">
               {skillGroups.map((group) => (
-                <div className="cv-skill-group" key={group.title}>
+                <section
+                  className="cv-skill-card"
+                  key={group.title}
+                >
                   <h3>{group.title}</h3>
+
                   <ul>
                     {group.skills.map((skill) => (
                       <li key={skill}>{skill}</li>
                     ))}
                   </ul>
-                </div>
+                </section>
               ))}
             </div>
           </section>
 
-          <section className="cv-section">
-            <div className="cv-section-label">
-              <span>06</span>
+          <section className="cv-section cv-community-section">
+            <div className="cv-section-heading">
+              <span className="cv-section-number">05</span>
               <h2>Community & Voluntary Engagement</h2>
             </div>
 
-            <div className="cv-section-content cv-experience-list">
+            <div className="cv-experience-list">
               <article className="cv-role">
                 <div className="cv-role-heading">
-                  <div>
-                    <h3>Volunteer — Children's Department</h3>
+                  <div className="cv-role-title-block">
+                    <h3>Volunteer — Children&apos;s Department</h3>
                     <p className="cv-organisation">
                       Fatima Mission Hospital
                     </p>
                   </div>
+
                   <span className="cv-dates">2015 – 2018</span>
                 </div>
-                <ul>
+
+                <ul className="cv-points">
                   <li>
                     Supported daily operational activities in a paediatric
                     care environment.
@@ -301,13 +303,15 @@ function CVPage() {
 
               <article className="cv-role">
                 <div className="cv-role-heading">
-                  <div>
+                  <div className="cv-role-title-block">
                     <h3>Volunteer</h3>
                     <p className="cv-organisation">UNBOUND, Nairobi</p>
                   </div>
+
                   <span className="cv-dates">2015 – 2018</span>
                 </div>
-                <ul>
+
+                <ul className="cv-points">
                   <li>
                     Assisted with documentation, record organisation,
                     beneficiary services, and correspondence management.
@@ -317,15 +321,17 @@ function CVPage() {
 
               <article className="cv-role">
                 <div className="cv-role-heading">
-                  <div>
+                  <div className="cv-role-title-block">
                     <h3>Community-Initiated Development Projects</h3>
                     <p className="cv-organisation">
                       Chinga Girls High School
                     </p>
                   </div>
+
                   <span className="cv-dates">2016 – 2018</span>
                 </div>
-                <ul>
+
+                <ul className="cv-points">
                   <li>
                     Initiated, planned, and carried out student-led
                     community development projects.
@@ -339,24 +345,24 @@ function CVPage() {
             </div>
           </section>
 
-          <section className="cv-section cv-interests">
-            <div className="cv-section-label">
-              <span>07</span>
+          <section className="cv-section cv-interests-section">
+            <div className="cv-section-heading">
+              <span className="cv-section-number">06</span>
               <h2>Professional Interests</h2>
             </div>
 
-            <div className="cv-section-content">
-              <p>
-                Water reuse · Circular water systems · Water quality ·
-                Low-energy treatment approaches · Sustainable water
-                management
-              </p>
+            <div className="cv-interest-list">
+              <span>Water reuse</span>
+              <span>Circular water systems</span>
+              <span>Water quality</span>
+              <span>Low-energy treatment</span>
+              <span>Sustainable water management</span>
             </div>
           </section>
         </div>
 
         <footer className="cv-footer">
-          <span>SCIENCE, SYSTEMS & SOLUTIONS</span>
+          <span>SCIENCE, SYSTEMS &amp; SOLUTIONS</span>
           <span>CV · Waithiegeni Jedidah</span>
         </footer>
       </article>
