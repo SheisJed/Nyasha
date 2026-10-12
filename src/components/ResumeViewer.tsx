@@ -8,7 +8,44 @@ function ResumeViewer() {
   return (
     <section className="resume-section" id="resume">
       <div className="resume-card">
-        <div className="resume-card-art" aria-hidden="true">
+<div className="resume-card-art" aria-hidden="true">
+  <div className="resume-document-icon">
+    <svg
+      viewBox="0 0 64 76"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 4.5H38L53 19.5V68C53 70 51 71.5 49 71.5H12C10 71.5 8.5 70 8.5 68V8C8.5 6 10 4.5 12 4.5Z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M38 5V20H52"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M18 33H43M18 42H43M18 51H36"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+      <path
+        d="M18 23H28"
+        stroke="#ED85C7"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+    </svg>
+  </div>
+
+  <span className="resume-art-caption">
+    THE FORMAL VERSION
+  </span>
+</div>
           <div className="resume-paper">
             <span className="resume-paper-line resume-paper-title" />
             <span className="resume-paper-line resume-paper-short" />
