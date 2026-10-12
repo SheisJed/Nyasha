@@ -138,90 +138,82 @@ function GitHubReplay() {
         <p>A career that kept circling back to water.</p>
       </div>
 
-      <div className="experience-cards">
-        {workExperience.map((experience) => {
-          const isExpanded = Boolean(
-            expandedEntries[experience.number]
-          )
-          const detailsId = `experience-details-${experience.number}`
-
-          return (
-            <article
-              key={experience.number}
-              className={`experience-card ${
-                isExpanded ? 'is-expanded' : ''
-              }`}
-            >
-              <div className="experience-card-top">
-                <span className="experience-number">
-                  {experience.number}
-                </span>
-                <span className="experience-emoji" aria-hidden="true">
-                  {experience.emoji}
-                </span>
-              </div>
-
-              <h3>{experience.title}</h3>
-
-              <p className="experience-role">
-                {experience.role}
-              </p>
-
-              <p className="experience-company">
-                {experience.company}
-              </p>
-
-              {experience.dates && (
-                <p className="experience-dates">
-                  {experience.dates}
-                </p>
-              )}
-
-              <p className="experience-summary">
-                {experience.summary}
-              </p>
-
-              <button
-                type="button"
-                className="experience-toggle"
-                aria-expanded={isExpanded}
-                aria-controls={detailsId}
-                onClick={() => toggleEntry(experience.number)}
-              >
-                {isExpanded ? 'Show less' : 'Read more'}
-                <span aria-hidden="true">
-                  {isExpanded ? '−' : '+'}
-                </span>
-              </button>
-
-              <div
-                id={detailsId}
-                className="experience-details"
-                hidden={!isExpanded}
-              >
-                <ul className="experience-highlights">
-                  {experience.highlights.map((highlight) => (
-                    <li key={highlight}>{highlight}</li>
-                  ))}
-                </ul>
-              </div>
-              
-      <div className="experience-whimsy">
-        <div className="experience-whimsy-note">
-          <span className="experience-whimsy-kicker">
-            AND STILL, I WONDER
-          </span>
-          <p>
-            A little curiosity can take you somewhere beautiful.
-          </p>
-        </div>
-
+      <div className="experience-stage">
         <WhimsyCompanion />
-      </div>
 
-            </article>
-          )
-        })}
+        <div className="experience-cards">
+          {workExperience.map((experience) => {
+            const isExpanded = Boolean(
+              expandedEntries[experience.number]
+            )
+            const detailsId = `experience-details-${experience.number}`
+
+            return (
+              <article
+                key={experience.number}
+                className={`experience-card ${
+                  isExpanded ? 'is-expanded' : ''
+                }`}
+              >
+                <div className="experience-card-top">
+                  <span className="experience-number">
+                    {experience.number}
+                  </span>
+
+                  <span className="experience-emoji" aria-hidden="true">
+                    {experience.emoji}
+                  </span>
+                </div>
+
+                <h3>{experience.title}</h3>
+
+                <p className="experience-role">
+                  {experience.role}
+                </p>
+
+                <p className="experience-company">
+                  {experience.company}
+                </p>
+
+                {experience.dates && (
+                  <p className="experience-dates">
+                    {experience.dates}
+                  </p>
+                )}
+
+                <p className="experience-summary">
+                  {experience.summary}
+                </p>
+
+                <button
+                  type="button"
+                  className="experience-toggle"
+                  aria-expanded={isExpanded}
+                  aria-controls={detailsId}
+                  onClick={() => toggleEntry(experience.number)}
+                >
+                  {isExpanded ? 'Show less' : 'Read more'}
+
+                  <span aria-hidden="true">
+                    {isExpanded ? '−' : '+'}
+                  </span>
+                </button>
+
+                <div
+                  id={detailsId}
+                  className="experience-details"
+                  hidden={!isExpanded}
+                >
+                  <ul className="experience-highlights">
+                    {experience.highlights.map((highlight) => (
+                      <li key={highlight}>{highlight}</li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            )
+          })}
+        </div>
       </div>
     </section>
   )
