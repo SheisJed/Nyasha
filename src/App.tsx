@@ -13,6 +13,7 @@ import PersonalHobbies from './components/PersonalHobbies'
 import SignOutSatire from './components/SignOutSatire'
 import ContactSection from './components/ContactSection'
 import CVPage from './components/CVPage'
+import ContactPage from './components/ContactPage'
 import ChatWidget from './components/ChatWidget'
 import Footer from './components/Footer'
 import { LanguageProvider } from './contexts/LanguageContext'
@@ -134,15 +135,7 @@ function App() {
 
         {currentRoute === 'writing' && <WritingPage />}
 
-        {currentRoute === 'contact' && (
-          <main className="container">
-            <div className="content-wrapper">
-              <div className="main-content">
-                <ContactSection />
-              </div>
-            </div>
-          </main>
-        )}
+       {currentRoute === 'contact' && <ContactPage />}
 
         <Footer />
         <ChatWidget />
