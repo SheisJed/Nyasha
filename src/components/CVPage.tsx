@@ -109,9 +109,20 @@ function CVPage() {
             Water Treatment Design Engineer
           </p>
 
-          <p className="cv-header-intro">
-            Chemistry, water quality, and practical engineering solutions.
-          </p>
+         <p className="cv-header-intro">
+  Industrial Chemistry graduate and Water Treatment Design Engineer
+  with experience in water treatment system design, water quality
+  interpretation, laboratory analysis, materials testing, and quality
+  control. Skilled in translating analytical results into practical
+  treatment solutions and preparing technical proposals and
+  documentation. Interested in advancing sustainable water management
+  through efficient treatment, water reuse, and circular water systems.
+</p>
+
+<p className="cv-personal-philosophy">
+  I believe engineering has its greatest impact when it quietly makes
+  everyday life better.
+</p>
 
           <div
             className="cv-contact-links"
