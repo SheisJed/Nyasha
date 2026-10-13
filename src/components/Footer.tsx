@@ -4,6 +4,7 @@ import { portfolioConfig } from '../config/portfolio.config'
 function Footer() {
   const currentYear = new Date().getFullYear()
   const startYear = 2026
+
   const yearDisplay =
     startYear === currentYear
       ? `${currentYear}`
@@ -25,24 +26,22 @@ function Footer() {
 
       section.classList.add('highlight-pulse')
 
-      setTimeout(() => {
+      window.setTimeout(() => {
         section.classList.remove('highlight-pulse')
       }, 2000)
     }
   }
 
- 
-const quickLinks = [
-  {
-    name: 'Resume',
-    id: 'resume',
-  },
-  {
-    name: 'Work Experience',
-    id: 'experience',
-  },
-]
-
+  const quickLinks = [
+    {
+      name: 'Resume',
+      id: 'resume',
+    },
+    {
+      name: 'Work Experience',
+      id: 'experience',
+    },
+  ]
 
   const socialLinks = [
     {
@@ -79,6 +78,18 @@ const quickLinks = [
 
   return (
     <footer className="footer">
+      <div className="footer-garden">
+        <img
+          className="footer-garden-cat"
+          src={`${import.meta.env.BASE_URL}garden-cat.png`}
+          alt="A little white cat sitting among grass and flowers"
+          loading="lazy"
+        />
+        <p className="footer-garden-caption">
+          A little patch of calm, just for you. 🌷
+        </p>
+      </div>
+
       <div className="footer-top">
         <div className="footer-container">
           <div className="footer-column">
@@ -159,9 +170,21 @@ const quickLinks = [
                       strokeWidth="1.8"
                       aria-hidden="true"
                     >
-                      <rect x="3" y="3" width="18" height="18" rx="5" />
+                      <rect
+                        x="3"
+                        y="3"
+                        width="18"
+                        height="18"
+                        rx="5"
+                      />
                       <circle cx="12" cy="12" r="4.2" />
-                      <circle cx="17.4" cy="6.7" r="1" fill="currentColor" stroke="none" />
+                      <circle
+                        cx="17.4"
+                        cy="6.7"
+                        r="1"
+                        fill="currentColor"
+                        stroke="none"
+                      />
                     </svg>
                   )}
 
@@ -196,6 +219,7 @@ const quickLinks = [
 
           <div className="footer-column footer-column-about">
             <h3 className="footer-heading">A Little More</h3>
+
             <p className="footer-tagline">
               A small corner of the internet where water, words & curiosity
               collide

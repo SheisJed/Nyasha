@@ -1,9 +1,55 @@
 /* Footer Container */
+
 .footer {
   margin-top: 60px;
   border-top: 2px solid var(--border-color);
   background: var(--bg-primary);
+  overflow: hidden;
 }
+
+/* Little Garden Cat */
+
+.footer-garden {
+  width: 100%;
+  min-height: 190px;
+  padding: 22px 20px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    radial-gradient(
+      ellipse at 50% 100%,
+      rgba(174, 204, 153, 0.18) 0%,
+      rgba(174, 204, 153, 0.07) 42%,
+      transparent 75%
+    );
+}
+
+.footer-garden-cat {
+  display: block;
+  width: min(100%, 340px);
+  max-height: 210px;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 0.35s ease;
+}
+
+.footer-garden-cat:hover {
+  transform: translateY(-4px);
+}
+
+.footer-garden-caption {
+  margin: 2px 0 0;
+  color: var(--text-secondary);
+  font-size: 12px;
+  line-height: 1.6;
+  font-style: italic;
+  letter-spacing: 0.2px;
+}
+
+/* Top Section */
 
 .footer-top {
   padding: 40px 0;
@@ -84,6 +130,7 @@
 
 .footer-social-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   margin-top: 8px;
 }
@@ -159,7 +206,8 @@
 }
 
 @keyframes steamPulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.7;
     transform: scale(1);
   }
@@ -173,6 +221,16 @@
 /* Responsive Design */
 
 @media (max-width: 768px) {
+  .footer-garden {
+    min-height: 160px;
+    padding-top: 18px;
+  }
+
+  .footer-garden-cat {
+    width: min(100%, 280px);
+    max-height: 170px;
+  }
+
   .footer-top {
     padding: 30px 0;
   }
@@ -193,11 +251,25 @@
   }
 
   .footer-social-links {
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
 
 @media (max-width: 480px) {
+  .footer-garden {
+    min-height: 140px;
+    padding: 16px 16px 10px;
+  }
+
+  .footer-garden-cat {
+    width: min(100%, 230px);
+    max-height: 140px;
+  }
+
+  .footer-garden-caption {
+    font-size: 11px;
+  }
+
   .footer-top {
     padding: 24px 0;
   }
@@ -227,5 +299,25 @@
   .footer-copyright,
   .footer-made-with {
     font-size: 11px;
+  }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-garden-cat,
+  .footer-link,
+  .footer-social-link,
+  .footer-social-link svg {
+    transition: none;
+  }
+
+  .footer-garden-cat:hover,
+  .footer-social-link:hover {
+    transform: none;
+  }
+
+  .footer-steam-icon {
+    animation: none;
   }
 }
