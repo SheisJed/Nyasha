@@ -1,336 +1,397 @@
-/* =========================================
-   NYASHA — WRITING PAGE
-   A smaller, floating editorial layout
-   ========================================= */
+
+/* ========================================
+   WRITING PAGE — NYASHA
+   ======================================== */
 
 .writing-page {
   width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  padding: 24px 22px 52px;
-  margin: 0 auto;
+  min-width: 0;
+  padding: clamp(8px, 2vw, 20px) 0 28px;
+  color: inherit;
 }
 
-/* Keep the entire writing experience
-   comfortably contained in the page */
-
-.writing-page > * {
-  width: 100%;
-  max-width: 820px;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
-}
-
-/* =========================================
-   INTRODUCTION
-   ========================================= */
+/* Introduction */
 
 .writing-intro {
-  max-width: 660px;
+  max-width: 740px;
+  margin: 0 auto 38px;
   text-align: center;
-  padding: 20px 12px 0;
-  margin-bottom: 36px;
-}
-
-.writing-eyebrow {
-  font-size: 0.7rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-  opacity: 0.72;
+  padding: 22px 12px 0;
 }
 
 .writing-intro h1 {
-  font-size: clamp(2.5rem, 5vw, 3.6rem);
+  margin: 12px 0 14px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.6rem, 6vw, 4.2rem);
+  font-weight: 400;
   line-height: 1.08;
   letter-spacing: -0.045em;
-  margin: 0 0 16px;
 }
 
-.writing-intro p {
-  max-width: 510px;
-  margin: 0 auto 12px;
+.writing-lead {
+  max-width: 620px;
+  margin: 0 auto 14px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.1rem, 2.3vw, 1.4rem);
+  line-height: 1.55;
+  opacity: 0.9;
+}
+
+.writing-description {
+  max-width: 580px;
+  margin: 0 auto 14px;
   font-size: 0.96rem;
   line-height: 1.8;
-  opacity: 0.86;
+  opacity: 0.78;
 }
 
-.writing-intro .writing-lead {
-  font-size: 1.08rem;
-  line-height: 1.75;
+.writing-signature {
+  margin-top: 18px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.96rem;
+  font-style: italic;
+  color: #b36c89;
 }
 
-/* =========================================
-   SECTION HEADINGS
-   ========================================= */
+/* Section headings */
 
 .writing-section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 0 0 15px;
+}
+
+.writing-section-heading h2 {
+  margin: 6px 0 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.writing-overline {
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  opacity: 0.65;
+}
+
+.writing-count {
+  flex-shrink: 0;
+  padding-bottom: 4px;
+  font-size: 0.66rem;
+  letter-spacing: 0.09em;
+  opacity: 0.58;
+}
+
+/* Featured essay */
+
+.writing-featured {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  overflow: hidden;
+  margin-bottom: 40px;
+  border: 1px solid rgba(181, 108, 137, 0.28);
+  border-radius: 18px;
+  background:
+    radial-gradient(
+      ellipse at 100% 0%,
+      rgba(213, 143, 169, 0.17),
+      transparent 48%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(213, 143, 169, 0.10),
+      rgba(213, 143, 169, 0.025)
+    );
+}
+
+.writing-featured-decoration {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  margin: 0 auto 16px;
-  max-width: 760px;
+  padding: 14px 24px 0;
+  color: #b36c89;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.1rem;
 }
 
-.writing-section-heading h2 {
-  font-size: 1.45rem;
-  font-weight: 500;
-  letter-spacing: -0.025em;
-  line-height: 1.3;
-  margin: 0;
+.writing-featured-decoration span:first-child {
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
 }
 
-.writing-section-number {
-  font-size: 0.67rem;
-  letter-spacing: 0.14em;
-  white-space: nowrap;
-  opacity: 0.65;
-}
-
-/* =========================================
-   FEATURED STORY
-   ========================================= */
-
-.writing-featured {
-  max-width: 760px;
-  margin: 0 auto 36px;
-  overflow: hidden;
-  border-radius: 16px;
-  box-sizing: border-box;
-}
-
-.writing-featured-decoration {
-  padding: 12px 22px 0;
-  text-align: right;
+.writing-featured-decoration span:last-child {
+  font-size: 1.5rem;
 }
 
 .writing-featured-content {
-  padding: 10px 26px 24px;
+  padding: 12px clamp(20px, 3.5vw, 34px) 23px;
 }
 
-.writing-featured-label {
-  font-size: 0.67rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  opacity: 0.72;
+.writing-category {
+  display: inline-block;
+  font-size: 0.64rem;
+  font-weight: 700;
+  line-height: 1.65;
+  letter-spacing: 0.11em;
+  opacity: 0.7;
 }
 
 .writing-featured h2 {
-  max-width: 610px;
-  font-size: clamp(1.7rem, 3vw, 2.35rem);
-  line-height: 1.16;
+  max-width: 760px;
+  margin: 10px 0 12px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.8rem, 3.8vw, 2.8rem);
+  font-weight: 400;
+  line-height: 1.15;
   letter-spacing: -0.035em;
-  margin: 0 0 12px;
 }
 
-.writing-featured-subtitle {
-  max-width: 600px;
-  font-size: 0.98rem;
-  line-height: 1.7;
-  margin: 0 0 12px;
-  opacity: 0.88;
+.writing-story-subtitle {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.65;
+  opacity: 0.83;
 }
 
-.writing-featured-excerpt {
-  max-width: 590px;
-  font-size: 0.87rem;
-  line-height: 1.8;
-  margin: 0 0 18px;
-  opacity: 0.8;
+.writing-featured .writing-story-subtitle {
+  max-width: 690px;
+  font-size: clamp(1rem, 1.8vw, 1.12rem);
 }
 
-.writing-featured a {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.86rem;
-  text-decoration: none;
-  transition: gap 0.2s ease;
+.writing-excerpt {
+  margin: 12px 0 18px;
+  font-size: 0.9rem;
+  line-height: 1.75;
+  opacity: 0.76;
 }
 
-.writing-featured a:hover {
-  gap: 12px;
+.writing-featured .writing-excerpt {
+  max-width: 660px;
 }
 
-/* =========================================
-   STORY CARDS
-   ========================================= */
+/* Smaller story cards */
+
+.writing-more-heading {
+  margin-top: 4px;
+}
 
 .writing-stories-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
-  max-width: 760px;
-  margin: 0 auto 38px;
+  margin-bottom: 42px;
 }
 
 .writing-story-card {
+  display: flex;
+  flex-direction: column;
   min-width: 0;
   padding: 20px;
-  border-radius: 14px;
-  box-sizing: border-box;
+  border: 1px solid rgba(181, 108, 137, 0.22);
+  border-radius: 16px;
+  background: rgba(213, 143, 169, 0.04);
   transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
 }
 
 .writing-story-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
+  border-color: rgba(181, 108, 137, 0.45);
+  background: rgba(213, 143, 169, 0.075);
 }
 
-.writing-story-card-label {
-  font-size: 0.65rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-  opacity: 0.68;
+.writing-card-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.writing-card-number {
+  color: #b36c89;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15rem;
 }
 
 .writing-story-card h3 {
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
-  line-height: 1.3;
+  margin: 0 0 9px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.3rem, 2vw, 1.65rem);
+  font-weight: 400;
+  line-height: 1.25;
   letter-spacing: -0.025em;
-  margin: 0 0 10px;
-  overflow-wrap: anywhere;
 }
 
-.writing-story-card p {
-  font-size: 0.84rem;
-  line-height: 1.75;
-  margin: 0 0 15px;
-  opacity: 0.82;
+.writing-story-card .writing-story-subtitle {
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.6;
 }
 
-.writing-story-card a {
+.writing-story-card .writing-excerpt {
+  margin: 12px 0 20px;
+  line-height: 1.7;
+}
+
+/* Shared story footer */
+
+.writing-story-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid rgba(181, 108, 137, 0.2);
+}
+
+.writing-story-footer > span {
+  font-size: 0.73rem;
+  line-height: 1.55;
+  opacity: 0.62;
+}
+
+.writing-read-link {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-size: 0.82rem;
+  gap: 5px;
+  width: fit-content;
+  color: #a95d7c;
+  font-size: 0.85rem;
+  font-weight: 600;
   text-decoration: none;
-  transition: gap 0.2s ease;
+  transition:
+    color 180ms ease,
+    gap 180ms ease;
 }
 
-.writing-story-card a:hover {
-  gap: 10px;
+.writing-read-link:hover {
+  gap: 8px;
+  color: #c07898;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
-/* =========================================
-   CLOSING NOTE
-   ========================================= */
+/* A little more to come */
 
 .writing-outro {
-  max-width: 620px;
-  text-align: center;
-  padding: 26px 18px 8px;
+  position: relative;
+  max-width: 700px;
   margin: 0 auto;
-  box-sizing: border-box;
+  padding: 27px clamp(18px, 3vw, 32px);
+  text-align: center;
+  border-top: 1px solid rgba(181, 108, 137, 0.28);
+}
+
+.writing-outro-symbol {
+  display: inline-block;
+  margin-bottom: 6px;
+  color: #b36c89;
+  font-size: 1.5rem;
 }
 
 .writing-outro h2 {
-  font-size: clamp(1.45rem, 3vw, 1.9rem);
-  line-height: 1.3;
-  letter-spacing: -0.025em;
-  margin: 0 0 12px;
+  margin: 5px 0 11px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
+  line-height: 1.25;
 }
 
 .writing-outro p {
-  font-size: 0.9rem;
+  max-width: 550px;
+  margin: 0 auto 18px;
+  font-size: 0.92rem;
   line-height: 1.8;
-  margin: 0 0 15px;
-  opacity: 0.82;
+  opacity: 0.77;
 }
 
-.writing-outro a {
-  font-size: 0.86rem;
-  text-decoration: none;
+.writing-substack-link {
+  margin: 0 auto;
 }
 
-/* =========================================
-   RESPONSIVE LAYOUT
-   ========================================= */
+/* Responsive layout */
 
 @media (max-width: 700px) {
   .writing-page {
-    padding: 18px 16px 36px;
+    padding-top: 4px;
   }
 
   .writing-intro {
-    padding: 18px 4px 0;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
+    padding-top: 18px;
   }
 
   .writing-intro h1 {
-    font-size: clamp(2.35rem, 10vw, 3.2rem);
-  }
-
-  .writing-intro p {
-    font-size: 0.91rem;
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
   }
 
   .writing-section-heading {
-    align-items: flex-end;
-    margin-bottom: 13px;
+    align-items: flex-start;
+    gap: 10px;
   }
 
   .writing-section-heading h2 {
-    font-size: 1.3rem;
+    font-size: 1.55rem;
   }
 
-  .writing-featured {
-    margin-bottom: 30px;
-    border-radius: 14px;
-  }
-
-  .writing-featured-decoration {
-    padding: 10px 17px 0;
-  }
-
-  .writing-featured-content {
-    padding: 10px 18px 21px;
-  }
-
-  .writing-featured h2 {
-    font-size: clamp(1.65rem, 7vw, 2.15rem);
-  }
-
-  .writing-featured-subtitle {
-    font-size: 0.91rem;
-  }
-
-  .writing-featured-excerpt {
-    font-size: 0.84rem;
+  .writing-count {
+    padding-top: 7px;
+    font-size: 0.59rem;
   }
 
   .writing-stories-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 12px;
-    margin-bottom: 30px;
+    margin-bottom: 34px;
   }
 
   .writing-story-card {
     padding: 19px;
   }
 
-  .writing-story-card h3 {
-    font-size: 1.35rem;
+  .writing-featured {
+    margin-bottom: 34px;
+    border-radius: 16px;
+  }
+
+  .writing-featured-decoration {
+    padding: 13px 19px 0;
+  }
+
+  .writing-featured-content {
+    padding: 12px 19px 20px;
+  }
+
+  .writing-featured h2 {
+    font-size: clamp(1.8rem, 7vw, 2.4rem);
+  }
+
+  .writing-card-topline {
+    margin-bottom: 14px;
   }
 
   .writing-outro {
-    padding: 22px 8px 8px;
+    padding: 24px 10px;
   }
 }
 
-/* =========================================
-   ACCESSIBILITY
-   ========================================= */
-
 @media (prefers-reduced-motion: reduce) {
-  .writing-featured a,
   .writing-story-card,
-  .writing-story-card a {
+  .writing-read-link {
     transition: none;
   }
 
