@@ -23,13 +23,6 @@ const professionalLinks = [
     icon: 'in',
     external: true,
   },
-  {
-    label: 'GitHub',
-    detail: 'Explore my work',
-    href: 'https://github.com/SheisJed',
-    icon: '⌘',
-    external: true,
-  },
 ]
 
 const personalLinks = [

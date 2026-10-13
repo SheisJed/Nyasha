@@ -39,11 +39,6 @@ function Footer() {
 
   const socialLinks = [
     {
-      name: 'GitHub',
-      url: `https://github.com/${portfolioConfig.social.github}`,
-      icon: 'github',
-    },
-    {
       name: 'LinkedIn',
       url: portfolioConfig.social.linkedin,
       icon: 'linkedin',

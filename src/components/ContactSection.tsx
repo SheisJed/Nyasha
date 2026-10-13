@@ -31,15 +31,6 @@ const ContactSection = () => {
           </a>
 
           <a
-            href="https://github.com/SheisJed"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="contact-button"
-          >
-            ◉ GitHub
-          </a>
-
-          <a
             href="https://www.linkedin.com/in/waithiegeni-jedidah/"
             target="_blank"
             rel="noopener noreferrer"
