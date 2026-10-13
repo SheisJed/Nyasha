@@ -1,105 +1,42 @@
-# 🌊 Nyasha — Waithiegeni Jedidah
+# Waithiegeni Jedidah
 
-A personal portfolio of Waithiegeni Jedidah — industrial chemist, water treatment design engineer, writer, and curious explorer. Built with React, TypeScript, and Vite.
+<p align="center">
+  <a href="https://sheisjed.github.io/Nyasha/#/">
+    <img src="./public/portfolio.PNG" alt="A preview of Waithiegeni Jedidah's personal portfolio" width="100%" />
+  </a>
+</p>
 
-![Status Live Badge](https://img.shields.io/badge/Status-Live-success?style=for-the-badge)
-![React](https://img.shields.io/badge/React-18.3-61dafb?style=for-the-badge&logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178c6?style=for-the-badge&logo=typescript)
-![Vite](https://img.shields.io/badge/Vite-6.0-646cff?style=for-the-badge&logo=vite)
+**Industrial Chemist · Water Treatment Design Engineer · Writer**
 
+I believe engineering has its greatest impact when it quietly makes everyday life better.
 
-## 🛠️ Tech Stack
+I work in water treatment design, where chemistry, analysis, and practical engineering come together to solve real problems. Beyond my day-to-day work, I am interested in water reuse, circular water systems, and ways to make reliable access to water more achievable, especially for communities where water remains a constant struggle.
 
-### Frontend
-- **React 18.3** - UI framework with hooks (useState, useEffect, useContext)
-- **TypeScript 5.6** - Type safety and interfaces
-- **Vite 6.0** - Build tool and dev server with HMR
-- **CSS3** - Styling with custom properties and animations
-- **React Context API** - Global state management for language switching
-- **LocalStorage API** - Persistent user preferences across sessions
+I am still learning, still asking questions, and still figuring out how to turn the things I care about into things I can build.
 
-### APIs & Services
-- **GitHub REST API** - Fetch repos and user data
-- **GitHub GraphQL API** - Contribution graphs and advanced queries
+This portfolio brings together my professional experience, the stories behind it, my writing, and the things that don't quite fit on a CV.
 
-## 📦 Installation
+## A little about my work
 
-### Prerequisites
-- Node.js 18+ and npm
+- **Water treatment:** Designing treatment systems around client requirements, raw water analysis, and the quality of water needed.
+- **Chemistry and quality control:** Building on laboratory experience, analytical testing, and industrial quality control.
+- **People and problem-solving:** Looking beyond the technical task to the people, processes, and everyday realities surrounding it.
+- **Water reuse and circular systems:** Exploring how water can be treated, reused, and managed so that every drop has the opportunity to serve more than one purpose.
 
-### Setup
+## Beyond the CV
 
-1. **Clone the repository**
-```bash
-git clone https://github.com/sheisjed/Nyasha.git
-cd Nyasha
-```
+I write, observe, ask questions, and collect stories. Some of what shapes me belongs in a laboratory or a treatment plant; some of it belongs in conversations, notebooks, and the ordinary moments that teach us something about being human.
 
-2. **Install dependencies**
-```bash
-npm install
-```
+Not everything meaningful fits neatly into a professional title. This space makes room for that, too.
 
-3. **Configure your portfolio**
+## Find me around the internet
 
-   Edit `src/config/portfolio.config.ts`:
-   ```typescript
-   export const portfolioConfig = {
-     personal: {
-       name: 'Waithiegeni Jedidah',
-       title: 'Industrial Chemist | Water Treatment Design Engineer',
-       email: 'jedidahgithinji12@gmail.com',
-       // ... more settings
-     },
-     social: {
-       github: 'SheisJed',
-       linkedin: 'https://linkedin.com/in/waithiegeni-jedidah/',
-     },
-     // ... more configuration
-   }
-   ```
-
-4. **Add your assets to `public/` folder**
-   - `profile-avatar.gif` - Your animated avatar
-   - `profile-background.jpg` - Background image
-   - `resume.pdf` - Your resume PDF
-   - `your-logo.png` - Your logo
-
-5. **Run development server**
-```bash
-npm run dev
-```
-
-Visit `http://localhost:5173` to see your portfolio!
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 👤 Author
-
-**Waithiegeni Jedidah**
-- GitHub: [@SheisJed](https://github.com/sheisjed)
-- LinkedIn: [Waithiegeni Jedidah](https://www.linkedin.com/in/waithiegeni-jedidah/)
-- Email: jedidahgithinji12@gmail.com
-
-## 🙏 Acknowledgments
-
-- Inspired by [Steam Community](https://steamcommunity.com/) profile design
-- Built with [Vite](https://vitejs.dev/) and [React](https://react.dev/)
+- **[Portfolio](https://sheisjed.github.io/Nyasha/#/)**
+- **[Work Experience](https://sheisjed.github.io/Nyasha/#/work-experience)**
+- **[Beyond the CV](https://sheisjed.github.io/Nyasha/#/things-that-dont-fit)**
+- **[LinkedIn](https://linkedin.com/in/waithiegeni-jedidah/)**
+- **Email:** [jedidahgithinji12@gmail.com](mailto:jedidahgithinji12@gmail.com)
 
 ---
 
-**Note**: Don't forget to star ⭐ this repository if you found it helpful!
-
-Made with 💜 and inspired by Steam
+*Built with React, TypeScript, and Vite. Made with care, curiosity, and a belief that the things we build should make life a little better.*
