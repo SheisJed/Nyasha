@@ -186,29 +186,29 @@ function ThingsThatDontFitPage() {
                 </a>
               )}
 
-              {index === stories.length - 1 && (
-                <div className="things-page-reflection">
-                  <span className="things-page-reflection-label">
-                    WHAT I CARRIED WITH ME
-                  </span>
+              
+{index === stories.length - 1 && (
+  <aside className="things-page-takeaway">
+    <span>WHAT I CARRIED WITH ME</span>
 
-                  <p>
-                    UNBOUND taught me to look beyond the paperwork.
-                    Fatima taught me gentleness and responsibility.
-                    Chinga taught me to speak up and turn a requirement
-                    into an opportunity. None of these lessons came
-                    neatly packaged, but all of them came with me.
-                  </p>
+    <p>
+      UNBOUND taught me to look beyond the paperwork.
+      Fatima taught me gentleness and responsibility.
+      Chinga taught me to speak up and turn a requirement
+      into an opportunity. None of these lessons came
+      neatly packaged, but all of them came with me.
+    </p>
 
-                  <a
-                    href="#story-contents"
-                    onClick={scrollToSection('story-contents')}
-                    className="things-page-next"
-                  >
-                    Back to the contents <span aria-hidden="true">↑</span>
-                  </a>
-                </div>
-              )}
+    <a
+      href="#story-contents"
+      onClick={scrollToSection('story-contents')}
+      className="things-page-next"
+    >
+      Back to the contents <span aria-hidden="true">↑</span>
+    </a>
+  </aside>
+)}
+
             </div>
           </article>
         ))}
@@ -225,16 +225,25 @@ function ThingsThatDontFitPage() {
           I am still carrying those lessons with me.
         </p>
 
-        <a
-          href="#/work-experience"
-          className="things-page-work-link"
-        >
-          Read the stories behind my work →
-        </a>
+        
+<a
+  href="#/writing"
+  className="things-page-work-link"
+>
+  Meet the Jed outside the job titles →
+</a>
 
-        <a href="#/" className="things-page-back">
-          ← Back to Home
-        </a>
+<a
+  href="#/cv"
+  className="things-page-work-link"
+>
+  Take a look at my CV →
+</a>
+
+<a href="#/" className="things-page-back">
+  Or back to home
+</a>
+
       </section>
     </main>
   )

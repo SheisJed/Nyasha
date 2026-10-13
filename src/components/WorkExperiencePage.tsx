@@ -260,16 +260,21 @@ function WorkExperiencePage() {
             with the real needs of people and communities.
           </p>
 
-          <a href="#/cv" className="work-page-cta">
-            Take a look at my CV <span aria-hidden="true">→</span>
-          </a>
+          
+<a
+  href="#/things-that-dont-fit"
+  className="work-page-cta"
+>
+  Explore the stories beyond the CV <span aria-hidden="true">→</span>
+</a>
 
-          <a
-            href="#/things-that-dont-fit"
-            className="work-page-secondary-link"
-          >
-            Or explore the stories beyond the CV →
-          </a>
+<a
+  href="#/cv"
+  className="work-page-secondary-link"
+>
+  Or take a look at my CV →
+</a>
+
         </section>
       </div>
     </main>
