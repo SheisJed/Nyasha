@@ -10,36 +10,30 @@ function Footer() {
       ? `${currentYear}`
       : `${startYear} - ${currentYear}`
 
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId)
-
-    if (section) {
-      const headerOffset = 100
-      const elementPosition = section.getBoundingClientRect().top
-      const offsetPosition =
-        elementPosition + window.pageYOffset - headerOffset
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      })
-
-      section.classList.add('highlight-pulse')
-
-      window.setTimeout(() => {
-        section.classList.remove('highlight-pulse')
-      }, 2000)
-    }
-  }
-
   const quickLinks = [
     {
-      name: 'Resume',
-      id: 'resume',
+      name: 'Home',
+      href: '#/',
     },
     {
       name: 'Work Experience',
-      id: 'experience',
+      href: '#/work-experience',
+    },
+    {
+      name: 'Beyond the CV',
+      href: '#/things-that-dont-fit',
+    },
+    {
+      name: 'CV',
+      href: '#/cv',
+    },
+    {
+      name: 'Writing',
+      href: '#/writing',
+    },
+    {
+      name: 'Contact',
+      href: '#/contact',
     },
   ]
 
@@ -85,6 +79,7 @@ function Footer() {
           alt="A little white cat sitting among grass and flowers"
           loading="lazy"
         />
+
         <p className="footer-garden-caption">
           May you feel held, always. 🤍
         </p>
@@ -97,14 +92,13 @@ function Footer() {
 
             <ul className="footer-links">
               {quickLinks.map(link => (
-                <li key={link.id}>
-                  <button
-                    type="button"
-                    onClick={() => scrollToSection(link.id)}
+                <li key={link.href}>
+                  <a
+                    href={link.href}
                     className="footer-link"
                   >
                     {link.name}
-                  </button>
+                  </a>
                 </li>
               ))}
             </ul>
