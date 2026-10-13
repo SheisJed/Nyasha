@@ -1,36 +1,46 @@
+
 import { FormEvent, useState } from 'react'
 import './ChatWidget.css'
 
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mzedjpbd'
+
 const ChatWidget = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-  event.preventDefault()
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submissionStatus, setSubmissionStatus] = useState<
+    'success' | 'error' | null
+  >(null)
 
-  const formData = new FormData(event.currentTarget)
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
 
-  const name = String(formData.get('name') || '').trim()
-  const email = String(formData.get('email') || '').trim()
-  const message = String(formData.get('message') || '').trim()
+    const form = event.currentTarget
+    const formData = new FormData(form)
 
-  if (!name || !email || !message) {
-    return
+    setIsSubmitting(true)
+    setSubmissionStatus(null)
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json',
+        },
+      })
+
+      if (response.ok) {
+        form.reset()
+        setSubmissionStatus('success')
+      } else {
+        setSubmissionStatus('error')
+      }
+    } catch {
+      setSubmissionStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
-
-  const subject = `A note from ${name}`
-
-  const body = [
-    `Hi Jedidah,`,
-    '',
-    message,
-    '',
-    `— ${name}`,
-    email,
-  ].join('\n')
-
-  const mailto = `mailto:jedidahgithinji12@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-
-  window.location.href = mailto
-}
 
   return (
     <>
@@ -64,9 +74,7 @@ const ChatWidget = () => {
           </div>
 
           <div className="chat-body">
-            <p className="chat-intro">
-              So… what brings you here?
-            </p>
+            <p className="chat-intro">So… what brings you here?</p>
 
             <p className="chat-intro">
               Maybe you have a water problem you want to talk through.
@@ -91,6 +99,7 @@ const ChatWidget = () => {
                   name="name"
                   placeholder="Your name"
                   required
+                  disabled={isSubmitting}
                 />
               </label>
 
@@ -100,7 +109,8 @@ const ChatWidget = () => {
                   type="email"
                   name="email"
                   placeholder="Where can I find you?"
-                   required
+                  required
+                  disabled={isSubmitting}
                 />
               </label>
 
@@ -110,12 +120,36 @@ const ChatWidget = () => {
                   name="message"
                   rows={4}
                   placeholder="Go on. I’m listening."
-                   required
+                  required
+                  disabled={isSubmitting}
                 />
               </label>
 
-              <button type="submit" className="chat-submit">
-                Okay, tell me →
+              {submissionStatus === 'success' && (
+                <p
+                  className="chat-status chat-status-success"
+                  role="status"
+                  aria-live="polite"
+                >
+                  Your note is on its way. Thank you for stopping by. 🤍
+                </p>
+              )}
+
+              {submissionStatus === 'error' && (
+                <p
+                  className="chat-status chat-status-error"
+                  role="alert"
+                >
+                  Oh, that didn’t go through. Please try again in a moment.
+                </p>
+              )}
+
+              <button
+                type="submit"
+                className="chat-submit"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? 'Sending…' : 'Okay, tell me →'}
               </button>
             </form>
           </div>

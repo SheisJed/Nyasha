@@ -286,3 +286,30 @@
   .chat-header h3 {
     font-size: 19px;
   }
+  
+.chat-status {
+  margin: 0;
+  padding: 11px 12px;
+  border-radius: 6px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.chat-status-success {
+  background: #f0f7f0;
+  border: 1px solid #c8dfc8;
+  color: #356b43;
+}
+
+.chat-status-error {
+  background: #fff0f0;
+  border: 1px solid #edc9d8;
+  color: #9b3f55;
+}
+
+.chat-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
