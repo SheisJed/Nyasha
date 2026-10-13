@@ -1,3 +1,5 @@
+
+import type { MouseEvent } from 'react'
 import './WorkExperiencePage.css'
 
 type ExperienceChapter = {
@@ -21,9 +23,9 @@ const chapters: ExperienceChapter[] = [
     company: 'State Department of Roads, Ministry of Infrastructure',
     dates: 'Jan 2023 – Apr 2023',
     introduction:
-      'My professional foundation began in the laboratory, where analytical work connected scientific measurements to practical engineering and construction needs. I was learning that a result on paper could influence a decision far beyond the laboratory bench.',
+      'My professional foundation began in the laboratory, where analytical work connected scientific measurements to practical engineering and construction needs.',
     takeaway:
-      'This chapter introduced me to the importance of careful measurement, reliable results, and the responsibility that comes with reporting what the evidence tells you.',
+      'This chapter introduced me to the importance of careful measurement, reliable results, and technical reporting.',
   },
   {
     number: '02',
@@ -33,9 +35,9 @@ const chapters: ExperienceChapter[] = [
     company: 'CCI Global',
     dates: 'Oct 2024 – May 2026',
     introduction:
-      'Customer service took me into a different kind of problem-solving. Instead of working only with samples and measurements, I worked with people, their concerns, and the information they needed to find a way forward. It was a different world from the one I had studied for, but it taught me things I would carry into engineering.',
+      'Customer service took me into a different kind of problem-solving. Instead of working only with samples and measurements, I worked with people, their concerns, and the information they needed to find a way forward.',
     takeaway:
-      'Technical knowledge matters, but so does understanding the person on the other side of a problem. Clear communication and patience are skills worth carrying into any field.',
+      'This experience gave my technical background another dimension: understanding the person on the other side of a problem matters, too.',
   },
   {
     number: '03',
@@ -52,14 +54,14 @@ const chapters: ExperienceChapter[] = [
       'I went home that afternoon, thanked my very smart friend, and shared the news. I was about to become a two-job big girl!',
       'Then day one arrived, and I felt very small, both literally and figuratively. The knowledge piling up around me was astonishing. Everything was new, and there was so much to understand.',
       'The factory produced several steel products, including binding wire, nails, weld mesh and BRC mesh. Those were the products I encountered as I moved through the quality control work. Each one depended on a sequence of processes, and each stage depended on the one before it being done properly. That was where I found myself: in quality control, a department I came to think of as the spine of an industry.',
-      'Take mild steel nails, for example. Before production could proceed, incoming material had to be checked against the required specifications. Measuring instruments and tensile testing equipment helped the quality control team assess the material. The results helped determine whether it was suitable for the intended product. Material was identified and sorted according to its grade and whether it met the required standards; anything that failed those checks could not simply be sent along to production and hoped for the best.',
+      'Take mild steel nails, for example. Before production could proceed, incoming material had to be checked against the required specifications. The quality control team used measuring instruments and tensile testing equipment to assess the material, and the results helped determine whether it was suitable for the intended product. Material was identified and sorted according to its grade and whether it met the required standards; anything that failed those checks could not simply be sent along to production and hoped for the best.',
       'For material that passed, the next steps included pickling in a hydrochloric acid bath, rinsing, and treatment in a phosphate bath. The process depended on controlled chemical concentrations, so quality control had to check those too, including through titration. The chemistry was not a side note to manufacturing. It helped prepare the material for what came next.',
-      'Then came wire drawing: pulling the wire through progressively smaller dies to bring it to the required diameter. The dimensions mattered. If the wire was not drawn to the right size, it could not reliably produce a nail of the intended dimensions. Packaging and product weights depended on consistency, too. If the wire dimensions were off, production could be stopped while the team investigated the cause and corrected it.',
+      'Then came wire drawing: pulling the wire through progressively smaller dies to bring it to the required diameter. The dimensions mattered. If the wire was not drawn to the right size, it could not reliably produce a nail of the intended dimensions. Packaging and product weights depended on consistency, too. If the wire dimensions were off, the production line could be stopped while the team investigated the cause and corrected it.',
       'And the nails themselves had their own specifications. They needed the correct length, the required tip angle, and properly centred heads and tips. The tensile strength of the drawn wire also had to be checked so that the finished nail would meet the mechanical requirements expected of it. If a check revealed a problem, production could not simply carry on as though nothing had happened.',
       'For someone who had come in looking for knowledge, it was a lot to take in. I was seeing how chemistry, measurement, machinery, and decision-making depended on one another. A small deviation at one stage could travel down the line and become a much bigger problem later.',
     ],
     takeaway:
-      'I learnt that it is better to stop and investigate when something first goes wrong than to let a small deviation travel through an entire process. The principle applies in manufacturing, and, in its own way, in everyday life too, doesn’t it?',
+      'This opportunity taught me that it is better to stop and investigate when something first goes wrong than to let a small deviation travel through an entire process. The principle applies in manufacturing, and, in its own way, in everyday life too, doesn’t it?',
   },
   {
     number: '04',
@@ -89,20 +91,24 @@ const chapters: ExperienceChapter[] = [
     emoji: '🌱',
     title: "Where I'm Going",
     role: 'Building Better Water Systems',
-    company: 'The questions I am following',
+    company: "The Questions I'm Following",
     introduction:
       'My professional direction extends beyond individual treatment plants. I am interested in how water can be treated, reused, and managed in ways that make water security more achievable, especially for communities facing water insecurity.',
-    story: [
-      'I want to keep learning how treatment systems work, why they succeed, and what makes them practical for the people who depend on them. I am especially interested in approaches that use energy thoughtfully and help water serve more than one purpose.',
-      'The bigger question for me is how we move from treating water as something to use once and discard to treating it as a resource worth managing carefully. I want to understand what that could look like in homes, in communities, and in places where reliable access to safe water is still a daily struggle.',
-      'I do not have every answer yet. For now, I am building the technical knowledge, asking questions, and paying attention to the people whose lives these systems are meant to improve.',
-    ],
     takeaway:
       'The direction is still unfolding, but the question guiding it is clear: how can we help water serve people better?',
   },
 ]
 
 function WorkExperiencePage() {
+  const scrollToSection =
+    (id: string) => (event: MouseEvent<HTMLAnchorElement>) => {
+      event.preventDefault()
+      document.getElementById(id)?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      })
+    }
+
   return (
     <main className="container work-experience-page">
       <div className="work-page-content">
@@ -124,11 +130,27 @@ function WorkExperiencePage() {
             A little science, a little people, a little industry,
             and a growing return to water.
           </p>
+
+          <a
+            className="work-page-down-link"
+            href="#experience-journey"
+            onClick={scrollToSection('experience-journey')}
+          >
+            Explore the journey <span aria-hidden="true">↓</span>
+          </a>
         </section>
 
-        <nav className="work-contents" aria-label="Work stories">
-          <span className="work-page-kicker">IN THIS CHAPTER OF MY LIFE</span>
+        <nav
+          className="work-contents"
+          id="experience-journey"
+          aria-label="Work stories"
+        >
+          <span className="work-page-kicker">
+            IN THIS CHAPTER OF MY LIFE
+          </span>
+
           <h2>A little table of contents</h2>
+
           <p className="work-contents-intro">
             Start wherever you like. Each chapter has its own place
             in the story.
@@ -137,20 +159,34 @@ function WorkExperiencePage() {
           <ol>
             {chapters.map((chapter) => (
               <li key={chapter.number}>
-                <a href={`#experience-chapter-${chapter.number}`}>
+                <a
+                  href={`#experience-chapter-${chapter.number}`}
+                  onClick={scrollToSection(
+                    `experience-chapter-${chapter.number}`,
+                  )}
+                >
                   <span className="work-contents-number">
                     {chapter.number}
                   </span>
-                  <span className="work-contents-emoji" aria-hidden="true">
+
+                  <span
+                    className="work-contents-emoji"
+                    aria-hidden="true"
+                  >
                     {chapter.emoji}
                   </span>
+
                   <span className="work-contents-title">
                     {chapter.title}
                     <span className="work-contents-role">
                       {chapter.role}
                     </span>
                   </span>
-                  <span className="work-contents-arrow" aria-hidden="true">
+
+                  <span
+                    className="work-contents-arrow"
+                    aria-hidden="true"
+                  >
                     ↘
                   </span>
                 </a>
@@ -159,7 +195,10 @@ function WorkExperiencePage() {
           </ol>
         </nav>
 
-        <section className="work-stories" aria-label="Work experience stories">
+        <section
+          className="work-stories"
+          aria-label="Work experience stories"
+        >
           {chapters.map((chapter) => (
             <article
               className="work-story"
@@ -225,7 +264,10 @@ function WorkExperiencePage() {
             Take a look at my CV <span aria-hidden="true">→</span>
           </a>
 
-          <a href="#/things-that-dont-fit" className="work-page-secondary-link">
+          <a
+            href="#/things-that-dont-fit"
+            className="work-page-secondary-link"
+          >
             Or explore the stories beyond the CV →
           </a>
         </section>
