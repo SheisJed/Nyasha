@@ -6,80 +6,84 @@
 .writing-page {
   width: 100%;
   min-width: 0;
-  padding: clamp(8px, 2vw, 24px) 0 36px;
+  padding: clamp(8px, 2vw, 20px) 0 28px;
   color: inherit;
 }
 
+/* Introduction */
+
 .writing-intro {
-  max-width: 780px;
-  margin: 0 auto 56px;
+  max-width: 740px;
+  margin: 0 auto 38px;
   text-align: center;
-  padding: 30px 12px 0;
+  padding: 22px 12px 0;
 }
 
 .writing-intro h1 {
-  margin: 14px 0 18px;
+  margin: 12px 0 14px;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(2.8rem, 7vw, 5rem);
+  font-size: clamp(2.6rem, 6vw, 4.2rem);
   font-weight: 400;
   line-height: 1.08;
   letter-spacing: -0.045em;
 }
 
 .writing-lead {
-  max-width: 650px;
-  margin: 0 auto 18px;
+  max-width: 620px;
+  margin: 0 auto 14px;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(1.2rem, 2.6vw, 1.55rem);
-  line-height: 1.6;
+  font-size: clamp(1.1rem, 2.3vw, 1.4rem);
+  line-height: 1.55;
   opacity: 0.9;
 }
 
 .writing-description {
-  max-width: 600px;
-  margin: 0 auto 18px;
-  font-size: 1rem;
-  line-height: 1.9;
+  max-width: 580px;
+  margin: 0 auto 14px;
+  font-size: 0.96rem;
+  line-height: 1.8;
   opacity: 0.78;
 }
 
 .writing-signature {
-  margin-top: 24px;
+  margin-top: 18px;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: 1rem;
+  font-size: 0.96rem;
   font-style: italic;
   color: #b36c89;
 }
+
+/* Section headings */
 
 .writing-section-heading {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 16px;
-  margin: 0 0 20px;
+  gap: 14px;
+  margin: 0 0 15px;
 }
 
 .writing-section-heading h2 {
-  margin: 7px 0 0;
+  margin: 6px 0 0;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(1.65rem, 3.5vw, 2.35rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: -0.025em;
 }
 
 .writing-overline {
-  font-size: 0.7rem;
+  font-size: 0.67rem;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.14em;
   opacity: 0.65;
 }
 
 .writing-count {
   flex-shrink: 0;
-  padding-bottom: 5px;
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
+  padding-bottom: 4px;
+  font-size: 0.66rem;
+  letter-spacing: 0.09em;
   opacity: 0.58;
 }
 
@@ -90,19 +94,19 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   overflow: hidden;
-  margin-bottom: 58px;
+  margin-bottom: 40px;
   border: 1px solid rgba(181, 108, 137, 0.28);
-  border-radius: 22px;
+  border-radius: 18px;
   background:
     radial-gradient(
       ellipse at 100% 0%,
-      rgba(213, 143, 169, 0.2),
+      rgba(213, 143, 169, 0.17),
       transparent 48%
     ),
     linear-gradient(
       135deg,
-      rgba(213, 143, 169, 0.12),
-      rgba(213, 143, 169, 0.035)
+      rgba(213, 143, 169, 0.10),
+      rgba(213, 143, 169, 0.025)
     );
 }
 
@@ -110,90 +114,90 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  padding: 22px 28px 0;
+  gap: 16px;
+  padding: 14px 24px 0;
   color: #b36c89;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
 }
 
 .writing-featured-decoration span:first-child {
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   letter-spacing: 0.12em;
 }
 
 .writing-featured-decoration span:last-child {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .writing-featured-content {
-  padding: 18px clamp(22px, 5vw, 48px) 32px;
+  padding: 12px clamp(20px, 3.5vw, 34px) 23px;
 }
 
 .writing-category {
   display: inline-block;
-  font-size: 0.67rem;
+  font-size: 0.64rem;
   font-weight: 700;
-  line-height: 1.7;
-  letter-spacing: 0.12em;
+  line-height: 1.65;
+  letter-spacing: 0.11em;
   opacity: 0.7;
 }
 
 .writing-featured h2 {
-  max-width: 820px;
-  margin: 15px 0 16px;
+  max-width: 760px;
+  margin: 10px 0 12px;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(1.8rem, 3.8vw, 2.8rem);
   font-weight: 400;
-  line-height: 1.12;
-  letter-spacing: -0.04em;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
 }
 
 .writing-story-subtitle {
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: 1.08rem;
+  font-size: 1rem;
   font-style: italic;
-  line-height: 1.75;
+  line-height: 1.65;
   opacity: 0.83;
 }
 
 .writing-featured .writing-story-subtitle {
-  max-width: 720px;
-  font-size: clamp(1.08rem, 2.2vw, 1.3rem);
+  max-width: 690px;
+  font-size: clamp(1rem, 1.8vw, 1.12rem);
 }
 
 .writing-excerpt {
-  margin: 18px 0 26px;
-  font-size: 0.94rem;
-  line-height: 1.85;
+  margin: 12px 0 18px;
+  font-size: 0.9rem;
+  line-height: 1.75;
   opacity: 0.76;
 }
 
 .writing-featured .writing-excerpt {
-  max-width: 680px;
+  max-width: 660px;
 }
 
 /* Smaller story cards */
 
 .writing-more-heading {
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
 .writing-stories-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  margin-bottom: 58px;
+  gap: 14px;
+  margin-bottom: 42px;
 }
 
 .writing-story-card {
   display: flex;
   flex-direction: column;
   min-width: 0;
-  padding: 25px;
+  padding: 20px;
   border: 1px solid rgba(181, 108, 137, 0.22);
-  border-radius: 18px;
-  background: rgba(213, 143, 169, 0.045);
+  border-radius: 16px;
+  background: rgba(213, 143, 169, 0.04);
   transition:
     transform 180ms ease,
     border-color 180ms ease,
@@ -201,29 +205,30 @@
 }
 
 .writing-story-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(181, 108, 137, 0.48);
-  background: rgba(213, 143, 169, 0.09);
+  transform: translateY(-2px);
+  border-color: rgba(181, 108, 137, 0.45);
+  background: rgba(213, 143, 169, 0.075);
 }
 
 .writing-card-topline {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 23px;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
 }
 
 .writing-card-number {
   color: #b36c89;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: 1.3rem;
+  font-size: 1.15rem;
 }
 
 .writing-story-card h3 {
-  margin: 0 0 12px;
+  margin: 0 0 9px;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(1.45rem, 2.5vw, 1.9rem);
+  font-size: clamp(1.3rem, 2vw, 1.65rem);
   font-weight: 400;
   line-height: 1.25;
   letter-spacing: -0.025em;
@@ -231,11 +236,13 @@
 
 .writing-story-card .writing-story-subtitle {
   margin: 0;
-  font-size: 0.98rem;
+  font-size: 0.94rem;
+  line-height: 1.6;
 }
 
 .writing-story-card .writing-excerpt {
-  margin: 17px 0 28px;
+  margin: 12px 0 20px;
+  line-height: 1.7;
 }
 
 /* Shared story footer */
@@ -245,15 +252,15 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 10px;
   margin-top: auto;
-  padding-top: 18px;
+  padding-top: 14px;
   border-top: 1px solid rgba(181, 108, 137, 0.2);
 }
 
 .writing-story-footer > span {
-  font-size: 0.76rem;
-  line-height: 1.6;
+  font-size: 0.73rem;
+  line-height: 1.55;
   opacity: 0.62;
 }
 
@@ -263,7 +270,7 @@
   gap: 5px;
   width: fit-content;
   color: #a95d7c;
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   font-weight: 600;
   text-decoration: none;
   transition:
@@ -272,7 +279,7 @@
 }
 
 .writing-read-link:hover {
-  gap: 9px;
+  gap: 8px;
   color: #c07898;
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -282,33 +289,33 @@
 
 .writing-outro {
   position: relative;
-  max-width: 760px;
+  max-width: 700px;
   margin: 0 auto;
-  padding: 34px clamp(20px, 4vw, 40px);
+  padding: 27px clamp(18px, 3vw, 32px);
   text-align: center;
   border-top: 1px solid rgba(181, 108, 137, 0.28);
 }
 
 .writing-outro-symbol {
   display: inline-block;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   color: #b36c89;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 
 .writing-outro h2 {
-  margin: 5px 0 14px;
+  margin: 5px 0 11px;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(1.65rem, 3.5vw, 2.25rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 400;
   line-height: 1.25;
 }
 
 .writing-outro p {
-  max-width: 580px;
-  margin: 0 auto 22px;
-  font-size: 0.96rem;
-  line-height: 1.9;
+  max-width: 550px;
+  margin: 0 auto 18px;
+  font-size: 0.92rem;
+  line-height: 1.8;
   opacity: 0.77;
 }
 
@@ -324,49 +331,61 @@
   }
 
   .writing-intro {
-    margin-bottom: 42px;
-    padding-top: 22px;
+    margin-bottom: 32px;
+    padding-top: 18px;
+  }
+
+  .writing-intro h1 {
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
   }
 
   .writing-section-heading {
     align-items: flex-start;
+    gap: 10px;
+  }
+
+  .writing-section-heading h2 {
+    font-size: 1.55rem;
   }
 
   .writing-count {
-    padding-top: 8px;
-    font-size: 0.62rem;
+    padding-top: 7px;
+    font-size: 0.59rem;
   }
 
   .writing-stories-grid {
     grid-template-columns: minmax(0, 1fr);
-    gap: 14px;
-    margin-bottom: 44px;
+    gap: 12px;
+    margin-bottom: 34px;
   }
 
   .writing-story-card {
-    padding: 22px;
+    padding: 19px;
   }
 
   .writing-featured {
-    margin-bottom: 44px;
-    border-radius: 18px;
+    margin-bottom: 34px;
+    border-radius: 16px;
   }
 
   .writing-featured-decoration {
-    padding: 18px 22px 0;
+    padding: 13px 19px 0;
   }
 
   .writing-featured-content {
-    padding: 17px 22px 25px;
+    padding: 12px 19px 20px;
+  }
+
+  .writing-featured h2 {
+    font-size: clamp(1.8rem, 7vw, 2.4rem);
   }
 
   .writing-card-topline {
-    margin-bottom: 18px;
+    margin-bottom: 14px;
   }
 
   .writing-outro {
-    padding-right: 10px;
-    padding-left: 10px;
+    padding: 24px 10px;
   }
 }
 
