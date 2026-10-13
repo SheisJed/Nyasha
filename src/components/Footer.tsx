@@ -86,7 +86,7 @@ function Footer() {
           loading="lazy"
         />
         <p className="footer-garden-caption">
-          A little patch of calm, just for you. 🌷
+          May you feel held, always. 🤍
         </p>
       </div>
 
