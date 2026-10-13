@@ -81,7 +81,7 @@ function Footer() {
       <div className="footer-garden">
         <img
           className="footer-garden-cat"
-          src={`${import.meta.env.BASE_URL}garden-cat.png`}
+          src={`${import.meta.env.BASE_URL}garden-cat.PNG`}
           alt="A little white cat sitting among grass and flowers"
           loading="lazy"
         />
