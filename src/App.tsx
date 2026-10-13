@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react'
 import Header from './components/Header'
 import ProfileOverview from './components/ProfileOverview'
@@ -131,11 +130,10 @@ function App() {
         )}
 
         {currentRoute === 'cv' && <CVPage />}
-      
 
         {currentRoute === 'writing' && <WritingPage />}
 
-       {currentRoute === 'contact' && <ContactPage />}
+        {currentRoute === 'contact' && <ContactPage />}
 
         <Footer />
         <ChatWidget />

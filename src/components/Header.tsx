@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react'
 import './Header.css'
 
@@ -8,12 +7,12 @@ const navigation = [
   { id: 'home', label: 'Home', href: '#/' },
   {
     id: 'work-experience',
-    label: 'Work Experience',
+    label: 'The Work & the Stories',
     href: '#/work-experience',
   },
   {
     id: 'things-that-dont-fit',
-    label: "Things That Don't Fit",
+    label: 'Beyond the CV',
     href: '#/things-that-dont-fit',
   },
   { id: 'cv', label: 'CV', href: '#/cv' },
