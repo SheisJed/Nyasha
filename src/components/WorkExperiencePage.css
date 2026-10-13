@@ -461,7 +461,40 @@
     margin-top: 17px;
     font-size: 14px;
   }
+  
+/* Longer personal stories within each chapter */
 
+.work-chapter-story {
+  margin: 26px 0 30px;
+  max-width: 720px;
+}
+
+.work-chapter-story p {
+  margin: 0 0 21px;
+  color: var(--text-secondary);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  line-height: 1.95;
+  overflow-wrap: anywhere;
+}
+
+.work-chapter-story p:last-child {
+  margin-bottom: 0;
+}
+
+/* Keep the long stories comfortable to read on mobile */
+
+@media (max-width: 540px) {
+  .work-chapter-story {
+    margin: 22px 0 26px;
+  }
+
+  .work-chapter-story p {
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+  }
+}
   .work-chapter-details li {
     font-size: 13px;
   }

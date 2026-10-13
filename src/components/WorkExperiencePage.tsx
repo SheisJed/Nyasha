@@ -9,6 +9,7 @@ type ExperienceChapter = {
   company: string
   dates?: string
   introduction: string
+  story?: string[]
   responsibilities: string[]
   takeaway: string
 }
@@ -55,18 +56,31 @@ const chapters: ExperienceChapter[] = [
     emoji: '🏭',
     title: 'Chemistry Meets Industry',
     role: 'Quality Control Analyst — Volunteer',
-    company: 'Devki Group of Companies',
+    company: 'Devki Steel Mills, Devki Group',
     dates: 'Feb 2026 – Apr 2026',
     introduction:
-      'In steel manufacturing, chemistry and precision measurement came together in a production environment. Quality checks required attention to specifications, accurate measurements, and careful records.',
+      'I wanted experience in the fields my heart was set on, but getting that first opportunity was proving difficult. So I took a different route: I went looking for the experience myself.',
+    story: [
+      'Then came Devki, and with it, the rather intimidating brick wall of not getting a job in the fields my heart was lost in. A very smart friend reminded me that, at that point in our lives, we were young, without too many responsibilities, and had the occasional luxury of working for free in exchange for experience.',
+      'So one morning, I printed copies of my CV, wrote letters expressing my interest, and went from factory to factory in search of knowledge, growth, and hopefully a bridge between the job I had and the work I wanted to do. That morning, Devki Steel Mills opened its doors to me. I was offered flexibility around my hours and days, and a pool of knowledge to delight in. What a steal!',
+      'I went home that afternoon, thanked my very smart friend, and shared the news. I was about to become a two-job big girl!',
+      'Then day one arrived, and I felt very small, both literally and figuratively. The knowledge piling up around me was astonishing. Everything was new, and there was so much to understand.',
+      'The factory produced several steel products, including binding wire, nails, weld mesh and BRC mesh. Those were the products I encountered as I moved through the quality control work. Each one depended on a sequence of processes, and each stage depended on the one before it being done properly. That was where I found myself: in quality control, a department I came to think of as the spine of an industry.',
+      'Take mild steel nails, for example. Before production could proceed, incoming material had to be checked against the required specifications. The quality control team used measuring instruments and tensile testing equipment to assess the material, and the results helped determine whether it was suitable for the intended product. Material was identified and sorted according to its grade and whether it met the required standards; anything that failed those checks could not simply be sent along to production and hoped for the best.',
+      'For material that passed, the next steps included pickling in a hydrochloric acid bath, rinsing, and treatment in a phosphate bath. The process depended on controlled chemical concentrations, so quality control had to check those too, including through titration. The chemistry was not a side note to manufacturing. It helped prepare the material for what came next.',
+      'Then came wire drawing: pulling the wire through progressively smaller dies to bring it to the required diameter. The dimensions mattered. If the wire was not drawn to the right size, it could not reliably produce a nail of the intended dimensions. Packaging and product weights depended on consistency, too. If the wire dimensions were off, the production line could be stopped while the team investigated the cause and corrected it.',
+      'And the nails themselves had their own specifications. They needed the correct length, the required tip angle, and properly centred heads and tips. The tensile strength of the drawn wire also had to be checked so that the finished nail would meet the mechanical requirements expected of it. If a check revealed a problem, production could not simply carry on as though nothing had happened.',
+      'For someone who had come in looking for knowledge, it was a lot to take in. I was seeing how chemistry, measurement, machinery, and decision-making depended on one another. A small deviation at one stage could travel down the line and become a much bigger problem later.',
+    ],
     responsibilities: [
       'Performed in-process and final quality inspections across steel manufacturing operations.',
       'Conducted dimensional inspections and tensile strength testing to verify product quality.',
       'Used Vernier calipers, micrometers, and universal tensile testing equipment for precision measurements.',
+      'Supported chemical concentration checks during pickling and phosphating processes.',
       'Identified non-conforming products and maintained quality inspection records.',
     ],
     takeaway:
-      'This chapter connected scientific precision with industrial quality control and the importance of checking work against defined requirements.',
+      'This opportunity taught me that it is better to stop and investigate when something first goes wrong than to let a small deviation travel through an entire process. The principle applies in manufacturing, and, in its own way, in everyday life too, doesn’t it?',
   },
   {
     number: '04',
@@ -76,7 +90,18 @@ const chapters: ExperienceChapter[] = [
     company: 'Kridha Limited',
     dates: 'May 2026 – Present',
     introduction:
-      'Water brought my scientific background and my interest in practical problem-solving together. My work involves translating water quality information and client requirements into treatment systems suited to the problem at hand.',
+      'Water had been on my mind long before I had a job in water treatment. Eventually, I stopped waiting for the right opportunity to find me and began looking for it myself.',
+    story: [
+      'I have always been heartbroken by stories of people dying from dehydration, diarrhoeal disease, and the consequences of poor sanitation. I have also been baffled by the experience of turning on a tap and finding it dry. The sea is vast, rivers keep flowing, and rain falls so generously in its season. So why do so many people still struggle to access safe water?',
+      'That question stayed with me. Every so often, I would send my CV to a water company I came across, hoping that somewhere there would be an opening for someone with my background and a genuine desire to understand the problem.',
+      'But there was another part of the story: CCI. After long, sometimes treacherous shifts, I would get home and return to my list of water companies. I would look them up, find a way to reach out, and send another email. It was a small routine, but it was my way of keeping the door open to the work I wanted to do.',
+      'One of those cold outreach emails went out in September. Months passed. Then, in February, just when hope was beginning to feel rather thin, an invitation to interview arrived. That email had travelled a long way from the evening I sent it, and I was grateful I had sent it at all.',
+      'That opportunity led me to Kridha Limited, a water and wastewater treatment company. At last, I was getting to work in the field I had been asking questions about for so long. The knowledge I have gained has been tremendous, and the problem that once felt so distant does not seem quite so out of reach anymore.',
+      'My days involve interpreting water analyses, understanding what a client needs, and helping identify and design a treatment system that can meet those requirements. The work also involves explaining the proposed solution, preparing technical proposals and quotations, and answering the questions that come with helping someone understand how a treatment system will work.',
+      'And water treatment is only one side of the coin. Wastewater treatment asks a different but equally important set of questions: how can homes and industries treat the water they have used so that it can be discharged safely to the environment or, where appropriate, to the public sewer? The answer depends on the wastewater, the applicable requirements, and what the system is designed to achieve.',
+      'The work is satisfying in a way that sometimes makes you forget you skipped breakfast. Hihi. It is intellectually demanding, too, because every analysis and every client brings a different problem to understand. Most importantly, it brings me closer to the question I am still wrestling with: how can we make better use of the water we already have?',
+      'That question leads me to the circular economy of water: treating water not simply as something we use and discard, but as a resource we can manage, recover, and reuse responsibly. I am still learning, and I have a long way to go. But I finally feel that I am building the knowledge I need to keep asking the question properly.',
+    ],
     responsibilities: [
       'Design and size water treatment systems based on client requirements and raw water analysis.',
       'Contribute to the design of reverse osmosis, softening, filtration, and wastewater treatment systems.',
@@ -85,7 +110,7 @@ const chapters: ExperienceChapter[] = [
       'Collaborate with technical and sales teams to develop customer-specific plant designs.',
     ],
     takeaway:
-      'This is where analysis becomes design: understanding what is in the water, identifying the treatment requirements, and working towards a practical solution.',
+      'This is where analysis becomes design: understanding what is in the water, identifying the treatment requirements, and working towards a practical solution. It is also where a long-standing question is beginning to turn into a professional direction.',
   },
   {
     number: '05',
@@ -217,6 +242,16 @@ function WorkExperiencePage() {
                   <p className="work-chapter-introduction">
                     {chapter.introduction}
                   </p>
+
+                  {chapter.story && (
+                    <div className="work-chapter-story">
+                      {chapter.story.map((paragraph, index) => (
+                        <p key={`${chapter.number}-story-${index}`}>
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
+                  )}
 
                   <div className="work-chapter-details">
                     <h3>What the work involved</h3>

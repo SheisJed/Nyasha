@@ -1,18 +1,21 @@
+
 .things-page {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 96px 28px 100px;
+  padding: 88px 28px 100px;
   color: var(--text-primary);
 }
 
 .things-page-intro {
-  max-width: 720px;
-  margin-bottom: 88px;
+  max-width: 760px;
+  margin-bottom: 48px;
 }
 
-.things-page-kicker {
+.things-page-kicker,
+.things-page-story-label,
+.things-page-contents-label,
+.things-page-reflection-label {
   display: block;
-  margin-bottom: 14px;
   color: #ed85c7;
   font-family: Arial, sans-serif;
   font-size: 10px;
@@ -21,67 +24,177 @@
   text-transform: uppercase;
 }
 
+.things-page-kicker {
+  margin-bottom: 16px;
+}
+
 .things-page-intro h1 {
   margin: 0 0 20px;
   color: var(--text-primary);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 52px;
+  font-size: clamp(38px, 5vw, 56px);
   font-weight: 600;
   line-height: 1.08;
 }
 
 .things-page-intro p {
-  max-width: 620px;
+  max-width: 650px;
   margin: 0;
   color: var(--text-secondary);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 18px;
-  line-height: 1.8;
+  line-height: 1.85;
 }
 
-.things-page-story {
-  padding: 32px 0;
+/* Chapter contents */
+
+.things-page-contents {
+  max-width: 760px;
+  margin: 0 0 76px;
+  padding: 24px 0;
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
+  scroll-margin-top: 32px;
 }
 
-.things-page-story-label {
-  display: block;
+.things-page-contents-label {
   margin-bottom: 12px;
-  color: #ed85c7;
-  font-family: Arial, sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1.4px;
 }
 
-.things-page-story h2 {
-  margin: 0 0 12px;
+.things-page-contents-link {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) 24px;
+  align-items: center;
+  gap: 12px;
+  padding: 17px 4px;
   color: var(--text-primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-color);
+  transition: color 0.2s ease, padding 0.2s ease;
+}
+
+.things-page-contents-link:last-child {
+  border-bottom: none;
+  padding-bottom: 8px;
+}
+
+.things-page-contents-link:hover {
+  color: var(--accent-blue);
+  padding-left: 9px;
+}
+
+.things-page-number {
+  color: #ed85c7;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 30px;
+  font-size: 22px;
+}
+
+.things-page-contents-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.things-page-contents-text strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
   font-weight: 600;
 }
 
-.things-page-story p {
-  max-width: 620px;
-  margin: 0;
+.things-page-contents-text small {
+  color: var(--text-secondary);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.things-page-arrow {
+  color: var(--accent-blue);
+  font-size: 19px;
+  text-align: right;
+}
+
+/* The stories */
+
+.things-page-story {
+  max-width: 760px;
+}
+
+.things-page-chapter {
+  padding: 40px 0 48px;
+  border-top: 1px solid var(--border-color);
+  scroll-margin-top: 32px;
+}
+
+.things-page-story-label {
+  margin-bottom: 16px;
+}
+
+.things-page-chapter h2 {
+  max-width: 680px;
+  margin: 0 0 26px;
+  color: var(--text-primary);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(29px, 4vw, 38px);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.things-page-chapter > p {
+  max-width: 680px;
+  margin: 0 0 21px;
   color: var(--text-secondary);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 16px;
-  line-height: 1.8;
+  line-height: 1.95;
 }
 
-.things-page-coming-soon {
-  display: block;
-  margin-top: 22px;
-  color: var(--text-secondary);
+.things-page-next {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  color: var(--text-primary);
   font-family: Arial, sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
+
+.things-page-next span {
+  color: #ed85c7;
+  font-size: 18px;
+}
+
+.things-page-next:hover {
+  color: var(--accent-blue);
+  transform: translateX(3px);
+}
+
+/* Closing reflection */
+
+.things-page-reflection {
+  margin-top: 34px;
+  padding: 24px;
+  border-left: 3px solid #ed85c7;
+  background: var(--bg-secondary);
+}
+
+.things-page-reflection-label {
+  margin-bottom: 12px;
+}
+
+.things-page-reflection p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* Back to home */
 
 .things-page-back {
   display: inline-block;
@@ -101,18 +214,69 @@
 
 @media (max-width: 600px) {
   .things-page {
-    padding: 64px 20px 72px;
+    padding: 62px 20px 72px;
   }
 
   .things-page-intro {
-    margin-bottom: 60px;
+    margin-bottom: 38px;
   }
 
   .things-page-intro h1 {
-    font-size: 40px;
+    font-size: 39px;
   }
 
   .things-page-intro p {
-    font-size: 17px;
+    font-size: 16px;
+    line-height: 1.85;
+  }
+
+  .things-page-contents {
+    margin-bottom: 48px;
+  }
+
+  .things-page-contents-link {
+    grid-template-columns: 32px minmax(0, 1fr) 18px;
+    gap: 9px;
+    padding: 15px 2px;
+  }
+
+  .things-page-contents-text strong {
+    font-size: 15px;
+  }
+
+  .things-page-contents-text small {
+    font-size: 11px;
+  }
+
+  .things-page-chapter {
+    padding: 32px 0 38px;
+  }
+
+  .things-page-chapter h2 {
+    font-size: 30px;
+    margin-bottom: 22px;
+  }
+
+  .things-page-chapter > p {
+    font-size: 15px;
+    line-height: 1.9;
+  }
+
+  .things-page-reflection {
+    padding: 19px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .things-page-contents-link,
+  .things-page-next,
+  .things-page-back {
+    transition: none;
+  }
+
+  .things-page-contents-link:hover,
+  .things-page-next:hover,
+  .things-page-back:hover {
+    transform: none;
   }
 }
