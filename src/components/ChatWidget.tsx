@@ -61,7 +61,8 @@ const ChatWidget = () => {
           <div className="chat-header">
             <div>
               <span className="chat-kicker">YOU FOUND THE CHAT BOX</span>
-              <h3>Hey. Who am I speaking with? 👋</h3>
+              <h3>Hey, you!
+               Thanks for taking the time😊</h3>
             </div>
 
             <button
@@ -75,7 +76,7 @@ const ChatWidget = () => {
           </div>
 
           <div className="chat-body">
-            <p className="chat-intro">So… what brings you here?</p>
+            <p className="chat-intro">I'm all ears</p>
 
             <p className="chat-intro">
               Need a hand with technical documentation, have a project
@@ -97,7 +98,7 @@ const ChatWidget = () => {
 
             <form className="chat-form" onSubmit={handleSubmit}>
               <label>
-                Who am I speaking with?
+                And who are you?
                 <input
                   type="text"
                   name="name"
@@ -135,7 +136,7 @@ const ChatWidget = () => {
                   role="status"
                   aria-live="polite"
                 >
-                  Your note is on its way. Thank you for stopping by. 🤍
+                  Your note is on its way. Thank you for taking the time. 🤍
                 </p>
               )}
 

@@ -161,7 +161,7 @@ function ContactPage() {
           </div>
 
           <p className="contact-page-signoff">
-            Until then, may you find something here worth staying for.
+            Looking forward to meeting you, human :)
           </p>
         </div>
       </div>
