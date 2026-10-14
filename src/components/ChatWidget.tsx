@@ -76,7 +76,7 @@ const ChatWidget = () => {
           </div>
 
           <div className="chat-body">
-            <p className="chat-intro">I'm all ears</p>
+            <p className="chat-intro">So?</p>
 
             <p className="chat-intro">
               Need a hand with technical documentation, have a project
