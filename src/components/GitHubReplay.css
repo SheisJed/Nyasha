@@ -87,9 +87,11 @@
   margin: 0 auto;
 }
 
+
 .experience-cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
   gap: 18px;
   width: 100%;
   margin: 0 auto;
@@ -318,5 +320,49 @@
 @media (prefers-reduced-motion: reduce) {
   .experience-card {
     transition: none;
+  }
+}
+
+/* More to explore */
+
+.experience-more-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 24px;
+  max-width: 760px;
+  margin: 32px auto 0;
+  padding: 0 12px;
+}
+
+.experience-more-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent-blue);
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.6;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.experience-more-links a:hover {
+  color: var(--accent-blue-hover);
+}
+
+.experience-more-links a:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+
+@media (max-width: 640px) {
+  .experience-more-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin-top: 26px;
   }
 }

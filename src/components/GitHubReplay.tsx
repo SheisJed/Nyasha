@@ -222,6 +222,19 @@ function GitHubReplay() {
               )
             })}
           </div>
+        
+        </div>
+
+        <div className="experience-more-links">
+          <a href="#/work-experience">
+            Explore my work experience
+            <span aria-hidden="true">→</span>
+          </a>
+
+          <a href="#/things-that-dont-fit">
+            Read the stories behind the CV
+            <span aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
     </section>
