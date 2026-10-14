@@ -43,7 +43,9 @@
   text-wrap: balance;
 }
 
-.contact-page-intro > p {
+
+.contact-page-intro > p + p {
+  margin-top: 1rem;
   max-width: 590px;
   margin: 0 auto;
   font-size: 1.02rem;

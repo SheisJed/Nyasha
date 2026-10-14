@@ -46,6 +46,7 @@ const ChatWidget = () => {
     <>
       {!isOpen && (
         <button
+          type="button"
           className="chat-trigger"
           onClick={() => setIsOpen(true)}
           aria-label="Open chat"
@@ -77,14 +78,17 @@ const ChatWidget = () => {
             <p className="chat-intro">So… what brings you here?</p>
 
             <p className="chat-intro">
-              Maybe you have a water problem you want to talk through.
-              Maybe you have an idea. Maybe you read something I wrote
-              and have something to say about it. Maybe you just have a question.
+              Need a hand with technical documentation, have a project
+              you’d like to talk through, or think your organisation has
+              a little Jed-shaped gap? You’re welcome to get in touch.
+              I’m an email or phone call away, and I promise I don’t bite. :)
             </p>
 
             <p className="chat-intro">
-              Or maybe you have absolutely no idea what you’re doing here.
-              Honestly? Same sometimes.
+              Maybe you have an idea, a question, or read something I
+              wrote and have something to say about it. Or maybe you have
+              absolutely no idea what you’re doing here. Honestly? Same
+              sometimes.
             </p>
 
             <p className="chat-intro">

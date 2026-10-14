@@ -58,11 +58,20 @@ function ContactPage() {
 
             <h1>Let's find our way to a conversation.</h1>
 
+            
             <p>
               Have a project in mind, an idea to exchange, or simply
               found something that resonated with you? I'd love to
               hear from you.
             </p>
+
+            <p>
+              Whether you need help with technical documentation,
+              have a project that could use some consultancy, or
+              think your organisation has a hole shaped like Jed,
+              let's talk. I'm an email or phone call away.
+            </p>
+
           </section>
 
           <div className="contact-link-panels">
