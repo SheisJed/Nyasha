@@ -35,6 +35,8 @@ jobs:
 
       - name: Build
         run: npm run build
+      - name: Copy Google verification file
+        run:  googleb136d61921318dd2.html dist/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
