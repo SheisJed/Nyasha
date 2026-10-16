@@ -5,7 +5,5 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: Sitemap: https://sheisjed.github.io/Nyasha/sitemap_index.xml
+Sitemap: https://sheisjed.github.io/Nyasha/sitemap.xml
 
-# Crawl-delay (optional, helps prevent server overload)
-Crawl-delay: 1
