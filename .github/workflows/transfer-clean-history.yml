@@ -83,7 +83,7 @@ jobs:
       # It runs only after all preceding checks succeed.
       - name: Replace original main history
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.HISTORY_TRANSFER_TOKEN }}
           EXPECTED_SHA: 0b35b42bdb2e20355c0907a8f21de98750468a53
         run: |
           git -C source push --force \
