@@ -38,7 +38,7 @@ jobs:
       - name: Verify sitemap
         run: |
           echo "Checking built sitemap:"
-          cat dist/sitemap_index.xml
+          cat dist/sitemap.xml
       - name: Copy Google verification file
         run:  cp googleb136d61921318dd2.html dist/
 
