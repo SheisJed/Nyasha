@@ -1,4 +1,3 @@
-
 import type { MouseEvent } from 'react'
 import './WorkExperiencePage.css'
 
@@ -24,6 +23,18 @@ const chapters: ExperienceChapter[] = [
     dates: 'Jan 2023 – Apr 2023',
     introduction:
       'My professional foundation began in the laboratory, where analytical work connected scientific measurements to practical engineering and construction needs.',
+    story: [
+      'This was my first and only attachment, and it began with a conversation I still remember. During my first year of university, I met a laboratory technologist who had a remarkable supply of wise words. Some of them were too good to keep to myself, so I thought I would leave them here for whoever comes after me.',
+      'You know those entry-level jobs that ask for one or two years of experience? Well, that was where his story began. He explained that there was a way around the little experience paradox, and I remember staring at him in disbelief before leaning in to listen more closely.',
+      'In my course, an attachment was not compulsory. But he pointed out that if a student worked for three months after every academic year, then over a four-year course, they could accumulate about a year of experience, perhaps even more, by graduation. And I thought to myself, offering my services for free for a few months would not be so difficult, would it? Future me would surely appreciate the investment.',
+      'Well, COVID-19 must have been watching this plan unfold and having a hearty laugh. After my first year, lockdowns and restrictions arrived, and finding an attachment was suddenly not even on the table. There was barely time to search before everything changed.',
+      'Second year came and went. When the holiday finally arrived, I was ready. I printed my CV, obtained a letter from the university department, wrote a letter expressing my interest, and went knocking from door to door in search of an attachment. Unfortunately, it seemed the industries had already had their fill of free labour for that season. The next opportunities would open when my next semester began. I was too late, and there was nothing left to do but rest and try again.',
+      'For third year, I learnt my lesson. I began searching in the middle of the semester, and, true to the advice I had received, the early bird catches the worm. In fact, I caught lots of worms. Hihi. I had several opportunities to consider, which meant I now had to sit down and evaluate which one I would enjoy most. A rather lovely problem to have, if you ask me.',
+      'I settled on an opportunity as a laboratory technician at the Ministry of Roads and Transport, State Department for Roads, in the Materials Testing and Research Division. I began on the 4th of January, and, at last, my attachment story had officially begun.',
+      'I got to work alongside wonderful people, both the staff and the other attachees I shared the experience with. The knowledge I encountered stretched far beyond what I had imagined, and we were trusted with independent projects. Sometimes that meant being handed a bag of cement or a jerrican of water and being allowed to carry out the work ourselves. If you know me, you know that freedom paired with responsibility makes me feel very grown up. Hihi. Give me a task, trust me with it, and watch me stand a little taller.',
+      'The work itself had a clear purpose: materials used in road construction had to be tested to establish whether they were suitable for their intended use. It was not enough for a material to simply look right. It had to meet the relevant requirements, too. From January through April, we worked on these tests and the associated laboratory work, generally on weekdays from around 8 a.m. to 4 p.m. I may need to verify the exact hours before swearing to them in court, but that is how I remember it.',
+      'Looking back, I am grateful for the technologist who shared that advice with me. What sounded like a clever way to accumulate experience became a lesson in timing, initiative, and trying again when the first attempt does not work. Sometimes the opportunity is not waiting for you to graduate. Sometimes you have to start looking while everyone else is still enjoying the holiday.'
+    ],
     takeaway:
       'This chapter introduced me to the importance of careful measurement, reliable results, and technical reporting.',
   },
@@ -36,6 +47,17 @@ const chapters: ExperienceChapter[] = [
     dates: 'Oct 2024 – May 2026',
     introduction:
       'Customer service took me into a different kind of problem-solving. Instead of working only with samples and measurements, I worked with people, their concerns, and the information they needed to find a way forward.',
+    story: [
+      'After graduation, finding a job was not quite like finding an attachment in third year. Apparently, the job market had not received the memo about my enthusiasm. Hihi. So I did what one does when a door refuses to open: I asked for help.',
+      'One of the people I reached out to was my communication lecturer from a CPA course I had taken after high school. He asked me to share my identification details, and, just a day later, I had an interview lined up at CCI Kenya. He did more than help me get my foot in the door; he also connected me with someone at CCI who helped me prepare mentally for the interview. I went in with a little more confidence than I might otherwise have had, and I remain grateful for that kindness.',
+      'The interview was conducted in a group, which was, naturally, a wonderful opportunity to wonder what on earth I was doing there. Hihi. Somehow, I made it through the hoops, and less than a month later, I found myself seated in a room with a gentleman whose responses began with, “Thank you for this opportunity.” Around us were so many other lovely human beings, and the facility itself was beautiful. The whole thing felt a little dreamy. I had a job, a workplace, new faces to meet, and a fresh chapter to begin. It was all rather exciting.',
+      'Then work began. And honestly, for the first few months, it barely felt like work. During a ten-hour shift, we could answer fifty calls or fewer. We therefore had quite a bit of time to talk, get to know one another, and find creative ways to occupy ourselves. We played those “50 questions to get to know your friend” games, learnt all sorts of card games, and made bets with the gentleman seated across from us about when the sun would finally pierce the horizon. Important scientific research, obviously. Hihi.',
+      'Looking back, I think that was part of the welcome package: the chance to settle in, get comfortable with the people around me, and discover that work could introduce you to some genuinely lovely human beings. I did not know it then, but those early, quieter months would become some of the memories I carried with me long after the job itself had changed.',
+      'Soon enough, however, the calls were no longer fifty or fewer. Somehow, we became professional yappers, answering a hundred calls or more during a shift. The pace picked up, the pressure grew, and the familiar faces around me gradually began to leave. As they did, the heart started to ache a little. The life I had imagined for myself was calling from somewhere else, and I could feel the distance between where I was and where I hoped to be.',
+      'I needed to do something about that distance. So I got a second job. Hihi. First came Devki, where I volunteered in quality control and began gaining experience in an industrial environment. Alongside that, I started reaching out to companies I imagined myself working for. I made calls, wrote countless emails, and offered free trials of my services in the hope that someone would give me an opportunity to prove what I could do.',
+      'Eventually, Kridha answered. The emails, the searching, and the little attempts to get closer to the work I wanted to do finally led somewhere. CCI gradually became a distant memory: the first official job I had worked, a place full of firsts, and a chapter that gave me so many fond memories and introduced me to so many wonderful people.',
+      'I left with more than experience in customer service. I had learnt to speak to people, listen, explain, persevere, and keep looking for a way forward even when the work in front of me was not the work I ultimately wanted to do. And perhaps that is one of the unexpected gifts of a first job: it teaches you things you do not always recognise until you find yourself using them somewhere else.'
+    ],
     takeaway:
       'This experience gave my technical background another dimension: understanding the person on the other side of a problem matters, too.',
   },
@@ -260,21 +282,19 @@ function WorkExperiencePage() {
             with the real needs of people and communities.
           </p>
 
-          
-<a
-  href="#/things-that-dont-fit"
-  className="work-page-cta"
->
-  Explore the stories beyond the CV <span aria-hidden="true">→</span>
-</a>
+          <a
+            href="#/things-that-dont-fit"
+            className="work-page-cta"
+          >
+            Explore the stories beyond the CV <span aria-hidden="true">→</span>
+          </a>
 
-<a
-  href="#/cv"
-  className="work-page-secondary-link"
->
-  Or take a look at my CV →
-</a>
-
+          <a
+            href="#/cv"
+            className="work-page-secondary-link"
+          >
+            Or take a look at my CV →
+          </a>
         </section>
       </div>
     </main>
