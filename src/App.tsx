@@ -306,6 +306,7 @@ function App() {
         {currentRoute === 'writing' && <WritingPage />}
 
         {currentRoute === 'contact' && <ContactPage />}
+        {currentRoute === 'take-a-break' && ( <TakeABreakPage />)}
 
         <Footer />
         <ChatWidget />

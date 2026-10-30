@@ -205,14 +205,12 @@ function Footer() {
               ))}
             </div>
             
-            <a
-              href="#/take-a-break"
-              className="footer-break-link"
-            >
-              <span aria-hidden="true">✧</span>
-              Take a Break
-              <span aria-hidden="true">♡</span>
-            </a>
+           <a
+  href="#/take-a-break"
+  className="footer-break-link"
+>
+  Take a Break
+</a>
 
           </div>
 
