@@ -76,7 +76,7 @@ export default function TakeABreakPage() {
     }, 1000);
   }
 
-  function catchButterfly(id: number) {
+  function catchButterfly() {
     setCaught((n) => n + 1);
     setPixels((old) => [
       ...old,
@@ -167,7 +167,7 @@ export default function TakeABreakPage() {
           className="break-butterfly butterfly-one"
           onClick={(e) => {
             e.stopPropagation();
-            catchButterfly(1);
+            catchButterfly();
           }}
           aria-label="Catch the pink butterfly"
           title="Catch me!"
@@ -179,7 +179,7 @@ export default function TakeABreakPage() {
           className="break-butterfly butterfly-two"
           onClick={(e) => {
             e.stopPropagation();
-            catchButterfly(2);
+            catchButterfly();
           }}
           aria-label="Catch the yellow butterfly"
           title="Catch me!"
