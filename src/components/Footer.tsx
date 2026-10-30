@@ -204,6 +204,16 @@ function Footer() {
                 </a>
               ))}
             </div>
+            
+            <a
+              href="#/take-a-break"
+              className="footer-break-link"
+            >
+              <span aria-hidden="true">✧</span>
+              Take a Break
+              <span aria-hidden="true">♡</span>
+            </a>
+
           </div>
 
           <div className="footer-column footer-column-about">

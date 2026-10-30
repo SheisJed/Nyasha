@@ -10,6 +10,7 @@ import ResumeViewer from './components/ResumeViewer'
 import ThingsThatDontFit from './components/ThingsThatDontFit'
 import ThingsThatDontFitPage from './components/ThingsThatDontFitPage'
 import PersonalHobbies from './components/PersonalHobbies'
+import TakeABreakPage from './components/TakeABreakPage'
 import SignOutSatire from './components/SignOutSatire'
 import ContactSection from './components/ContactSection'
 import CVPage from './components/CVPage'
@@ -26,6 +27,7 @@ type PageRoute =
   | 'cv'
   | 'writing'
   | 'contact'
+  | 'take-a-break'
 
 function getCurrentRoute(): PageRoute {
   switch (window.location.hash) {
@@ -39,8 +41,11 @@ function getCurrentRoute(): PageRoute {
       return 'writing'
     case '#/contact':
       return 'contact'
+    case '#/take-a-break':
+      return 'take-a-break'
     default:
       return 'home'
+    
   }
 }
 
@@ -257,6 +262,9 @@ function WritingPage() {
 function App() {
   const [currentRoute, setCurrentRoute] =
     useState<PageRoute>(getCurrentRoute)
+   {currentRoute === 'take-a-break' && (
+          <TakeABreakPage />
+        )}
 
   const isSignOutPage =
     window.location.pathname === '/satire-signout'
