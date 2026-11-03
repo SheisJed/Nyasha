@@ -204,14 +204,6 @@ function Footer() {
                 </a>
               ))}
             </div>
-            
-           <a
-  href="#/take-a-break"
-  className="footer-break-link"
->
-  Take a Break
-</a>
-
           </div>
 
           <div className="footer-column footer-column-about">
