@@ -1,0 +1,55 @@
+{
+  "name": "jedidah-portfolio",
+  "version": "1.0.0",
+  "description": "A personal portfolio for Waithiegeni Jedidah — an industrial chemist, water treatment design engineer, writer, and curious explorer. Built with React, TypeScript, and Vite.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage"
+  },
+  "keywords": [
+    "Waithiegeni Jedidah",
+    "Jedidah Waithiegeni",
+    "industrial chemist",
+    "water treatment",
+    "water treatment design",
+    "water reuse",
+    "wastewater treatment",
+    "water quality analysis",
+    "reverse osmosis",
+    "laboratory analysis",
+    "technical writing",
+    "creative writing",
+    "sustainability",
+    "circular water systems",
+    "portfolio",
+    "Nairobi",
+    "Kenya"
+  ],
+  "author": "Waithiegeni Jedidah <jedidahgithinji12@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sheisjed/Nyasha.git"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^5.0.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "vite": "^7.1.9"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.1",
+    "jsdom": "^27.0.0",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}
