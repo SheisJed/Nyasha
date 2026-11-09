@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://sheisjed.github.io/Nyasha/#/">
-    <img src=".jeds-website/public/portfolio.PNG" alt="A preview of Waithiegeni Jedidah's personal portfolio" width="100%" />
+  <img src="https://raw.githubusercontent.com/SheisJed/Nyasha/main/jeds-website/public/portfolio.PNG"/>
   </a>
 </p>
 
